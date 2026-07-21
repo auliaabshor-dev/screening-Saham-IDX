@@ -124,7 +124,9 @@ def swing_strategy(df: pd.DataFrame, m: dict):
 
     structure_score = 0
     broke_resistance = price > last_swing_high * 0.999
-    near_demand = price <= last_swing_low * 1.03
+    # Harga harus DI ATAS swing low (toleransi 0.99x) — kalau sudah jatuh
+    # di bawahnya, demand zone-nya jebol, bukan bounce.
+    near_demand = last_swing_low * 0.99 <= price <= last_swing_low * 1.03
     if broke_resistance:
         structure_score += 30
     if near_demand:
@@ -143,6 +145,9 @@ def swing_strategy(df: pd.DataFrame, m: dict):
         setup, sl = "Konsolidasi", price * 0.95
 
     entry = price
+    if sl >= entry:
+        # Geometri tidak valid (SL di atas entry) — turunkan jadi Konsolidasi
+        setup, sl = "Konsolidasi", price * 0.95
     risk = max(entry - sl, entry * 0.01)
     return {
         "strategy": "Swing",
