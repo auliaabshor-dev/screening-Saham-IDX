@@ -34,7 +34,7 @@ jobs:
         run: |
           git config user.name "screening-bot"
           git config user.email "actions@github.com"
-          git pull --rebase
           git add signals.json
           git diff --cached --quiet || git commit -m "Update sinyal $(TZ=Asia/Jakarta date +'%Y-%m-%d %H:%M WIB')"
+          git pull --rebase
           git push
