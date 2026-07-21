@@ -4,306 +4,431 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Papan Sinyal · Screening IDX</title>
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
     rel="stylesheet"
   />
   <style>
-    body { background-color: #0B1420; font-family: 'IBM Plex Sans', sans-serif; }
-    .font-mono { font-family: 'IBM Plex Mono', monospace !important; }
-    ::selection { background: #C9A227; color: #0B1420; }
+    :root {
+      --bg: #0B1420; --panel: #0E1826; --line: #1B2C40; --line-hi: #152238;
+      --text: #EDEDE5; --muted: #8A97A8; --dim: #5E6B7C;
+      --gold: #C9A227; --green: #3FB68C; --red: #E2574C;
+      --blue: #4E9AD4; --purple: #B07CD8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: 'IBM Plex Sans', sans-serif; min-height: 100vh;
+    }
+    .mono { font-family: 'IBM Plex Mono', monospace; }
+    ::selection { background: var(--gold); color: var(--bg); }
+
+    header { border-bottom: 1px solid var(--line); background: var(--panel); }
+    .header-inner {
+      max-width: 1100px; margin: 0 auto; padding: 16px 20px;
+      display: flex; flex-wrap: wrap; gap: 8px;
+      align-items: flex-end; justify-content: space-between;
+    }
+    .eyebrow {
+      font-size: 10px; text-transform: uppercase;
+      letter-spacing: 0.25em; color: var(--gold);
+    }
+    h1 { font-size: 24px; font-weight: 600; letter-spacing: -0.02em; margin-top: 4px; }
+    .session { font-size: 12px; color: var(--muted); text-align: right; }
+    .updated { font-size: 11px; color: var(--dim); margin-top: 2px; }
+
+    main { max-width: 1100px; margin: 0 auto; padding: 24px 20px; }
+
+    .tabs { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 16px; }
+    .tab {
+      border: 1px solid var(--line); background: var(--panel); color: var(--muted);
+      border-radius: 6px; padding: 6px 12px; font-size: 12px; font-weight: 500;
+      cursor: pointer; font-family: inherit;
+    }
+    .tab:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+    .tab-desc { font-size: 11px; color: var(--dim); margin-left: 4px; }
+
+    .controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px; }
+    .search {
+      width: 230px; border: 1px solid var(--line); background: var(--panel);
+      color: var(--text); border-radius: 6px; padding: 8px 12px; font-size: 14px;
+      font-family: inherit;
+    }
+    .search::placeholder { color: var(--dim); }
+    .search:focus { outline: none; border-color: var(--gold); }
+    .count { margin-left: auto; font-size: 11px; color: var(--muted); }
+
+    .grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    @media (min-width: 1024px) { .grid { grid-template-columns: 3fr 2fr; } }
+
+    .table-wrap { border: 1px solid var(--line); border-radius: 8px; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; text-align: left; }
+    thead tr { border-bottom: 1px solid var(--line); background: var(--panel); }
+    th {
+      padding: 12px 16px; font-size: 10px; font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted);
+    }
+    tbody tr { border-bottom: 1px solid var(--line); cursor: pointer; }
+    tbody tr:last-child { border-bottom: 0; }
+    tbody tr:hover { background: #111E30; }
+    tbody tr.active { background: var(--line-hi); }
+    td { padding: 12px 16px; vertical-align: top; }
+    .right { text-align: right; }
+    .ticker { font-family: 'IBM Plex Mono', monospace; font-weight: 600; }
+    .sub { font-size: 12px; color: var(--muted); }
+    .setup-sub { font-size: 11px; color: var(--muted); margin-top: 4px; }
+    .empty { padding: 40px 16px; text-align: center; font-size: 14px; color: var(--dim); }
+    .empty.err { color: var(--red); }
+
+    .badge {
+      display: inline-block; border-radius: 999px; padding: 2px 8px;
+      font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600;
+    }
+
+    .panel {
+      border: 1px solid var(--line); background: var(--panel);
+      border-radius: 8px; padding: 20px; align-self: start;
+    }
+    .panel-head { display: flex; justify-content: space-between; align-items: flex-start; }
+    .panel h2 { font-family: 'IBM Plex Mono', monospace; font-size: 20px; font-weight: 600; }
+    .panel-right { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .setup-label {
+      font-size: 10px; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--muted);
+    }
+
+    .bars { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+    .bar-row { display: flex; align-items: center; gap: 8px; }
+    .bar-label {
+      width: 80px; flex-shrink: 0; font-size: 10px;
+      text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted);
+    }
+    .bar-track { height: 6px; flex: 1; border-radius: 999px; background: var(--line); }
+    .bar-fill { height: 6px; border-radius: 999px; }
+    .bar-val {
+      width: 32px; flex-shrink: 0; text-align: right;
+      font-family: 'IBM Plex Mono', monospace; font-size: 12px;
+    }
+
+    .riskmap { margin-top: 16px; }
+    .riskmap-head { display: flex; justify-content: space-between; margin-bottom: 6px; }
+    .riskmap-title { font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); }
+    .riskmap-rr { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); }
+    .riskmap-rr b { color: var(--text); font-weight: 500; }
+    .riskmap-track { position: relative; height: 32px; border-radius: 6px; background: var(--bg); }
+    .zone { position: absolute; top: 0; height: 100%; }
+    .marker-line { position: absolute; top: 0; height: 100%; width: 1px; opacity: 0.9; }
+    .riskmap-labels { position: relative; height: 34px; margin-top: 4px; }
+    .marker-label {
+      position: absolute; top: 0; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .marker-label .k { font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
+    .marker-label .v { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--text); }
+
+    .notes { margin-top: 20px; border-top: 1px solid var(--line); padding-top: 16px; }
+    .notes-title { font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); }
+    .notes-body { margin-top: 6px; font-size: 14px; line-height: 1.6; color: #C7CEDA; }
+
+    .disclaimer { margin-top: 24px; text-align: center; font-size: 11px; color: var(--dim); }
   </style>
 </head>
 <body>
-  <div id="root"></div>
+  <header>
+    <div class="header-inner">
+      <div>
+        <p class="eyebrow">Bursa Efek Indonesia · Screening 3 Sesi</p>
+        <h1>Papan Sinyal</h1>
+      </div>
+      <div>
+        <p class="session mono" id="session-label">…</p>
+        <p class="updated mono" id="updated-label">Memuat data…</p>
+      </div>
+    </div>
+  </header>
 
-  <script type="text/babel" data-presets="react">
-    const { useState, useMemo, useEffect } = React;
+  <main>
+    <div class="tabs" id="tabs"></div>
+    <div class="controls">
+      <input class="search" id="search" placeholder="Cari ticker atau nama emiten…" />
+      <span class="count mono" id="count"></span>
+    </div>
+    <div class="grid">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Emiten</th><th>Strategi</th>
+              <th class="right">Harga</th><th class="right">Skor</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <tr><td colspan="4" class="empty">Memuat sinyal…</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="panel" id="panel">
+        <p class="sub">Memuat…</p>
+      </div>
+    </div>
+    <p class="disclaimer">
+      Sinyal dihasilkan otomatis dari screening — bukan rekomendasi investasi.
+      Keputusan transaksi tetap di tanganmu.
+    </p>
+  </main>
+
+  <script>
+    "use strict";
 
     // -----------------------------------------------------------------------
     // SUMBER DATA:
-    // 1. "./signals.json"  -> file di repo yang sama (GitHub Pages, tanpa CORS)
-    // 2. URL raw GitHub    -> cadangan kalau dibuka di luar Pages (mis. lokal)
+    // 1. ./signals.json  -> file di repo yang sama (GitHub Pages, tanpa CORS)
+    // 2. URL raw GitHub  -> cadangan kalau dibuka di luar Pages (mis. lokal)
     // -----------------------------------------------------------------------
-    const DATA_SOURCES = [
+    var DATA_SOURCES = [
       "./signals.json",
-      "https://raw.githubusercontent.com/auliaabshor-dev/screening-Saham-IDX/main/signals.json",
+      "https://raw.githubusercontent.com/auliaabshor-dev/screening-Saham-IDX/main/signals.json"
     ];
 
-    const STRATEGY_META = {
-      Semua: { color: "#8A97A8", desc: "Semua sinyal dari sesi terakhir" },
-      Swing: { color: "#C9A227", desc: "Posisi beberapa hari — teknikal + fundamental" },
-      BPJS:  { color: "#4E9AD4", desc: "Beli Pagi Jual Sore — momentum intraday, keluar sebelum closing" },
-      BSJP:  { color: "#B07CD8", desc: "Beli Sore Jual Pagi — strong close, target gap up pembukaan besok" },
+    var STRATEGY_META = {
+      "Semua": { color: "#8A97A8", desc: "Semua sinyal dari sesi terakhir" },
+      "Swing": { color: "#C9A227", desc: "Posisi beberapa hari — teknikal + fundamental" },
+      "BPJS":  { color: "#4E9AD4", desc: "Beli Pagi Jual Sore — momentum intraday, keluar sebelum closing" },
+      "BSJP":  { color: "#B07CD8", desc: "Beli Sore Jual Pagi — strong close, target gap up pembukaan besok" }
     };
 
-    const SESSION_LABEL = {
+    var SESSION_LABEL = {
       pagi:  "Sesi Pagi · 09:45 WIB",
       siang: "Sesi Siang · 12:15 WIB",
-      sore:  "Sesi Sore · 16:30 WIB",
+      sore:  "Sesi Sore · 16:30 WIB"
     };
 
-    const scoreColor = (v) => (v >= 75 ? "#3FB68C" : v >= 55 ? "#C9A227" : "#E2574C");
-    const fmt = (n) => new Intl.NumberFormat("id-ID").format(n);
+    var state = {
+      data: null,
+      status: "loading",   // loading | live | error
+      query: "",
+      tab: "Semua",
+      selected: null
+    };
 
-    function ConvictionBar({ value, label }) {
-      return (
-        <div className="flex items-center gap-2">
-          <span className="w-20 shrink-0 text-[10px] uppercase tracking-widest text-[#8A97A8]">{label}</span>
-          <div className="h-1.5 flex-1 rounded-full bg-[#1B2C40]">
-            <div className="h-1.5 rounded-full" style={{ width: value + "%", backgroundColor: scoreColor(value) }} />
-          </div>
-          <span className="w-8 shrink-0 text-right font-mono text-xs" style={{ color: scoreColor(value) }}>{value}</span>
-        </div>
-      );
+    function esc(s) {
+      return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
+    function fmt(n) { return new Intl.NumberFormat("id-ID").format(n); }
+    function scoreColor(v) { return v >= 75 ? "#3FB68C" : v >= 55 ? "#C9A227" : "#E2574C"; }
+
+    function combined(s) { return Math.round((s.technicalScore + s.fundamentalScore) / 2); }
+
+    function filteredSignals() {
+      var q = state.query.toLowerCase();
+      var list = (state.data && state.data.signals) ? state.data.signals.slice() : [];
+      list = list.filter(function (s) {
+        var mq = s.ticker.toLowerCase().indexOf(q) !== -1 ||
+                 String(s.name || "").toLowerCase().indexOf(q) !== -1;
+        var mt = state.tab === "Semua" || s.strategy === state.tab;
+        return mq && mt;
+      });
+      list.sort(function (a, b) { return combined(b) - combined(a); });
+      return list;
     }
 
-    function RiskMap({ sl, entry, tp1, tp2 }) {
-      const min = sl, max = tp2;
-      const range = max - min || 1;
-      const pos = (v) => ((v - min) / range) * 100;
-      const rr = ((tp1 - entry) / Math.max(entry - sl, 1)).toFixed(2);
-      const markers = [
-        { v: sl, label: "SL", color: "#E2574C" },
-        { v: entry, label: "Entry", color: "#C9A227" },
-        { v: tp1, label: "TP1", color: "#3FB68C" },
-        { v: tp2, label: "TP2", color: "#3FB68C" },
+    function badge(strategy) {
+      var meta = STRATEGY_META[strategy] || STRATEGY_META["Semua"];
+      return '<span class="badge" style="color:' + meta.color +
+        ';border:1px solid ' + meta.color + '55;background:' + meta.color + '14">' +
+        esc(strategy) + '</span>';
+    }
+
+    function renderTabs() {
+      var html = "";
+      Object.keys(STRATEGY_META).forEach(function (s) {
+        var meta = STRATEGY_META[s];
+        var on = state.tab === s;
+        html += '<button class="tab" data-tab="' + s + '" style="' +
+          (on ? "border-color:" + meta.color + ";background:" + meta.color + "14;color:" + meta.color : "") +
+          '">' + s + '</button>';
+      });
+      html += '<span class="tab-desc">' + esc(STRATEGY_META[state.tab].desc) + '</span>';
+      document.getElementById("tabs").innerHTML = html;
+    }
+
+    function renderHeader() {
+      var d = state.data;
+      document.getElementById("session-label").textContent =
+        d && SESSION_LABEL[d.session] ? SESSION_LABEL[d.session] : "…";
+      var u = document.getElementById("updated-label");
+      if (state.status === "loading") u.textContent = "Memuat data…";
+      else if (state.status === "error") u.textContent = "⚠ Gagal memuat signals.json";
+      else if (d && d.generatedAt) {
+        var label = new Intl.DateTimeFormat("id-ID", {
+          weekday: "long", day: "numeric", month: "long",
+          hour: "2-digit", minute: "2-digit", timeZone: "Asia/Jakarta"
+        }).format(new Date(d.generatedAt));
+        u.textContent = "Update terakhir: " + label + " WIB";
+      } else u.textContent = "—";
+    }
+
+    function renderTable() {
+      var list = filteredSignals();
+      var tbody = document.getElementById("tbody");
+      document.getElementById("count").textContent =
+        state.status === "live" ? list.length + " sinyal" : "";
+
+      if (state.status === "loading") {
+        tbody.innerHTML = '<tr><td colspan="4" class="empty">Memuat sinyal…</td></tr>';
+        return;
+      }
+      if (state.status === "error") {
+        tbody.innerHTML = '<tr><td colspan="4" class="empty err">' +
+          'Gagal memuat data. Pastikan signals.json ada di repo dan halaman dibuka lewat GitHub Pages.</td></tr>';
+        return;
+      }
+      if (list.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="4" class="empty">Tidak ada sinyal ' +
+          (state.tab !== "Semua" ? esc(state.tab) + " " : "") + 'di sesi ini.</td></tr>';
+        return;
+      }
+
+      var activeKey = getActiveKey(list);
+      var html = "";
+      list.forEach(function (s) {
+        var key = s.ticker + "-" + s.strategy;
+        var c = combined(s);
+        html += '<tr data-key="' + esc(key) + '" class="' + (key === activeKey ? "active" : "") + '">' +
+          '<td><div class="ticker">' + esc(s.ticker) + '</div>' +
+          '<div class="sub">' + esc(s.name) + '</div></td>' +
+          '<td>' + badge(s.strategy) +
+          '<div class="setup-sub">' + esc(s.setup) + '</div></td>' +
+          '<td class="right mono">' + fmt(s.price) + '</td>' +
+          '<td class="right"><span class="mono" style="font-weight:600;color:' + scoreColor(c) + '">' + c + '</span></td>' +
+          '</tr>';
+      });
+      tbody.innerHTML = html;
+    }
+
+    function getActiveKey(list) {
+      if (state.selected) {
+        for (var i = 0; i < list.length; i++) {
+          if (list[i].ticker + "-" + list[i].strategy === state.selected) return state.selected;
+        }
+      }
+      return list.length ? list[0].ticker + "-" + list[0].strategy : null;
+    }
+
+    function barRow(label, value) {
+      return '<div class="bar-row">' +
+        '<span class="bar-label">' + label + '</span>' +
+        '<div class="bar-track"><div class="bar-fill" style="width:' + value + '%;background:' + scoreColor(value) + '"></div></div>' +
+        '<span class="bar-val" style="color:' + scoreColor(value) + '">' + value + '</span></div>';
+    }
+
+    function riskMap(s) {
+      var min = s.sl, max = s.tp2, range = (max - min) || 1;
+      function pos(v) { return ((v - min) / range) * 100; }
+      var rr = ((s.tp1 - s.entry) / Math.max(s.entry - s.sl, 1)).toFixed(2);
+      var markers = [
+        { v: s.sl, k: "SL", c: "#E2574C" },
+        { v: s.entry, k: "Entry", c: "#C9A227" },
+        { v: s.tp1, k: "TP1", c: "#3FB68C" },
+        { v: s.tp2, k: "TP2", c: "#3FB68C" }
       ];
-      return (
-        <div className="mt-4">
-          <div className="mb-1.5 flex items-center justify-between">
-            <span className="text-[10px] uppercase tracking-widest text-[#8A97A8]">Peta Risiko</span>
-            <span className="font-mono text-[11px] text-[#8A97A8]">R:R ke TP1&nbsp;<span className="text-[#EDEDE5]">{rr}</span></span>
-          </div>
-          <div className="relative h-8 rounded-md bg-[#0B1420]">
-            <div className="absolute top-0 h-full rounded-l-md" style={{ left: 0, width: pos(entry) + "%", backgroundColor: "rgba(226,87,76,0.2)" }} />
-            <div className="absolute top-0 h-full" style={{ left: pos(entry) + "%", width: (100 - pos(entry)) + "%", backgroundColor: "rgba(63,182,140,0.15)" }} />
-            {markers.map((m, i) => (
-              <div key={i} className="absolute top-0 h-full w-px" style={{ left: pos(m.v) + "%", backgroundColor: m.color, opacity: 0.9 }} />
-            ))}
-          </div>
-          <div className="relative mt-1 h-8">
-            {markers.map((m) => (
-              <div key={m.label} className="absolute top-0 flex -translate-x-1/2 flex-col items-center" style={{ left: pos(m.v) + "%" }}>
-                <span className="text-[9px] uppercase tracking-wider text-[#8A97A8]">{m.label}</span>
-                <span className="font-mono text-[11px] text-[#EDEDE5]">{fmt(m.v)}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      );
+      var html = '<div class="riskmap">' +
+        '<div class="riskmap-head"><span class="riskmap-title">Peta Risiko</span>' +
+        '<span class="riskmap-rr">R:R ke TP1&nbsp; <b>' + rr + '</b></span></div>' +
+        '<div class="riskmap-track">' +
+        '<div class="zone" style="left:0;width:' + pos(s.entry) + '%;background:rgba(226,87,76,0.2);border-radius:6px 0 0 6px"></div>' +
+        '<div class="zone" style="left:' + pos(s.entry) + '%;width:' + (100 - pos(s.entry)) + '%;background:rgba(63,182,140,0.15)"></div>';
+      markers.forEach(function (m) {
+        html += '<div class="marker-line" style="left:' + pos(m.v) + '%;background:' + m.c + '"></div>';
+      });
+      html += '</div><div class="riskmap-labels">';
+      markers.forEach(function (m) {
+        html += '<div class="marker-label" style="left:' + pos(m.v) + '%">' +
+          '<span class="k">' + m.k + '</span><span class="v">' + fmt(m.v) + '</span></div>';
+      });
+      html += '</div></div>';
+      return html;
     }
 
-    function StrategyBadge({ strategy }) {
-      const meta = STRATEGY_META[strategy] || STRATEGY_META.Semua;
-      return (
-        <span
-          className="rounded-full px-2 py-0.5 font-mono text-[10px] font-semibold"
-          style={{ color: meta.color, border: "1px solid " + meta.color + "55", backgroundColor: meta.color + "14" }}
-        >
-          {strategy}
-        </span>
-      );
+    function renderPanel() {
+      var panel = document.getElementById("panel");
+      if (state.status !== "live") {
+        panel.innerHTML = '<p class="sub">' +
+          (state.status === "loading" ? "Memuat…" : "Data tidak tersedia.") + '</p>';
+        return;
+      }
+      var list = filteredSignals();
+      var key = getActiveKey(list);
+      var s = null;
+      for (var i = 0; i < list.length; i++) {
+        if (list[i].ticker + "-" + list[i].strategy === key) { s = list[i]; break; }
+      }
+      if (!s) {
+        panel.innerHTML = '<p class="sub">Pilih emiten di tabel untuk melihat detail.</p>';
+        return;
+      }
+      panel.innerHTML =
+        '<div class="panel-head"><div>' +
+        '<h2>' + esc(s.ticker) + '</h2>' +
+        '<p class="sub">' + esc(s.name) + ' · ' + esc(s.sector) + '</p></div>' +
+        '<div class="panel-right">' + badge(s.strategy) +
+        '<span class="setup-label">' + esc(s.setup) + '</span></div></div>' +
+        '<div class="bars">' + barRow("Teknikal", s.technicalScore) + barRow("Fundamental", s.fundamentalScore) + '</div>' +
+        riskMap(s) +
+        '<div class="notes"><p class="notes-title">Catatan</p>' +
+        '<p class="notes-body">' + esc(s.notes) + '</p></div>';
     }
 
-    function Dashboard() {
-      const [data, setData] = useState(null);
-      const [status, setStatus] = useState("loading"); // loading | live | error
-      const [query, setQuery] = useState("");
-      const [strategyTab, setStrategyTab] = useState("Semua");
-      const [selected, setSelected] = useState(null);
+    function renderAll() {
+      renderHeader(); renderTabs(); renderTable(); renderPanel();
+    }
 
-      useEffect(() => {
-        let cancelled = false;
-        (async () => {
-          for (const url of DATA_SOURCES) {
-            try {
-              const res = await fetch(url + "?t=" + Date.now());
-              if (!res.ok) continue;
-              const json = await res.json();
-              if (!cancelled && Array.isArray(json.signals)) {
-                setData(json);
-                setStatus("live");
-                return;
-              }
-            } catch (e) { /* coba sumber berikutnya */ }
-          }
-          if (!cancelled) setStatus("error");
-        })();
-        return () => { cancelled = true; };
-      }, []);
+    // --- Events (delegated) ---
+    document.getElementById("tabs").addEventListener("click", function (e) {
+      var btn = e.target.closest("[data-tab]");
+      if (!btn) return;
+      state.tab = btn.getAttribute("data-tab");
+      state.selected = null;
+      renderAll();
+    });
+    document.getElementById("tbody").addEventListener("click", function (e) {
+      var row = e.target.closest("[data-key]");
+      if (!row) return;
+      state.selected = row.getAttribute("data-key");
+      renderTable(); renderPanel();
+    });
+    document.getElementById("search").addEventListener("input", function (e) {
+      state.query = e.target.value;
+      renderTable(); renderPanel();
+    });
 
-      const signals = (data && data.signals) || [];
-
-      const filtered = useMemo(() => {
-        return signals
-          .filter((s) => {
-            const q = query.toLowerCase();
-            const matchQuery = s.ticker.toLowerCase().includes(q) || (s.name || "").toLowerCase().includes(q);
-            const matchStrategy = strategyTab === "Semua" || s.strategy === strategyTab;
-            return matchQuery && matchStrategy;
+    // --- Load data ---
+    (function load() {
+      var i = 0;
+      function tryNext() {
+        if (i >= DATA_SOURCES.length) {
+          state.status = "error"; renderAll(); return;
+        }
+        var url = DATA_SOURCES[i++] + "?t=" + Date.now();
+        fetch(url)
+          .then(function (res) {
+            if (!res.ok) throw new Error("HTTP " + res.status);
+            return res.json();
           })
-          .sort((a, b) => (b.technicalScore + b.fundamentalScore) / 2 - (a.technicalScore + a.fundamentalScore) / 2);
-      }, [signals, query, strategyTab]);
+          .then(function (json) {
+            if (json && Object.prototype.toString.call(json.signals) === "[object Array]") {
+              state.data = json; state.status = "live"; renderAll();
+            } else throw new Error("format tidak dikenal");
+          })
+          .catch(tryNext);
+      }
+      tryNext();
+    })();
 
-      const active = filtered.find((s) => s.ticker + "-" + s.strategy === selected) || filtered[0];
-
-      const generatedLabel = data && data.generatedAt
-        ? new Intl.DateTimeFormat("id-ID", {
-            weekday: "long", day: "numeric", month: "long",
-            hour: "2-digit", minute: "2-digit", timeZone: "Asia/Jakarta",
-          }).format(new Date(data.generatedAt)) + " WIB"
-        : "—";
-
-      return (
-        <div className="min-h-screen w-full text-[#EDEDE5]">
-          <header className="border-b border-[#1B2C40] bg-[#0E1826]">
-            <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-4 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <p className="text-[10px] uppercase tracking-[0.25em] text-[#C9A227]">Bursa Efek Indonesia · Screening 3 Sesi</p>
-                <h1 className="mt-1 text-2xl font-semibold tracking-tight">Papan Sinyal</h1>
-              </div>
-              <div className="sm:text-right">
-                <p className="font-mono text-xs text-[#8A97A8]">{(data && SESSION_LABEL[data.session]) || "…"}</p>
-                <p className="mt-0.5 font-mono text-[11px] text-[#5E6B7C]">
-                  {status === "loading" && "Memuat data…"}
-                  {status === "live" && "Update terakhir: " + generatedLabel}
-                  {status === "error" && "⚠ Gagal memuat signals.json — cek koneksi / repo"}
-                </p>
-              </div>
-            </div>
-          </header>
-
-          <main className="mx-auto max-w-6xl px-5 py-6">
-            <div className="mb-4 flex flex-wrap gap-2">
-              {Object.keys(STRATEGY_META).map((s) => {
-                const isActive = strategyTab === s;
-                const meta = STRATEGY_META[s];
-                return (
-                  <button
-                    key={s}
-                    onClick={() => setStrategyTab(s)}
-                    className="rounded-md border px-3 py-1.5 text-xs font-medium"
-                    style={{
-                      borderColor: isActive ? meta.color : "#1B2C40",
-                      backgroundColor: isActive ? meta.color + "14" : "#0E1826",
-                      color: isActive ? meta.color : "#8A97A8",
-                    }}
-                  >
-                    {s}
-                  </button>
-                );
-              })}
-              <p className="ml-1 self-center text-[11px] text-[#5E6B7C]">{STRATEGY_META[strategyTab].desc}</p>
-            </div>
-
-            <div className="mb-5 flex flex-wrap items-center gap-3">
-              <input
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Cari ticker atau nama emiten…"
-                className="w-56 rounded-md border border-[#1B2C40] bg-[#0E1826] px-3 py-2 text-sm placeholder-[#5E6B7C] focus:border-[#C9A227] focus:outline-none"
-              />
-              <span className="ml-auto font-mono text-[11px] text-[#8A97A8]">{filtered.length} sinyal</span>
-            </div>
-
-            <div className="grid grid-cols-1 gap-5 lg:grid-cols-5">
-              <div className="overflow-x-auto rounded-lg border border-[#1B2C40] lg:col-span-3">
-                <table className="w-full text-left text-sm">
-                  <thead>
-                    <tr className="border-b border-[#1B2C40] bg-[#0E1826] text-[10px] uppercase tracking-widest text-[#8A97A8]">
-                      <th className="px-4 py-3 font-medium">Emiten</th>
-                      <th className="px-4 py-3 font-medium">Strategi</th>
-                      <th className="px-4 py-3 text-right font-medium">Harga</th>
-                      <th className="px-4 py-3 text-right font-medium">Skor</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {filtered.map((s) => {
-                      const key = s.ticker + "-" + s.strategy;
-                      const combined = Math.round((s.technicalScore + s.fundamentalScore) / 2);
-                      const isActive = active && active.ticker + "-" + active.strategy === key;
-                      return (
-                        <tr
-                          key={key}
-                          onClick={() => setSelected(key)}
-                          className={"cursor-pointer border-b border-[#1B2C40] last:border-0 " + (isActive ? "bg-[#152238]" : "hover:bg-[#111E30]")}
-                        >
-                          <td className="px-4 py-3">
-                            <div className="font-mono font-semibold">{s.ticker}</div>
-                            <div className="text-xs text-[#8A97A8]">{s.name}</div>
-                          </td>
-                          <td className="px-4 py-3">
-                            <StrategyBadge strategy={s.strategy} />
-                            <div className="mt-1 text-[11px] text-[#8A97A8]">{s.setup}</div>
-                          </td>
-                          <td className="px-4 py-3 text-right font-mono">{fmt(s.price)}</td>
-                          <td className="px-4 py-3 text-right">
-                            <span className="font-mono font-semibold" style={{ color: scoreColor(combined) }}>{combined}</span>
-                          </td>
-                        </tr>
-                      );
-                    })}
-                    {status === "live" && filtered.length === 0 && (
-                      <tr><td colSpan="4" className="px-4 py-10 text-center text-sm text-[#5E6B7C]">
-                        Tidak ada sinyal {strategyTab !== "Semua" ? strategyTab : ""} di sesi ini.
-                      </td></tr>
-                    )}
-                    {status === "loading" && (
-                      <tr><td colSpan="4" className="px-4 py-10 text-center text-sm text-[#5E6B7C]">Memuat sinyal…</td></tr>
-                    )}
-                    {status === "error" && (
-                      <tr><td colSpan="4" className="px-4 py-10 text-center text-sm text-[#E2574C]">
-                        Gagal memuat data. Pastikan signals.json ada di repo dan halaman ini dibuka lewat GitHub Pages.
-                      </td></tr>
-                    )}
-                  </tbody>
-                </table>
-              </div>
-
-              <div className="rounded-lg border border-[#1B2C40] bg-[#0E1826] p-5 lg:col-span-2">
-                {active ? (
-                  <React.Fragment>
-                    <div className="flex items-start justify-between">
-                      <div>
-                        <h2 className="font-mono text-xl font-semibold">{active.ticker}</h2>
-                        <p className="text-xs text-[#8A97A8]">{active.name} · {active.sector}</p>
-                      </div>
-                      <div className="flex flex-col items-end gap-1.5">
-                        <StrategyBadge strategy={active.strategy} />
-                        <span className="text-[10px] uppercase tracking-wider text-[#8A97A8]">{active.setup}</span>
-                      </div>
-                    </div>
-                    <div className="mt-5 space-y-2.5">
-                      <ConvictionBar value={active.technicalScore} label="Teknikal" />
-                      <ConvictionBar value={active.fundamentalScore} label="Fundamental" />
-                    </div>
-                    <RiskMap sl={active.sl} entry={active.entry} tp1={active.tp1} tp2={active.tp2} />
-                    <div className="mt-5 border-t border-[#1B2C40] pt-4">
-                      <p className="text-[10px] uppercase tracking-widest text-[#8A97A8]">Catatan</p>
-                      <p className="mt-1.5 text-sm leading-relaxed text-[#C7CEDA]">{active.notes}</p>
-                    </div>
-                  </React.Fragment>
-                ) : (
-                  status === "live" && <p className="text-sm text-[#5E6B7C]">Pilih emiten di tabel untuk melihat detail.</p>
-                )}
-              </div>
-            </div>
-
-            <p className="mt-6 text-center text-[11px] text-[#5E6B7C]">
-              Sinyal dihasilkan otomatis dari screening — bukan rekomendasi investasi. Keputusan transaksi tetap di tanganmu.
-            </p>
-          </main>
-        </div>
-      );
-    }
-
-    ReactDOM.createRoot(document.getElementById("root")).render(<Dashboard />);
+    renderAll();
   </script>
 </body>
 </html>
