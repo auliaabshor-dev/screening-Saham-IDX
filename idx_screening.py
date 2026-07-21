@@ -1,19 +1,29 @@
 """
-Screening harian saham IDX — 3 sesi (pagi/siang/sore) dengan 3 strategi:
+Screening harian saham IDX — VERSI FINAL hasil kalibrasi backtest 2 tahun.
 
-  - SWING : posisi beberapa hari, teknikal + fundamental (logika lama)
-  - BPJS  : Beli Pagi Jual Sore  -> dicari saat sesi PAGI
-  - BSJP  : Beli Sore Jual Pagi  -> dicari saat sesi SORE
+Setiap sinyal punya status:
+  "aktif"  : lolos backtest, layak dipertimbangkan sebagai sinyal trade
+  "pantau" : TIDAK lolos backtest — ditampilkan hanya untuk observasi
 
-Sesi ditentukan otomatis dari jam WIB saat script dijalankan:
-  pagi  : sebelum 12:00 WIB  -> Swing + BPJS
-  siang : 12:00 - 15:00 WIB  -> Swing (update posisi)
-  sore  : setelah 15:00 WIB  -> Swing + BSJP
+Hasil riset (backtest 2 tahun, 20 emiten, model konservatif sadar-gap):
+  AKTIF:
+  - Swing BREAKOUT  : PF 1.69, +1.73%/trade (target utama TP2 = 3R)
+  - BSJP            : PF 3.09, +0.37%/trade (ambang optimal cp>=0.6, vol>=1.2)
+                      * butuh broker fee rendah (<0.30% round trip)
+  PANTAU (gagal backtest, jangan ditrade):
+  - Demand Zone Bounce : PF 0.79  (v2 dengan konfirmasi: PF 0.54)
+  - BOS Konfirmasi     : PF 0.74-0.77
+  - BPJS               : PF 0.59  (v2 ORB intraday: avg di bawah fee)
+  - Konsolidasi        : bukan sinyal, sekadar pemantauan
+
+Sesi (otomatis dari jam WIB):
+  pagi  (<12:00)      : Swing + BPJS(pantau)
+  siang (12:00-15:00) : Swing
+  sore  (>15:00)      : Swing + BSJP
 
 Cara pakai:
-    pip install yfinance pandas numpy
-    python idx_screening.py            # sesi otomatis dari jam WIB
-    python idx_screening.py --sesi sore   # paksa sesi tertentu (untuk tes)
+    python idx_screening.py            # sesi otomatis
+    python idx_screening.py --sesi sore
 
 Output: signals.json (dibaca dashboard)
 """
@@ -39,6 +49,10 @@ WATCHLIST = [
 LOOKBACK_DAYS = 150
 SWING_WINDOW = 5
 VOLUME_AVG_WINDOW = 20
+
+# Ambang BSJP — hasil sweep backtest (PF 3.09 di kombinasi ini)
+BSJP_CLOSE_POS_MIN = 0.6
+BSJP_VOL_RATIO_MIN = 1.2
 
 WIB = timezone(timedelta(hours=7))
 
@@ -77,7 +91,6 @@ def find_swings(df: pd.DataFrame, window: int = SWING_WINDOW):
 
 
 def base_metrics(df: pd.DataFrame) -> dict:
-    """Metrik dasar yang dipakai semua strategi."""
     close, volume = df["Close"], df["Volume"]
     last = df.iloc[-1]
     prev = df.iloc[-2]
@@ -103,12 +116,14 @@ def base_metrics(df: pd.DataFrame) -> dict:
         "ma20": float(ma20),
         "ma50": float(ma50),
         "vol_ratio": vol_ratio,
-        "close_position": float(close_position),  # 0 = tutup di low, 1 = di high
+        "close_position": float(close_position),
     }
 
 
 # ---------------------------------------------------------------------------
-# 3. STRATEGI SWING (teknikal + fundamental, logika lama)
+# 3. STRATEGI SWING
+#    Hanya BREAKOUT yang berstatus "aktif" (lolos backtest: PF 1.69 di TP2).
+#    Setup lain tetap dihitung tapi berstatus "pantau".
 # ---------------------------------------------------------------------------
 
 def swing_strategy(df: pd.DataFrame, m: dict):
@@ -136,22 +151,23 @@ def swing_strategy(df: pd.DataFrame, m: dict):
     technical_score = int(min(100, trend_score + structure_score + volume_score))
 
     if broke_resistance and m["vol_ratio"] > 1.2:
-        setup, sl = "Breakout", last_swing_high * 0.985
+        setup, sl, status = "Breakout", last_swing_high * 0.985, "aktif"
     elif near_demand:
-        setup, sl = "Demand Zone Bounce", last_swing_low * 0.98
+        setup, sl, status = "Demand Zone Bounce", last_swing_low * 0.98, "pantau"
     elif price > m["ma20"] and m["ma20"] > m["ma50"]:
-        setup, sl = "BOS Konfirmasi", min(last_swing_low, m["ma50"]) * 0.99
+        setup, sl, status = "BOS Konfirmasi", min(last_swing_low, m["ma50"]) * 0.99, "pantau"
     else:
-        setup, sl = "Konsolidasi", price * 0.95
+        setup, sl, status = "Konsolidasi", price * 0.95, "pantau"
 
     entry = price
     if sl >= entry:
         # Geometri tidak valid (SL di atas entry) — turunkan jadi Konsolidasi
-        setup, sl = "Konsolidasi", price * 0.95
+        setup, sl, status = "Konsolidasi", price * 0.95, "pantau"
     risk = max(entry - sl, entry * 0.01)
     return {
         "strategy": "Swing",
         "setup": setup,
+        "status": status,
         "entry": round(entry),
         "sl": round(sl),
         "tp1": round(entry + 2 * risk),
@@ -161,27 +177,66 @@ def swing_strategy(df: pd.DataFrame, m: dict):
 
 
 # ---------------------------------------------------------------------------
-# 4. STRATEGI BPJS — Beli Pagi Jual Sore (dicari sesi PAGI)
+# 4. STRATEGI BSJP — Beli Sore Jual Pagi (sesi SORE) — AKTIF
+#    Ambang hasil sweep backtest: close_position >= 0.6, volume >= 1.2x.
+#    PF 3.09, +0.37%/trade. Perhatikan fee broker: butuh <0.30% round trip.
 # ---------------------------------------------------------------------------
-# Logika: cari saham yang PAGI ini menunjukkan momentum lanjutan dari kemarin,
-# untuk dijual sebelum penutupan hari yang sama.
-#   1. Gap up sehat: open hari ini 0.5% - 3% di atas close kemarin
-#      (gap terlalu besar >3% rawan profit taking / "gap and crap")
-#   2. ATAU harga pagi ini sudah menembus high kemarin (breakout intraday)
-#   3. Kemarin candle bullish (momentum ada yang mendasari)
-#   4. Masih dalam uptrend (harga > MA20)
-# TP/SL sempit karena horizon hanya 1 hari:
-#   SL  : di bawah open hari ini / -1.5%
-#   TP1 : +2%   TP2 : +3.5%
+
+def bsjp_strategy(m: dict):
+    price = m["price"]
+    strong_close = m["close_position"] >= BSJP_CLOSE_POS_MIN
+    green_day = price > m["open"]
+    up_vs_yesterday = price > m["prev_close"]
+
+    if not (strong_close and green_day):
+        return None
+
+    score = 0
+    score += 35 if strong_close else 0
+    score += 15 if green_day else 0
+    score += 10 if up_vs_yesterday else 0
+    if m["vol_ratio"] >= 1.5:
+        score += 25
+    elif m["vol_ratio"] >= BSJP_VOL_RATIO_MIN:
+        score += 15
+    if price > m["ma20"]:
+        score += 15
+
+    if m["vol_ratio"] >= BSJP_VOL_RATIO_MIN:
+        setup, status = "Strong Close + Volume", "aktif"
+    else:
+        # Tanpa volume: statistik backtest lebih lemah — pantau saja
+        setup, status = "Strong Close", "pantau"
+
+    entry = price
+    return {
+        "strategy": "BSJP",
+        "setup": setup,
+        "status": status,
+        "entry": round(entry),
+        "sl": round(entry * 0.98),
+        "tp1": round(entry * 1.015),
+        "tp2": round(entry * 1.03),
+        "technicalScore": int(min(100, score)),
+    }
+
+
+# ---------------------------------------------------------------------------
+# 5. STRATEGI BPJS — Beli Pagi Jual Sore (sesi pagi) — PANTAU SAJA
+#    Gagal backtest 2x (gap-follow PF 0.59; ORB intraday avg < fee).
+#    Tetap dihitung untuk observasi, JANGAN ditrade.
+# ---------------------------------------------------------------------------
 
 def bpjs_strategy(m: dict):
     price, prev_close = m["price"], m["prev_close"]
     gap_pct = (m["open"] - prev_close) / prev_close * 100
 
-    score = 0
     healthy_gap = 0.5 <= gap_pct <= 3.0
     broke_prev_high = price > m["prev_high"]
+    if not (healthy_gap or broke_prev_high):
+        return None
 
+    score = 0
     if healthy_gap:
         score += 35
     if broke_prev_high:
@@ -192,10 +247,6 @@ def bpjs_strategy(m: dict):
         score += 10
     if m["vol_ratio"] > 1.0:
         score += 10
-
-    # Minimal harus ada gap sehat ATAU breakout high kemarin
-    if not (healthy_gap or broke_prev_high):
-        return None
 
     if healthy_gap and broke_prev_high:
         setup = "Gap Up + Breakout"
@@ -209,6 +260,7 @@ def bpjs_strategy(m: dict):
     return {
         "strategy": "BPJS",
         "setup": setup,
+        "status": "pantau",
         "entry": round(entry),
         "sl": round(sl),
         "tp1": round(entry * 1.02),
@@ -218,58 +270,7 @@ def bpjs_strategy(m: dict):
 
 
 # ---------------------------------------------------------------------------
-# 5. STRATEGI BSJP — Beli Sore Jual Pagi (dicari sesi SORE)
-# ---------------------------------------------------------------------------
-# Logika: cari saham yang hari ini ditutup KUAT — historisnya, closing kuat
-# dengan volume cenderung berlanjut ke gap up / kenaikan di pembukaan besok.
-#   1. Strong close: tutup di 30% teratas rentang hari ini (close_position >= 0.7)
-#   2. Candle hari ini hijau (close > open) dan naik vs kemarin
-#   3. Volume >= 1.2x rata-rata 20 hari (ada akumulasi, bukan naik kosong)
-#   4. Masih uptrend (harga > MA20)
-# TP/SL sangat sempit karena target hanya pembukaan besok pagi:
-#   SL  : -2% dari entry
-#   TP1 : +1.5%  TP2 : +3%
-
-def bsjp_strategy(m: dict):
-    price = m["price"]
-    strong_close = m["close_position"] >= 0.7
-    green_day = price > m["open"]
-    up_vs_yesterday = price > m["prev_close"]
-
-    if not (strong_close and green_day):
-        return None
-
-    score = 0
-    score += 35 if strong_close else 0
-    score += 15 if green_day else 0
-    score += 10 if up_vs_yesterday else 0
-    if m["vol_ratio"] >= 1.5:
-        score += 25
-    elif m["vol_ratio"] >= 1.2:
-        score += 15
-    if price > m["ma20"]:
-        score += 15
-
-    setup = (
-        "Strong Close + Volume"
-        if m["vol_ratio"] >= 1.2
-        else "Strong Close"
-    )
-
-    entry = price
-    return {
-        "strategy": "BSJP",
-        "setup": setup,
-        "entry": round(entry),
-        "sl": round(entry * 0.98),
-        "tp1": round(entry * 1.015),
-        "tp2": round(entry * 1.03),
-        "technicalScore": int(min(100, score)),
-    }
-
-
-# ---------------------------------------------------------------------------
-# 6. FUNDAMENTAL (dipakai strategi Swing)
+# 6. FUNDAMENTAL (pelengkap skor untuk Swing)
 # ---------------------------------------------------------------------------
 
 def fundamental_analysis(ticker: str):
@@ -302,23 +303,40 @@ def build_notes(sig: dict, fund: dict, m: dict) -> str:
     parts = []
     if sig["strategy"] == "BPJS":
         parts.append(
-            f"{sig['setup']} — momentum pagi lanjutan dari kemarin. "
-            "Target jual sebelum penutupan hari ini."
+            f"{sig['setup']} — PANTAU SAJA: strategi ini gagal backtest "
+            "(PF 0.59; versi ORB pun tidak melampaui fee). Untuk observasi."
         )
     elif sig["strategy"] == "BSJP":
-        parts.append(
-            f"{sig['setup']} — tutup di area atas rentang harian "
-            f"(posisi close {m['close_position']*100:.0f}%). "
-            "Target jual di pembukaan besok pagi."
-        )
-    else:
-        setup_notes = {
-            "Breakout": "Breakout dengan volume di atas rata-rata 20 hari.",
-            "Demand Zone Bounce": "Harga memantul dari demand zone terdekat.",
-            "BOS Konfirmasi": "Struktur bullish (harga di atas MA20 & MA50).",
-            "Konsolidasi": "Belum ada konfirmasi arah yang kuat.",
-        }
-        parts.append(setup_notes.get(sig["setup"], ""))
+        if sig["status"] == "aktif":
+            parts.append(
+                f"{sig['setup']} — tutup di area atas rentang harian "
+                f"(posisi close {m['close_position']*100:.0f}%) dengan volume. "
+                "Target jual di pembukaan besok pagi. "
+                "Backtest: PF 3.09, +0.37%/trade (sebelum fee)."
+            )
+        else:
+            parts.append(
+                f"{sig['setup']} — strong close TANPA volume di atas rata-rata. "
+                "Statistik lebih lemah, pantau saja."
+            )
+    else:  # Swing
+        if sig["setup"] == "Breakout":
+            parts.append(
+                "Breakout swing high dengan volume. Backtest: PF 1.69, "
+                "+1.73%/trade — TARGET UTAMA TP2 (3R), bukan TP1."
+            )
+        elif sig["setup"] == "Demand Zone Bounce":
+            parts.append(
+                "PANTAU SAJA: setup ini gagal backtest (PF 0.79; "
+                "versi dengan konfirmasi pun PF 0.54). Untuk observasi."
+            )
+        elif sig["setup"] == "BOS Konfirmasi":
+            parts.append(
+                "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, "
+                "rata-rata hold 16 hari untuk hasil negatif)."
+            )
+        else:
+            parts.append("Belum ada konfirmasi arah — pemantauan kondisi.")
         if fund.get("per") is not None:
             parts.append(f"PER {fund['per']:.1f}x.")
         if fund.get("roe") is not None:
@@ -344,7 +362,6 @@ def run_screening(session: str):
             m = base_metrics(df)
             fund = fundamental_analysis(ticker)
 
-            # Strategi yang dijalankan tergantung sesi
             candidates = [swing_strategy(df, m)]
             if session == "pagi":
                 candidates.append(bpjs_strategy(m))
@@ -367,6 +384,7 @@ def run_screening(session: str):
                     "fundamentalScore": fund["fundamentalScore"],
                     "strategy": sig["strategy"],
                     "setup": sig["setup"],
+                    "status": sig["status"],
                     "notes": build_notes(sig, fund, m),
                 })
 
@@ -375,9 +393,12 @@ def run_screening(session: str):
         except Exception as e:
             print(f"[error] {ticker}: {e}")
 
+    # Sinyal aktif di atas, lalu urut skor gabungan
     results.sort(
-        key=lambda s: (s["technicalScore"] + s["fundamentalScore"]) / 2,
-        reverse=True,
+        key=lambda s: (
+            0 if s["status"] == "aktif" else 1,
+            -(s["technicalScore"] + s["fundamentalScore"]) / 2,
+        )
     )
 
     output = {
@@ -388,7 +409,9 @@ def run_screening(session: str):
     with open("signals.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    print(f"\nSelesai. {len(results)} sinyal disimpan ke signals.json")
+    n_aktif = sum(1 for r in results if r["status"] == "aktif")
+    print(f"\nSelesai. {len(results)} sinyal ({n_aktif} aktif, "
+          f"{len(results) - n_aktif} pantau) disimpan ke signals.json")
 
 
 if __name__ == "__main__":
