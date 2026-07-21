@@ -85,6 +85,23 @@
       display: inline-block; border-radius: 999px; padding: 2px 8px;
       font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600;
     }
+    .chip-pantau {
+      display: inline-block; margin-left: 6px; border-radius: 4px;
+      padding: 1px 6px; font-size: 9px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--dim); border: 1px dashed var(--dim);
+    }
+    tr.pantau td { opacity: 0.55; }
+    .toggle {
+      border: 1px solid var(--line); background: var(--panel); color: var(--muted);
+      border-radius: 6px; padding: 8px 12px; font-size: 12px; cursor: pointer;
+      font-family: inherit;
+    }
+    .toggle.on { border-color: var(--gold); color: var(--gold); }
+    .warn-box {
+      margin-top: 16px; border: 1px dashed var(--dim); border-radius: 6px;
+      padding: 10px 12px; font-size: 12px; line-height: 1.5; color: var(--muted);
+    }
 
     .panel {
       border: 1px solid var(--line); background: var(--panel);
@@ -152,6 +169,7 @@
     <div class="tabs" id="tabs"></div>
     <div class="controls">
       <input class="search" id="search" placeholder="Cari ticker atau nama emiten…" />
+      <button class="toggle on" id="toggle-pantau">Pantau: tampil</button>
       <span class="count mono" id="count"></span>
     </div>
     <div class="grid">
@@ -193,9 +211,9 @@
 
     var STRATEGY_META = {
       "Semua": { color: "#8A97A8", desc: "Semua sinyal dari sesi terakhir" },
-      "Swing": { color: "#C9A227", desc: "Posisi beberapa hari — teknikal + fundamental" },
-      "BPJS":  { color: "#4E9AD4", desc: "Beli Pagi Jual Sore — momentum intraday, keluar sebelum closing" },
-      "BSJP":  { color: "#B07CD8", desc: "Beli Sore Jual Pagi — strong close, target gap up pembukaan besok" }
+      "Swing": { color: "#C9A227", desc: "Breakout = aktif (PF 1.69, target TP2). Setup lain: pantau" },
+      "BPJS":  { color: "#4E9AD4", desc: "Pantau saja — gagal backtest (PF 0.59)" },
+      "BSJP":  { color: "#B07CD8", desc: "Strong close + volume = aktif (PF 3.09). Jual di open besok" }
     };
 
     var SESSION_LABEL = {
@@ -209,7 +227,8 @@
       status: "loading",   // loading | live | error
       query: "",
       tab: "Semua",
-      selected: null
+      selected: null,
+      showPantau: true
     };
 
     function esc(s) {
@@ -222,6 +241,8 @@
 
     function combined(s) { return Math.round((s.technicalScore + s.fundamentalScore) / 2); }
 
+    function sigStatus(s) { return s.status === "pantau" ? "pantau" : "aktif"; }
+
     function filteredSignals() {
       var q = state.query.toLowerCase();
       var list = (state.data && state.data.signals) ? state.data.signals.slice() : [];
@@ -229,9 +250,14 @@
         var mq = s.ticker.toLowerCase().indexOf(q) !== -1 ||
                  String(s.name || "").toLowerCase().indexOf(q) !== -1;
         var mt = state.tab === "Semua" || s.strategy === state.tab;
-        return mq && mt;
+        var mp = state.showPantau || sigStatus(s) === "aktif";
+        return mq && mt && mp;
       });
-      list.sort(function (a, b) { return combined(b) - combined(a); });
+      list.sort(function (a, b) {
+        var st = (sigStatus(a) === "aktif" ? 0 : 1) - (sigStatus(b) === "aktif" ? 0 : 1);
+        if (st !== 0) return st;
+        return combined(b) - combined(a);
+      });
       return list;
     }
 
@@ -274,8 +300,11 @@
     function renderTable() {
       var list = filteredSignals();
       var tbody = document.getElementById("tbody");
+      var all = (state.data && state.data.signals) || [];
+      var nA = all.filter(function (s) { return sigStatus(s) === "aktif"; }).length;
+      var nP = all.length - nA;
       document.getElementById("count").textContent =
-        state.status === "live" ? list.length + " sinyal" : "";
+        state.status === "live" ? nA + " aktif · " + nP + " pantau" : "";
 
       if (state.status === "loading") {
         tbody.innerHTML = '<tr><td colspan="4" class="empty">Memuat sinyal…</td></tr>';
@@ -297,10 +326,13 @@
       list.forEach(function (s) {
         var key = s.ticker + "-" + s.strategy;
         var c = combined(s);
-        html += '<tr data-key="' + esc(key) + '" class="' + (key === activeKey ? "active" : "") + '">' +
+        var pantau = sigStatus(s) === "pantau";
+        html += '<tr data-key="' + esc(key) + '" class="' +
+          (key === activeKey ? "active " : "") + (pantau ? "pantau" : "") + '">' +
           '<td><div class="ticker">' + esc(s.ticker) + '</div>' +
           '<div class="sub">' + esc(s.name) + '</div></td>' +
           '<td>' + badge(s.strategy) +
+          (pantau ? '<span class="chip-pantau">Pantau</span>' : '') +
           '<div class="setup-sub">' + esc(s.setup) + '</div></td>' +
           '<td class="right mono">' + fmt(s.price) + '</td>' +
           '<td class="right"><span class="mono" style="font-weight:600;color:' + scoreColor(c) + '">' + c + '</span></td>' +
@@ -375,7 +407,12 @@
         '<h2>' + esc(s.ticker) + '</h2>' +
         '<p class="sub">' + esc(s.name) + ' · ' + esc(s.sector) + '</p></div>' +
         '<div class="panel-right">' + badge(s.strategy) +
+        (sigStatus(s) === "pantau" ? '<span class="chip-pantau">Pantau</span>' : '') +
         '<span class="setup-label">' + esc(s.setup) + '</span></div></div>' +
+        (sigStatus(s) === "pantau"
+          ? '<div class="warn-box">⚠ Setup ini <b>tidak lolos backtest</b> dan ' +
+            'ditampilkan hanya untuk observasi — bukan sinyal trade.</div>'
+          : '') +
         '<div class="bars">' + barRow("Teknikal", s.technicalScore) + barRow("Fundamental", s.fundamentalScore) + '</div>' +
         riskMap(s) +
         '<div class="notes"><p class="notes-title">Catatan</p>' +
@@ -402,6 +439,13 @@
     });
     document.getElementById("search").addEventListener("input", function (e) {
       state.query = e.target.value;
+      renderTable(); renderPanel();
+    });
+    document.getElementById("toggle-pantau").addEventListener("click", function () {
+      state.showPantau = !state.showPantau;
+      var btn = document.getElementById("toggle-pantau");
+      btn.textContent = "Pantau: " + (state.showPantau ? "tampil" : "sembunyi");
+      btn.className = "toggle" + (state.showPantau ? " on" : "");
       renderTable(); renderPanel();
     });
 
