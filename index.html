@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Papan Sinyal · Screening IDX</title>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body { background-color: #0B1420; font-family: 'IBM Plex Sans', sans-serif; }
+    .font-mono { font-family: 'IBM Plex Mono', monospace !important; }
+    ::selection { background: #C9A227; color: #0B1420; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel" data-presets="react">
+    const { useState, useMemo, useEffect } = React;
+
+    // -----------------------------------------------------------------------
+    // SUMBER DATA:
+    // 1. "./signals.json"  -> file di repo yang sama (GitHub Pages, tanpa CORS)
+    // 2. URL raw GitHub    -> cadangan kalau dibuka di luar Pages (mis. lokal)
+    // -----------------------------------------------------------------------
+    const DATA_SOURCES = [
+      "./signals.json",
+      "https://raw.githubusercontent.com/auliaabshor-dev/screening-Saham-IDX/main/signals.json",
+    ];
+
+    const STRATEGY_META = {
+      Semua: { color: "#8A97A8", desc: "Semua sinyal dari sesi terakhir" },
+      Swing: { color: "#C9A227", desc: "Posisi beberapa hari — teknikal + fundamental" },
+      BPJS:  { color: "#4E9AD4", desc: "Beli Pagi Jual Sore — momentum intraday, keluar sebelum closing" },
+      BSJP:  { color: "#B07CD8", desc: "Beli Sore Jual Pagi — strong close, target gap up pembukaan besok" },
+    };
+
+    const SESSION_LABEL = {
+      pagi:  "Sesi Pagi · 09:45 WIB",
+      siang: "Sesi Siang · 12:15 WIB",
+      sore:  "Sesi Sore · 16:30 WIB",
+    };
+
+    const scoreColor = (v) => (v >= 75 ? "#3FB68C" : v >= 55 ? "#C9A227" : "#E2574C");
+    const fmt = (n) => new Intl.NumberFormat("id-ID").format(n);
+
+    function ConvictionBar({ value, label }) {
+      return (
+        <div className="flex items-center gap-2">
+          <span className="w-20 shrink-0 text-[10px] uppercase tracking-widest text-[#8A97A8]">{label}</span>
+          <div className="h-1.5 flex-1 rounded-full bg-[#1B2C40]">
+            <div className="h-1.5 rounded-full" style={{ width: value + "%", backgroundColor: scoreColor(value) }} />
+          </div>
+          <span className="w-8 shrink-0 text-right font-mono text-xs" style={{ color: scoreColor(value) }}>{value}</span>
+        </div>
+      );
+    }
+
+    function RiskMap({ sl, entry, tp1, tp2 }) {
+      const min = sl, max = tp2;
+      const range = max - min || 1;
+      const pos = (v) => ((v - min) / range) * 100;
+      const rr = ((tp1 - entry) / Math.max(entry - sl, 1)).toFixed(2);
+      const markers = [
+        { v: sl, label: "SL", color: "#E2574C" },
+        { v: entry, label: "Entry", color: "#C9A227" },
+        { v: tp1, label: "TP1", color: "#3FB68C" },
+        { v: tp2, label: "TP2", color: "#3FB68C" },
+      ];
+      return (
+        <div className="mt-4">
+          <div className="mb-1.5 flex items-center justify-between">
+            <span className="text-[10px] uppercase tracking-widest text-[#8A97A8]">Peta Risiko</span>
+            <span className="font-mono text-[11px] text-[#8A97A8]">R:R ke TP1&nbsp;<span className="text-[#EDEDE5]">{rr}</span></span>
+          </div>
+          <div className="relative h-8 rounded-md bg-[#0B1420]">
+            <div className="absolute top-0 h-full rounded-l-md" style={{ left: 0, width: pos(entry) + "%", backgroundColor: "rgba(226,87,76,0.2)" }} />
+            <div className="absolute top-0 h-full" style={{ left: pos(entry) + "%", width: (100 - pos(entry)) + "%", backgroundColor: "rgba(63,182,140,0.15)" }} />
+            {markers.map((m, i) => (
+              <div key={i} className="absolute top-0 h-full w-px" style={{ left: pos(m.v) + "%", backgroundColor: m.color, opacity: 0.9 }} />
+            ))}
+          </div>
+          <div className="relative mt-1 h-8">
+            {markers.map((m) => (
+              <div key={m.label} className="absolute top-0 flex -translate-x-1/2 flex-col items-center" style={{ left: pos(m.v) + "%" }}>
+                <span className="text-[9px] uppercase tracking-wider text-[#8A97A8]">{m.label}</span>
+                <span className="font-mono text-[11px] text-[#EDEDE5]">{fmt(m.v)}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    function StrategyBadge({ strategy }) {
+      const meta = STRATEGY_META[strategy] || STRATEGY_META.Semua;
+      return (
+        <span
+          className="rounded-full px-2 py-0.5 font-mono text-[10px] font-semibold"
+          style={{ color: meta.color, border: "1px solid " + meta.color + "55", backgroundColor: meta.color + "14" }}
+        >
+          {strategy}
+        </span>
+      );
+    }
+
+    function Dashboard() {
+      const [data, setData] = useState(null);
+      const [status, setStatus] = useState("loading"); // loading | live | error
+      const [query, setQuery] = useState("");
+      const [strategyTab, setStrategyTab] = useState("Semua");
+      const [selected, setSelected] = useState(null);
+
+      useEffect(() => {
+        let cancelled = false;
+        (async () => {
+          for (const url of DATA_SOURCES) {
+            try {
+              const res = await fetch(url + "?t=" + Date.now());
+              if (!res.ok) continue;
+              const json = await res.json();
+              if (!cancelled && Array.isArray(json.signals)) {
+                setData(json);
+                setStatus("live");
+                return;
+              }
+            } catch (e) { /* coba sumber berikutnya */ }
+          }
+          if (!cancelled) setStatus("error");
+        })();
+        return () => { cancelled = true; };
+      }, []);
+
+      const signals = (data && data.signals) || [];
+
+      const filtered = useMemo(() => {
+        return signals
+          .filter((s) => {
+            const q = query.toLowerCase();
+            const matchQuery = s.ticker.toLowerCase().includes(q) || (s.name || "").toLowerCase().includes(q);
+            const matchStrategy = strategyTab === "Semua" || s.strategy === strategyTab;
+            return matchQuery && matchStrategy;
+          })
+          .sort((a, b) => (b.technicalScore + b.fundamentalScore) / 2 - (a.technicalScore + a.fundamentalScore) / 2);
+      }, [signals, query, strategyTab]);
+
+      const active = filtered.find((s) => s.ticker + "-" + s.strategy === selected) || filtered[0];
+
+      const generatedLabel = data && data.generatedAt
+        ? new Intl.DateTimeFormat("id-ID", {
+            weekday: "long", day: "numeric", month: "long",
+            hour: "2-digit", minute: "2-digit", timeZone: "Asia/Jakarta",
+          }).format(new Date(data.generatedAt)) + " WIB"
+        : "—";
+
+      return (
+        <div className="min-h-screen w-full text-[#EDEDE5]">
+          <header className="border-b border-[#1B2C40] bg-[#0E1826]">
+            <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-4 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="text-[10px] uppercase tracking-[0.25em] text-[#C9A227]">Bursa Efek Indonesia · Screening 3 Sesi</p>
+                <h1 className="mt-1 text-2xl font-semibold tracking-tight">Papan Sinyal</h1>
+              </div>
+              <div className="sm:text-right">
+                <p className="font-mono text-xs text-[#8A97A8]">{(data && SESSION_LABEL[data.session]) || "…"}</p>
+                <p className="mt-0.5 font-mono text-[11px] text-[#5E6B7C]">
+                  {status === "loading" && "Memuat data…"}
+                  {status === "live" && "Update terakhir: " + generatedLabel}
+                  {status === "error" && "⚠ Gagal memuat signals.json — cek koneksi / repo"}
+                </p>
+              </div>
+            </div>
+          </header>
+
+          <main className="mx-auto max-w-6xl px-5 py-6">
+            <div className="mb-4 flex flex-wrap gap-2">
+              {Object.keys(STRATEGY_META).map((s) => {
+                const isActive = strategyTab === s;
+                const meta = STRATEGY_META[s];
+                return (
+                  <button
+                    key={s}
+                    onClick={() => setStrategyTab(s)}
+                    className="rounded-md border px-3 py-1.5 text-xs font-medium"
+                    style={{
+                      borderColor: isActive ? meta.color : "#1B2C40",
+                      backgroundColor: isActive ? meta.color + "14" : "#0E1826",
+                      color: isActive ? meta.color : "#8A97A8",
+                    }}
+                  >
+                    {s}
+                  </button>
+                );
+              })}
+              <p className="ml-1 self-center text-[11px] text-[#5E6B7C]">{STRATEGY_META[strategyTab].desc}</p>
+            </div>
+
+            <div className="mb-5 flex flex-wrap items-center gap-3">
+              <input
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Cari ticker atau nama emiten…"
+                className="w-56 rounded-md border border-[#1B2C40] bg-[#0E1826] px-3 py-2 text-sm placeholder-[#5E6B7C] focus:border-[#C9A227] focus:outline-none"
+              />
+              <span className="ml-auto font-mono text-[11px] text-[#8A97A8]">{filtered.length} sinyal</span>
+            </div>
+
+            <div className="grid grid-cols-1 gap-5 lg:grid-cols-5">
+              <div className="overflow-x-auto rounded-lg border border-[#1B2C40] lg:col-span-3">
+                <table className="w-full text-left text-sm">
+                  <thead>
+                    <tr className="border-b border-[#1B2C40] bg-[#0E1826] text-[10px] uppercase tracking-widest text-[#8A97A8]">
+                      <th className="px-4 py-3 font-medium">Emiten</th>
+                      <th className="px-4 py-3 font-medium">Strategi</th>
+                      <th className="px-4 py-3 text-right font-medium">Harga</th>
+                      <th className="px-4 py-3 text-right font-medium">Skor</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {filtered.map((s) => {
+                      const key = s.ticker + "-" + s.strategy;
+                      const combined = Math.round((s.technicalScore + s.fundamentalScore) / 2);
+                      const isActive = active && active.ticker + "-" + active.strategy === key;
+                      return (
+                        <tr
+                          key={key}
+                          onClick={() => setSelected(key)}
+                          className={"cursor-pointer border-b border-[#1B2C40] last:border-0 " + (isActive ? "bg-[#152238]" : "hover:bg-[#111E30]")}
+                        >
+                          <td className="px-4 py-3">
+                            <div className="font-mono font-semibold">{s.ticker}</div>
+                            <div className="text-xs text-[#8A97A8]">{s.name}</div>
+                          </td>
+                          <td className="px-4 py-3">
+                            <StrategyBadge strategy={s.strategy} />
+                            <div className="mt-1 text-[11px] text-[#8A97A8]">{s.setup}</div>
+                          </td>
+                          <td className="px-4 py-3 text-right font-mono">{fmt(s.price)}</td>
+                          <td className="px-4 py-3 text-right">
+                            <span className="font-mono font-semibold" style={{ color: scoreColor(combined) }}>{combined}</span>
+                          </td>
+                        </tr>
+                      );
+                    })}
+                    {status === "live" && filtered.length === 0 && (
+                      <tr><td colSpan="4" className="px-4 py-10 text-center text-sm text-[#5E6B7C]">
+                        Tidak ada sinyal {strategyTab !== "Semua" ? strategyTab : ""} di sesi ini.
+                      </td></tr>
+                    )}
+                    {status === "loading" && (
+                      <tr><td colSpan="4" className="px-4 py-10 text-center text-sm text-[#5E6B7C]">Memuat sinyal…</td></tr>
+                    )}
+                    {status === "error" && (
+                      <tr><td colSpan="4" className="px-4 py-10 text-center text-sm text-[#E2574C]">
+                        Gagal memuat data. Pastikan signals.json ada di repo dan halaman ini dibuka lewat GitHub Pages.
+                      </td></tr>
+                    )}
+                  </tbody>
+                </table>
+              </div>
+
+              <div className="rounded-lg border border-[#1B2C40] bg-[#0E1826] p-5 lg:col-span-2">
+                {active ? (
+                  <React.Fragment>
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <h2 className="font-mono text-xl font-semibold">{active.ticker}</h2>
+                        <p className="text-xs text-[#8A97A8]">{active.name} · {active.sector}</p>
+                      </div>
+                      <div className="flex flex-col items-end gap-1.5">
+                        <StrategyBadge strategy={active.strategy} />
+                        <span className="text-[10px] uppercase tracking-wider text-[#8A97A8]">{active.setup}</span>
+                      </div>
+                    </div>
+                    <div className="mt-5 space-y-2.5">
+                      <ConvictionBar value={active.technicalScore} label="Teknikal" />
+                      <ConvictionBar value={active.fundamentalScore} label="Fundamental" />
+                    </div>
+                    <RiskMap sl={active.sl} entry={active.entry} tp1={active.tp1} tp2={active.tp2} />
+                    <div className="mt-5 border-t border-[#1B2C40] pt-4">
+                      <p className="text-[10px] uppercase tracking-widest text-[#8A97A8]">Catatan</p>
+                      <p className="mt-1.5 text-sm leading-relaxed text-[#C7CEDA]">{active.notes}</p>
+                    </div>
+                  </React.Fragment>
+                ) : (
+                  status === "live" && <p className="text-sm text-[#5E6B7C]">Pilih emiten di tabel untuk melihat detail.</p>
+                )}
+              </div>
+            </div>
+
+            <p className="mt-6 text-center text-[11px] text-[#5E6B7C]">
+              Sinyal dihasilkan otomatis dari screening — bukan rekomendasi investasi. Keputusan transaksi tetap di tanganmu.
+            </p>
+          </main>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<Dashboard />);
+  </script>
+</body>
+</html>
