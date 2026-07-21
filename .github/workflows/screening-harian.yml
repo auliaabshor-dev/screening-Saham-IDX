@@ -2,23 +2,24 @@ name: Screening Harian IDX
 
 on:
   schedule:
-    # 09:30 UTC = 16:30 WIB — setelah pasar IDX tutup (15:50 WIB).
-    # Hanya hari kerja (Senin–Jumat). Catatan: cron GitHub pakai UTC.
-    - cron: "30 9 * * 1-5"
-  workflow_dispatch: {}   # tombol "Run workflow" manual di tab Actions
+    # Jadwal dalam UTC (WIB = UTC+7). Hanya hari kerja (Senin-Jumat).
+    - cron: "45 2 * * 1-5"   # 09:45 WIB — sesi PAGI  (Swing + BPJS)
+    - cron: "15 5 * * 1-5"   # 12:15 WIB — sesi SIANG (Swing / update)
+    - cron: "30 9 * * 1-5"   # 16:30 WIB — sesi SORE  (Swing + BSJP)
+  workflow_dispatch: {}      # tombol "Run workflow" manual
 
 permissions:
-  contents: write   # izin untuk commit signals.json kembali ke repo
+  contents: write
 
 jobs:
   screening:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -26,13 +27,14 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Jalankan screening
+        # Sesi (pagi/siang/sore) terdeteksi otomatis dari jam WIB
         run: python idx_screening.py
 
       - name: Commit hasil signals.json
         run: |
           git config user.name "screening-bot"
           git config user.email "actions@github.com"
+          git pull --rebase
           git add signals.json
-          # Commit hanya jika ada perubahan
-          git diff --cached --quiet || git commit -m "Update sinyal $(date -u +'%Y-%m-%d')"
+          git diff --cached --quiet || git commit -m "Update sinyal $(TZ=Asia/Jakarta date +'%Y-%m-%d %H:%M WIB')"
           git push
