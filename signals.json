@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T12:06:05.975540+00:00",
+  "generatedAt": "2026-07-22T15:24:01.286494+00:00",
   "session": "sore",
   "signals": [
     {
@@ -51,6 +51,22 @@
       "notes": "Strong Close + Volume — tutup di area atas rentang harian (posisi close 80%) dengan volume. Target jual di pembukaan besok pagi. Backtest: PF 3.09, +0.37%/trade (sebelum fee)."
     },
     {
+      "ticker": "INDF",
+      "name": "PT Indofood Sukses Makmur Tbk",
+      "sector": "Consumer Defensive",
+      "price": 6900,
+      "entry": 6900,
+      "sl": 6762,
+      "tp1": 7003,
+      "tp2": 7107,
+      "technicalScore": 90,
+      "fundamentalScore": 85,
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "status": "aktif",
+      "notes": "Strong Close + Volume — tutup di area atas rentang harian (posisi close 60%) dengan volume. Target jual di pembukaan besok pagi. Backtest: PF 3.09, +0.37%/trade (sebelum fee)."
+    },
+    {
       "ticker": "ASII",
       "name": "PT Astra International Tbk",
       "sector": "Industrials",
@@ -65,6 +81,22 @@
       "setup": "Breakout",
       "status": "aktif",
       "notes": "Breakout swing high dengan volume. Backtest: PF 1.69, +1.73%/trade — TARGET UTAMA TP2 (3R), bukan TP1. PER 6.6x. ROE 13.2%."
+    },
+    {
+      "ticker": "INDF",
+      "name": "PT Indofood Sukses Makmur Tbk",
+      "sector": "Consumer Defensive",
+      "price": 6900,
+      "entry": 6900,
+      "sl": 6747,
+      "tp1": 7206,
+      "tp2": 7358,
+      "technicalScore": 77,
+      "fundamentalScore": 85,
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "status": "aktif",
+      "notes": "Breakout swing high dengan volume. Backtest: PF 1.69, +1.73%/trade — TARGET UTAMA TP2 (3R), bukan TP1. PER 5.5x. ROE 13.3%."
     },
     {
       "ticker": "ICBP",
@@ -337,6 +369,22 @@
       "setup": "Konsolidasi",
       "status": "pantau",
       "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 8.5x. ROE 10.1%."
+    },
+    {
+      "ticker": "MDKA",
+      "name": "PT Merdeka Copper Gold Tbk",
+      "sector": "Basic Materials",
+      "price": 2730,
+      "entry": 2730,
+      "sl": 2455,
+      "tp1": 3280,
+      "tp2": 3554,
+      "technicalScore": 62,
+      "fundamentalScore": 20,
+      "strategy": "Swing",
+      "setup": "BOS Konfirmasi",
+      "status": "pantau",
+      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 1436.8x. ROE 4.5%."
     },
     {
       "ticker": "EXCL",
