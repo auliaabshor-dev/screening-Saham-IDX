@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T09:10:43.249142+00:00",
+  "generatedAt": "2026-07-23T09:22:35.586454+00:00",
   "session": "sore",
   "signals": [
     {
@@ -43,7 +43,7 @@
       "sl": 2994,
       "tp1": 3251,
       "tp2": 3337,
-      "technicalScore": 81,
+      "technicalScore": 82,
       "fundamentalScore": 90,
       "strategy": "Swing",
       "setup": "Breakout",
@@ -83,6 +83,22 @@
       "notes": "Breakout swing high dengan volume. Backtest: PF 1.69, +1.73%/trade — TARGET UTAMA TP2 (3R), bukan TP1. PER 5.6x. ROE 13.3%."
     },
     {
+      "ticker": "ASII",
+      "name": "PT Astra International Tbk",
+      "sector": "Industrials",
+      "price": 5000,
+      "entry": 5000,
+      "sl": 4905,
+      "tp1": 5189,
+      "tp2": 5284,
+      "technicalScore": 69,
+      "fundamentalScore": 85,
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "status": "aktif",
+      "notes": "Breakout swing high dengan volume. Backtest: PF 1.69, +1.73%/trade — TARGET UTAMA TP2 (3R), bukan TP1. PER 6.4x. ROE 13.2%."
+    },
+    {
       "ticker": "ADRO",
       "name": "PT Alamtri Resources Indonesia Tbk",
       "sector": "Energy",
@@ -99,22 +115,6 @@
       "notes": "Breakout swing high dengan volume. Backtest: PF 1.69, +1.73%/trade — TARGET UTAMA TP2 (3R), bukan TP1. PER 8.2x. ROE 10.3%."
     },
     {
-      "ticker": "ASII",
-      "name": "PT Astra International Tbk",
-      "sector": "Industrials",
-      "price": 5000,
-      "entry": 5000,
-      "sl": 4905,
-      "tp1": 5189,
-      "tp2": 5284,
-      "technicalScore": 68,
-      "fundamentalScore": 85,
-      "strategy": "Swing",
-      "setup": "Breakout",
-      "status": "aktif",
-      "notes": "Breakout swing high dengan volume. Backtest: PF 1.69, +1.73%/trade — TARGET UTAMA TP2 (3R), bukan TP1. PER 6.4x. ROE 13.2%."
-    },
-    {
       "ticker": "MDKA",
       "name": "PT Merdeka Copper Gold Tbk",
       "sector": "Basic Materials",
@@ -123,7 +123,7 @@
       "sl": 2738,
       "tp1": 2863,
       "tp2": 2905,
-      "technicalScore": 98,
+      "technicalScore": 99,
       "fundamentalScore": 20,
       "strategy": "Swing",
       "setup": "Breakout",
@@ -219,7 +219,7 @@
       "sl": 5494,
       "tp1": 7836,
       "tp2": 8616,
-      "technicalScore": 42,
+      "technicalScore": 43,
       "fundamentalScore": 80,
       "strategy": "Swing",
       "setup": "BOS Konfirmasi",
