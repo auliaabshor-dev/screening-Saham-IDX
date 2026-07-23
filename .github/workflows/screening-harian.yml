@@ -3,9 +3,12 @@ name: Screening Harian IDX
 on:
   schedule:
     # Jadwal dalam UTC (WIB = UTC+7). Hanya hari kerja (Senin-Jumat).
-    - cron: "45 2 * * 1-5"   # 09:45 WIB — sesi PAGI  (Swing + BPJS)
-    - cron: "15 5 * * 1-5"   # 12:15 WIB — sesi SIANG (Swing / update)
-    - cron: "30 9 * * 1-5"   # 16:30 WIB — sesi SORE  (Swing + BSJP)
+    # CATATAN: cron GitHub biasa molor 5-30 menit dari jadwal.
+    - cron: "45 2 * * 1-5"   # 09:45 WIB — sesi PAGI  (Swing + BPJS pantau; jurnal menutup BSJP kemarin)
+    - cron: "15 5 * * 1-5"   # 12:15 WIB — sesi SIANG (Swing)
+    - cron: "30 8 * * 1-5"   # 15:30 WIB — sesi SORE  (Swing + BSJP; dijadwalkan lebih awal
+                             #   agar dengan molornya cron, hasil tetap keluar SEBELUM pasar
+                             #   tutup 15:50 WIB — masih ada waktu untuk beli)
   workflow_dispatch: {}      # tombol "Run workflow" manual
 
 permissions:
@@ -30,11 +33,14 @@ jobs:
         # Sesi (pagi/siang/sore) terdeteksi otomatis dari jam WIB
         run: python idx_screening.py
 
-      - name: Commit hasil signals.json
+      - name: Update jurnal performa
+        run: python jurnal.py
+
+      - name: Commit hasil
         run: |
           git config user.name "screening-bot"
           git config user.email "actions@github.com"
-          git add signals.json
-          git diff --cached --quiet || git commit -m "Update sinyal $(TZ=Asia/Jakarta date +'%Y-%m-%d %H:%M WIB')"
+          git add signals.json journal.json
+          git diff --cached --quiet || git commit -m "Update sinyal & jurnal $(TZ=Asia/Jakarta date +'%Y-%m-%d %H:%M WIB')"
           git pull --rebase
           git push
