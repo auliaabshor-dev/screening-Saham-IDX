@@ -1,0 +1,115 @@
+{
+  "open": [
+    {
+      "id": "c5206a16",
+      "ticker": "CPIN",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-07-23",
+      "entry": 3310,
+      "sl": 3244,
+      "tp1": 3360,
+      "tp2": 3409,
+      "technicalScore": 100,
+      "fundamentalScore": 100
+    },
+    {
+      "id": "48129d02",
+      "ticker": "ICBP",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-07-23",
+      "entry": 7125,
+      "sl": 6982,
+      "tp1": 7232,
+      "tp2": 7339,
+      "technicalScore": 100,
+      "fundamentalScore": 75
+    },
+    {
+      "id": "1fd489c1",
+      "ticker": "ANTM",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-07-23",
+      "entry": 3080,
+      "sl": 2994,
+      "tp1": 3251,
+      "tp2": 3337,
+      "technicalScore": 81,
+      "fundamentalScore": 90
+    },
+    {
+      "id": "4360aa59",
+      "ticker": "ICBP",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-07-23",
+      "entry": 7125,
+      "sl": 6747,
+      "tp1": 7880,
+      "tp2": 8258,
+      "technicalScore": 92,
+      "fundamentalScore": 75
+    },
+    {
+      "id": "749c1f34",
+      "ticker": "INDF",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-07-23",
+      "entry": 6925,
+      "sl": 6747,
+      "tp1": 7280,
+      "tp2": 7458,
+      "technicalScore": 78,
+      "fundamentalScore": 85
+    },
+    {
+      "id": "f1bc964a",
+      "ticker": "ADRO",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-07-23",
+      "entry": 2540,
+      "sl": 2295,
+      "tp1": 3030,
+      "tp2": 3275,
+      "technicalScore": 94,
+      "fundamentalScore": 60
+    },
+    {
+      "id": "f11ab6b7",
+      "ticker": "ASII",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-07-23",
+      "entry": 5000,
+      "sl": 4905,
+      "tp1": 5189,
+      "tp2": 5284,
+      "technicalScore": 68,
+      "fundamentalScore": 85
+    },
+    {
+      "id": "1a54bf9f",
+      "ticker": "MDKA",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-07-23",
+      "entry": 2780,
+      "sl": 2738,
+      "tp1": 2863,
+      "tp2": 2905,
+      "technicalScore": 98,
+      "fundamentalScore": 20
+    }
+  ],
+  "closed": [],
+  "stats": {
+    "total": {
+      "trades": 0
+    }
+  },
+  "updatedAt": "2026-07-23T09:10:45.256612+00:00"
+}
