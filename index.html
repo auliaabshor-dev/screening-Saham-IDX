@@ -149,6 +149,25 @@
     .notes-body { margin-top: 6px; font-size: 14px; line-height: 1.6; color: #C7CEDA; }
 
     .disclaimer { margin-top: 24px; text-align: center; font-size: 11px; color: var(--dim); }
+
+    /* --- Jurnal --- */
+    #journal-section { margin-top: 36px; display: none; }
+    .journal-title {
+      font-size: 10px; text-transform: uppercase; letter-spacing: 0.25em;
+      color: var(--gold); margin-bottom: 4px;
+    }
+    .journal-h { font-size: 20px; font-weight: 600; margin-bottom: 16px; }
+    .stat-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 20px; }
+    .stat-card { border: 1px solid var(--line); background: var(--panel); border-radius: 8px; padding: 14px 16px; }
+    .stat-card .k { font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); }
+    .stat-card .big { font-family: 'IBM Plex Mono', monospace; font-size: 22px; font-weight: 600; margin-top: 4px; }
+    .stat-card .row { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); margin-top: 6px; }
+    .stat-card .row b { color: var(--text); font-weight: 500; font-family: 'IBM Plex Mono', monospace; }
+    .journal-sub {
+      font-size: 10px; text-transform: uppercase; letter-spacing: 0.15em;
+      color: var(--muted); margin: 18px 0 8px;
+    }
+    .pos { color: var(--green); } .neg { color: var(--red); }
   </style>
 </head>
 <body>
@@ -190,6 +209,24 @@
         <p class="sub">Memuat…</p>
       </div>
     </div>
+    <div id="journal-section">
+      <p class="journal-title">Validasi Berjalan · Data Live</p>
+      <h2 class="journal-h">Jurnal Performa</h2>
+      <div class="stat-cards" id="journal-stats"></div>
+      <p class="journal-sub">Posisi Terbuka</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Emiten</th><th>Strategi</th><th>Masuk</th>
+        <th class="right">Entry</th><th class="right">SL</th><th class="right">Target</th></tr></thead>
+        <tbody id="journal-open"></tbody>
+      </table></div>
+      <p class="journal-sub">Posisi Tertutup Terakhir</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Emiten</th><th>Strategi</th><th>Keluar</th>
+        <th>Via</th><th class="right">Hasil</th></tr></thead>
+        <tbody id="journal-closed"></tbody>
+      </table></div>
+    </div>
+
     <p class="disclaimer">
       Sinyal dihasilkan otomatis dari screening — bukan rekomendasi investasi.
       Keputusan transaksi tetap di tanganmu.
@@ -208,6 +245,10 @@
       "./signals.json",
       "https://raw.githubusercontent.com/auliaabshor-dev/screening-Saham-IDX/main/signals.json"
     ];
+    var JOURNAL_SOURCES = [
+      "./journal.json",
+      "https://raw.githubusercontent.com/auliaabshor-dev/screening-Saham-IDX/main/journal.json"
+    ];
 
     var STRATEGY_META = {
       "Semua": { color: "#8A97A8", desc: "Semua sinyal dari sesi terakhir" },
@@ -219,7 +260,7 @@
     var SESSION_LABEL = {
       pagi:  "Sesi Pagi · 09:45 WIB",
       siang: "Sesi Siang · 12:15 WIB",
-      sore:  "Sesi Sore · 16:30 WIB"
+      sore:  "Sesi Sore · ±15:35 WIB (sebelum tutup)"
     };
 
     var state = {
@@ -467,6 +508,84 @@
               state.data = json; state.status = "live"; renderAll();
             } else throw new Error("format tidak dikenal");
           })
+          .catch(tryNext);
+      }
+      tryNext();
+    })();
+
+    // --- Jurnal performa ---
+    function statCard(label, s) {
+      if (!s || !s.trades) {
+        return '<div class="stat-card"><div class="k">' + esc(label) +
+          '</div><div class="big" style="color:var(--dim)">—</div>' +
+          '<div class="row"><span>Belum ada posisi tertutup</span></div></div>';
+      }
+      var avgCls = s.avg_return_pct > 0 ? "pos" : "neg";
+      return '<div class="stat-card"><div class="k">' + esc(label) + '</div>' +
+        '<div class="big ' + avgCls + '">' +
+        (s.avg_return_pct > 0 ? "+" : "") + s.avg_return_pct + '%</div>' +
+        '<div class="row"><span>Trade</span><b>' + s.trades + '</b></div>' +
+        '<div class="row"><span>Win rate</span><b>' + s.win_rate_pct + '%</b></div>' +
+        '<div class="row"><span>Profit factor</span><b>' +
+        (s.profit_factor == null ? "∞" : s.profit_factor) + '</b></div></div>';
+    }
+
+    function renderJournal(j) {
+      var sec = document.getElementById("journal-section");
+      if (!j) { sec.style.display = "none"; return; }
+      sec.style.display = "block";
+
+      var stats = j.stats || {};
+      var html = statCard("Semua (rata-rata/trade)", stats.total);
+      ["Swing", "BSJP"].forEach(function (k) {
+        if (stats[k]) html += statCard(k, stats[k]);
+      });
+      document.getElementById("journal-stats").innerHTML = html;
+
+      var open = (j.open || []).slice().reverse();
+      var ob = "";
+      open.forEach(function (e) {
+        var tgt = e.strategy === "BSJP" ? "open besok" : fmt(e.tp2) + " (TP2)";
+        ob += '<tr><td><div class="ticker">' + esc(e.ticker) + '</div>' +
+          '<div class="sub">' + esc(e.setup) + '</div></td>' +
+          '<td>' + badge(e.strategy) + '</td>' +
+          '<td class="mono" style="font-size:12px">' + esc(e.date_in) + '</td>' +
+          '<td class="right mono">' + fmt(e.entry) + '</td>' +
+          '<td class="right mono">' + fmt(e.sl) + '</td>' +
+          '<td class="right mono" style="font-size:12px">' + tgt + '</td></tr>';
+      });
+      document.getElementById("journal-open").innerHTML =
+        ob || '<tr><td colspan="6" class="empty">Tidak ada posisi terbuka.</td></tr>';
+
+      var closed = (j.closed || []).slice().sort(function (a, b) {
+        return a.date_out < b.date_out ? 1 : -1;
+      }).slice(0, 15);
+      var cb = "";
+      closed.forEach(function (e) {
+        var cls = e.return_pct > 0 ? "pos" : "neg";
+        cb += '<tr><td><div class="ticker">' + esc(e.ticker) + '</div>' +
+          '<div class="sub">' + esc(e.setup) + '</div></td>' +
+          '<td>' + badge(e.strategy) + '</td>' +
+          '<td class="mono" style="font-size:12px">' + esc(e.date_out) + '</td>' +
+          '<td class="mono" style="font-size:12px">' + esc(e.exit_via) + '</td>' +
+          '<td class="right mono ' + cls + '" style="font-weight:600">' +
+          (e.return_pct > 0 ? "+" : "") + e.return_pct + '%</td></tr>';
+      });
+      document.getElementById("journal-closed").innerHTML =
+        cb || '<tr><td colspan="5" class="empty">Belum ada posisi tertutup.</td></tr>';
+    }
+
+    (function loadJournal() {
+      var i = 0;
+      function tryNext() {
+        if (i >= JOURNAL_SOURCES.length) { renderJournal(null); return; }
+        var url = JOURNAL_SOURCES[i++] + "?t=" + Date.now();
+        fetch(url)
+          .then(function (res) {
+            if (!res.ok) throw new Error("HTTP " + res.status);
+            return res.json();
+          })
+          .then(function (json) { renderJournal(json); })
           .catch(tryNext);
       }
       tryNext();
