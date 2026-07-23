@@ -20,6 +20,9 @@ Sesi (otomatis dari jam WIB):
   pagi  (<12:00)      : Swing + BPJS(pantau)
   siang (12:00-15:00) : Swing
   sore  (>15:00)      : Swing + BSJP
+    * Dijadwalkan ±15:30-15:45 WIB (SEBELUM tutup 15:50) agar sinyal BSJP
+      masih bisa dieksekusi. Konsekuensi: candle hari itu belum 100% final —
+      volume sedikit undercounted dan close bisa bergeser di menit akhir.
 
 Cara pakai:
     python idx_screening.py            # sesi otomatis
