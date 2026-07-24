@@ -38,6 +38,19 @@
       "tp2": 3275,
       "technicalScore": 94,
       "fundamentalScore": 60
+    },
+    {
+      "id": "b02089a6",
+      "ticker": "ASII",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-07-24",
+      "entry": 4980,
+      "sl": 4905,
+      "tp1": 5129,
+      "tp2": 5204,
+      "technicalScore": 58,
+      "fundamentalScore": 85
     }
   ],
   "closed": [
@@ -157,5 +170,5 @@
       "profit_factor": 0.0
     }
   },
-  "updatedAt": "2026-07-24T10:35:36.560979+00:00"
+  "updatedAt": "2026-07-24T11:27:37.923937+00:00"
 }
