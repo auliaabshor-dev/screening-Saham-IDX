@@ -38,19 +38,6 @@
       "tp2": 3275,
       "technicalScore": 94,
       "fundamentalScore": 60
-    },
-    {
-      "id": "f11ab6b7",
-      "ticker": "ASII",
-      "strategy": "Swing",
-      "setup": "Breakout",
-      "date_in": "2026-07-23",
-      "entry": 5000,
-      "sl": 4905,
-      "tp1": 5189,
-      "tp2": 5284,
-      "technicalScore": 68,
-      "fundamentalScore": 85
     }
   ],
   "closed": [
@@ -129,13 +116,32 @@
       "hold_days": 1,
       "return_pct": -1.511,
       "outcome": "loss"
+    },
+    {
+      "id": "f11ab6b7",
+      "ticker": "ASII",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-07-23",
+      "entry": 5000,
+      "sl": 4905,
+      "tp1": 5189,
+      "tp2": 5284,
+      "technicalScore": 68,
+      "fundamentalScore": 85,
+      "date_out": "2026-07-24",
+      "exit": 4905,
+      "exit_via": "sl",
+      "hold_days": 1,
+      "return_pct": -1.9,
+      "outcome": "loss"
     }
   ],
   "stats": {
     "total": {
-      "trades": 4,
+      "trades": 5,
       "win_rate_pct": 0.0,
-      "avg_return_pct": -1.239,
+      "avg_return_pct": -1.371,
       "profit_factor": 0.0
     },
     "BSJP": {
@@ -145,11 +151,11 @@
       "profit_factor": 0.0
     },
     "Swing": {
-      "trades": 2,
+      "trades": 3,
       "win_rate_pct": 0.0,
-      "avg_return_pct": -2.151,
+      "avg_return_pct": -2.068,
       "profit_factor": 0.0
     }
   },
-  "updatedAt": "2026-07-24T06:13:15.235969+00:00"
+  "updatedAt": "2026-07-24T10:35:36.560979+00:00"
 }
