@@ -1,45 +1,6 @@
 {
   "open": [
     {
-      "id": "c5206a16",
-      "ticker": "CPIN",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-07-23",
-      "entry": 3310,
-      "sl": 3244,
-      "tp1": 3360,
-      "tp2": 3409,
-      "technicalScore": 100,
-      "fundamentalScore": 100
-    },
-    {
-      "id": "48129d02",
-      "ticker": "ICBP",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-07-23",
-      "entry": 7125,
-      "sl": 6982,
-      "tp1": 7232,
-      "tp2": 7339,
-      "technicalScore": 100,
-      "fundamentalScore": 75
-    },
-    {
-      "id": "1fd489c1",
-      "ticker": "ANTM",
-      "strategy": "Swing",
-      "setup": "Breakout",
-      "date_in": "2026-07-23",
-      "entry": 3080,
-      "sl": 2994,
-      "tp1": 3251,
-      "tp2": 3337,
-      "technicalScore": 81,
-      "fundamentalScore": 90
-    },
-    {
       "id": "4360aa59",
       "ticker": "ICBP",
       "strategy": "Swing",
@@ -90,6 +51,65 @@
       "tp2": 5284,
       "technicalScore": 68,
       "fundamentalScore": 85
+    }
+  ],
+  "closed": [
+    {
+      "id": "c5206a16",
+      "ticker": "CPIN",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-07-23",
+      "entry": 3310,
+      "sl": 3244,
+      "tp1": 3360,
+      "tp2": 3409,
+      "technicalScore": 100,
+      "fundamentalScore": 100,
+      "date_out": "2026-07-24",
+      "exit": 3300,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": -0.302,
+      "outcome": "loss"
+    },
+    {
+      "id": "48129d02",
+      "ticker": "ICBP",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-07-23",
+      "entry": 7125,
+      "sl": 6982,
+      "tp1": 7232,
+      "tp2": 7339,
+      "technicalScore": 100,
+      "fundamentalScore": 75,
+      "date_out": "2026-07-24",
+      "exit": 7100,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": -0.351,
+      "outcome": "loss"
+    },
+    {
+      "id": "1fd489c1",
+      "ticker": "ANTM",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-07-23",
+      "entry": 3080,
+      "sl": 2994,
+      "tp1": 3251,
+      "tp2": 3337,
+      "technicalScore": 81,
+      "fundamentalScore": 90,
+      "date_out": "2026-07-24",
+      "exit": 2994,
+      "exit_via": "sl",
+      "hold_days": 1,
+      "return_pct": -2.792,
+      "outcome": "loss"
     },
     {
       "id": "1a54bf9f",
@@ -102,14 +122,34 @@
       "tp1": 2863,
       "tp2": 2905,
       "technicalScore": 98,
-      "fundamentalScore": 20
+      "fundamentalScore": 20,
+      "date_out": "2026-07-24",
+      "exit": 2738,
+      "exit_via": "sl",
+      "hold_days": 1,
+      "return_pct": -1.511,
+      "outcome": "loss"
     }
   ],
-  "closed": [],
   "stats": {
     "total": {
-      "trades": 0
+      "trades": 4,
+      "win_rate_pct": 0.0,
+      "avg_return_pct": -1.239,
+      "profit_factor": 0.0
+    },
+    "BSJP": {
+      "trades": 2,
+      "win_rate_pct": 0.0,
+      "avg_return_pct": -0.327,
+      "profit_factor": 0.0
+    },
+    "Swing": {
+      "trades": 2,
+      "win_rate_pct": 0.0,
+      "avg_return_pct": -2.151,
+      "profit_factor": 0.0
     }
   },
-  "updatedAt": "2026-07-23T12:03:38.233570+00:00"
+  "updatedAt": "2026-07-24T03:03:57.968825+00:00"
 }
