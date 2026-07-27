@@ -38,6 +38,32 @@
       "tp2": 3275,
       "technicalScore": 94,
       "fundamentalScore": 60
+    },
+    {
+      "id": "d2ed4fbb",
+      "ticker": "BMRI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-07-27",
+      "entry": 4160,
+      "sl": 4077,
+      "tp1": 4222,
+      "tp2": 4285,
+      "technicalScore": 90,
+      "fundamentalScore": 100
+    },
+    {
+      "id": "dcf5566a",
+      "ticker": "BBNI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-07-27",
+      "entry": 3520,
+      "sl": 3450,
+      "tp1": 3573,
+      "tp2": 3626,
+      "technicalScore": 80,
+      "fundamentalScore": 85
     }
   ],
   "closed": [
@@ -176,5 +202,5 @@
       "profit_factor": 0.0
     }
   },
-  "updatedAt": "2026-07-27T08:38:43.676990+00:00"
+  "updatedAt": "2026-07-27T13:29:48.307699+00:00"
 }
