@@ -38,32 +38,6 @@
       "tp2": 3275,
       "technicalScore": 94,
       "fundamentalScore": 60
-    },
-    {
-      "id": "d2ed4fbb",
-      "ticker": "BMRI",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-07-27",
-      "entry": 4160,
-      "sl": 4077,
-      "tp1": 4222,
-      "tp2": 4285,
-      "technicalScore": 90,
-      "fundamentalScore": 100
-    },
-    {
-      "id": "dcf5566a",
-      "ticker": "BBNI",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-07-27",
-      "entry": 3520,
-      "sl": 3450,
-      "tp1": 3573,
-      "tp2": 3626,
-      "technicalScore": 80,
-      "fundamentalScore": 85
     }
   ],
   "closed": [
@@ -180,19 +154,57 @@
       "hold_days": 1,
       "return_pct": -1.506,
       "outcome": "loss"
+    },
+    {
+      "id": "d2ed4fbb",
+      "ticker": "BMRI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-07-27",
+      "entry": 4160,
+      "sl": 4077,
+      "tp1": 4222,
+      "tp2": 4285,
+      "technicalScore": 90,
+      "fundamentalScore": 100,
+      "date_out": "2026-07-28",
+      "exit": 4150,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": -0.24,
+      "outcome": "loss"
+    },
+    {
+      "id": "dcf5566a",
+      "ticker": "BBNI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-07-27",
+      "entry": 3520,
+      "sl": 3450,
+      "tp1": 3573,
+      "tp2": 3626,
+      "technicalScore": 80,
+      "fundamentalScore": 85,
+      "date_out": "2026-07-28",
+      "exit": 3520,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 0.0,
+      "outcome": "loss"
     }
   ],
   "stats": {
     "total": {
-      "trades": 6,
+      "trades": 8,
       "win_rate_pct": 0.0,
-      "avg_return_pct": -1.394,
+      "avg_return_pct": -1.075,
       "profit_factor": 0.0
     },
     "BSJP": {
-      "trades": 2,
+      "trades": 4,
       "win_rate_pct": 0.0,
-      "avg_return_pct": -0.327,
+      "avg_return_pct": -0.223,
       "profit_factor": 0.0
     },
     "Swing": {
@@ -202,5 +214,5 @@
       "profit_factor": 0.0
     }
   },
-  "updatedAt": "2026-07-27T16:39:47.979347+00:00"
+  "updatedAt": "2026-07-28T11:26:59.820879+00:00"
 }
