@@ -38,6 +38,19 @@
       "tp2": 3275,
       "technicalScore": 94,
       "fundamentalScore": 60
+    },
+    {
+      "id": "201e828b",
+      "ticker": "AMRT",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-07-30",
+      "entry": 1335,
+      "sl": 1308,
+      "tp1": 1355,
+      "tp2": 1375,
+      "technicalScore": 75,
+      "fundamentalScore": 80
     }
   ],
   "closed": [
@@ -214,5 +227,5 @@
       "profit_factor": 0.0
     }
   },
-  "updatedAt": "2026-07-29T15:34:33.944990+00:00"
+  "updatedAt": "2026-07-30T10:38:22.580523+00:00"
 }
