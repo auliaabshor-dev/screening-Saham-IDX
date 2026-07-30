@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T10:38:21.602161+00:00",
+  "generatedAt": "2026-07-30T10:52:01.356466+00:00",
   "session": "sore",
   "signals": [
     {
@@ -416,7 +416,7 @@
       "strategy": "Swing",
       "setup": "BOS Konfirmasi",
       "status": "pantau",
-      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 17.5x. ROE 128.8%."
+      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 17.5x. ROE 133.4%."
     },
     {
       "ticker": "ADRO",
