@@ -38,6 +38,45 @@
       "tp2": 3275,
       "technicalScore": 94,
       "fundamentalScore": 60
+    },
+    {
+      "id": "3e50b318",
+      "ticker": "UNVR",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-07-31",
+      "entry": 1745,
+      "sl": 1710,
+      "tp1": 1771,
+      "tp2": 1797,
+      "technicalScore": 90,
+      "fundamentalScore": 65
+    },
+    {
+      "id": "058c7765",
+      "ticker": "INCO",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-07-31",
+      "entry": 5275,
+      "sl": 5170,
+      "tp1": 5354,
+      "tp2": 5433,
+      "technicalScore": 100,
+      "fundamentalScore": 25
+    },
+    {
+      "id": "75117732",
+      "ticker": "INCO",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-07-31",
+      "entry": 5275,
+      "sl": 5196,
+      "tp1": 5433,
+      "tp2": 5512,
+      "technicalScore": 89,
+      "fundamentalScore": 25
     }
   ],
   "closed": [
@@ -233,5 +272,5 @@
       "profit_factor": 0.0
     }
   },
-  "updatedAt": "2026-07-31T05:53:02.611391+00:00"
+  "updatedAt": "2026-07-31T08:10:04.450107+00:00"
 }
