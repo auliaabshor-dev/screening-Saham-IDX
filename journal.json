@@ -38,19 +38,6 @@
       "tp2": 3275,
       "technicalScore": 94,
       "fundamentalScore": 60
-    },
-    {
-      "id": "201e828b",
-      "ticker": "AMRT",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-07-30",
-      "entry": 1335,
-      "sl": 1308,
-      "tp1": 1355,
-      "tp2": 1375,
-      "technicalScore": 75,
-      "fundamentalScore": 80
     }
   ],
   "closed": [
@@ -205,19 +192,38 @@
       "hold_days": 1,
       "return_pct": 0.0,
       "outcome": "loss"
+    },
+    {
+      "id": "201e828b",
+      "ticker": "AMRT",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-07-30",
+      "entry": 1335,
+      "sl": 1308,
+      "tp1": 1355,
+      "tp2": 1375,
+      "technicalScore": 75,
+      "fundamentalScore": 80,
+      "date_out": "2026-07-31",
+      "exit": 1330,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": -0.375,
+      "outcome": "loss"
     }
   ],
   "stats": {
     "total": {
-      "trades": 8,
+      "trades": 9,
       "win_rate_pct": 0.0,
-      "avg_return_pct": -1.075,
+      "avg_return_pct": -0.997,
       "profit_factor": 0.0
     },
     "BSJP": {
-      "trades": 4,
+      "trades": 5,
       "win_rate_pct": 0.0,
-      "avg_return_pct": -0.223,
+      "avg_return_pct": -0.254,
       "profit_factor": 0.0
     },
     "Swing": {
@@ -227,5 +233,5 @@
       "profit_factor": 0.0
     }
   },
-  "updatedAt": "2026-07-30T12:06:42.638459+00:00"
+  "updatedAt": "2026-07-31T05:53:02.611391+00:00"
 }
