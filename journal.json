@@ -77,6 +77,32 @@
       "tp2": 5512,
       "technicalScore": 89,
       "fundamentalScore": 25
+    },
+    {
+      "id": "f471d2b5",
+      "ticker": "INDF",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-07-31",
+      "entry": 6975,
+      "sl": 6836,
+      "tp1": 7080,
+      "tp2": 7184,
+      "technicalScore": 100,
+      "fundamentalScore": 85
+    },
+    {
+      "id": "89287f08",
+      "ticker": "KLBF",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-07-31",
+      "entry": 725,
+      "sl": 710,
+      "tp1": 736,
+      "tp2": 747,
+      "technicalScore": 85,
+      "fundamentalScore": 85
     }
   ],
   "closed": [
@@ -272,5 +298,5 @@
       "profit_factor": 0.0
     }
   },
-  "updatedAt": "2026-07-31T08:10:04.450107+00:00"
+  "updatedAt": "2026-07-31T11:06:47.653557+00:00"
 }
