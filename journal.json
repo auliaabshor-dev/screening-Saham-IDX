@@ -38,6 +38,32 @@
       "tp2": 3275,
       "technicalScore": 94,
       "fundamentalScore": 60
+    },
+    {
+      "id": "3f46e1ee",
+      "ticker": "ICBP",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-03",
+      "entry": 7200,
+      "sl": 7056,
+      "tp1": 7308,
+      "tp2": 7416,
+      "technicalScore": 100,
+      "fundamentalScore": 75
+    },
+    {
+      "id": "e772ea68",
+      "ticker": "INDF",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-03",
+      "entry": 7150,
+      "sl": 7007,
+      "tp1": 7257,
+      "tp2": 7364,
+      "technicalScore": 90,
+      "fundamentalScore": 85
     }
   ],
   "closed": [
@@ -328,5 +354,5 @@
       "profit_factor": 0.0
     }
   },
-  "updatedAt": "2026-08-03T05:59:54.654558+00:00"
+  "updatedAt": "2026-08-03T08:42:12.103229+00:00"
 }
