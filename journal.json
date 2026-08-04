@@ -38,45 +38,6 @@
       "tp2": 3275,
       "technicalScore": 94,
       "fundamentalScore": 60
-    },
-    {
-      "id": "3f46e1ee",
-      "ticker": "ICBP",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-08-03",
-      "entry": 7200,
-      "sl": 7056,
-      "tp1": 7308,
-      "tp2": 7416,
-      "technicalScore": 100,
-      "fundamentalScore": 75
-    },
-    {
-      "id": "e772ea68",
-      "ticker": "INDF",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-08-03",
-      "entry": 7150,
-      "sl": 7007,
-      "tp1": 7257,
-      "tp2": 7364,
-      "technicalScore": 90,
-      "fundamentalScore": 85
-    },
-    {
-      "id": "98cf4652",
-      "ticker": "EXCL",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-08-03",
-      "entry": 2530,
-      "sl": 2479,
-      "tp1": 2568,
-      "tp2": 2606,
-      "technicalScore": 90,
-      "fundamentalScore": 35
     }
   ],
   "closed": [
@@ -345,20 +306,77 @@
       "hold_days": 1,
       "return_pct": 0.0,
       "outcome": "loss"
+    },
+    {
+      "id": "3f46e1ee",
+      "ticker": "ICBP",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-03",
+      "entry": 7200,
+      "sl": 7056,
+      "tp1": 7308,
+      "tp2": 7416,
+      "technicalScore": 100,
+      "fundamentalScore": 75,
+      "date_out": "2026-08-04",
+      "exit": 7200,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 0.0,
+      "outcome": "loss"
+    },
+    {
+      "id": "e772ea68",
+      "ticker": "INDF",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-03",
+      "entry": 7150,
+      "sl": 7007,
+      "tp1": 7257,
+      "tp2": 7364,
+      "technicalScore": 90,
+      "fundamentalScore": 85,
+      "date_out": "2026-08-04",
+      "exit": 7075,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": -1.049,
+      "outcome": "loss"
+    },
+    {
+      "id": "98cf4652",
+      "ticker": "EXCL",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-03",
+      "entry": 2530,
+      "sl": 2479,
+      "tp1": 2568,
+      "tp2": 2606,
+      "technicalScore": 90,
+      "fundamentalScore": 35,
+      "date_out": "2026-08-04",
+      "exit": 2530,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 0.0,
+      "outcome": "loss"
     }
   ],
   "stats": {
     "total": {
-      "trades": 14,
-      "win_rate_pct": 21.4,
-      "avg_return_pct": -0.296,
-      "profit_factor": 0.6
+      "trades": 17,
+      "win_rate_pct": 17.6,
+      "avg_return_pct": -0.306,
+      "profit_factor": 0.55
     },
     "BSJP": {
-      "trades": 9,
-      "win_rate_pct": 33.3,
-      "avg_return_pct": 0.562,
-      "profit_factor": 4.99
+      "trades": 12,
+      "win_rate_pct": 25.0,
+      "avg_return_pct": 0.334,
+      "profit_factor": 2.73
     },
     "Swing": {
       "trades": 5,
@@ -367,5 +385,5 @@
       "profit_factor": 0.0
     }
   },
-  "updatedAt": "2026-08-03T11:57:05.434013+00:00"
+  "updatedAt": "2026-08-04T05:34:53.641393+00:00"
 }
