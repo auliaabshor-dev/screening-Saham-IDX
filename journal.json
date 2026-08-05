@@ -40,19 +40,6 @@
       "fundamentalScore": 60
     },
     {
-      "id": "c2ba403f",
-      "ticker": "BBNI",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-08-04",
-      "entry": 3660,
-      "sl": 3587,
-      "tp1": 3715,
-      "tp2": 3770,
-      "technicalScore": 90,
-      "fundamentalScore": 85
-    },
-    {
       "id": "dbf05457",
       "ticker": "BBNI",
       "strategy": "Swing",
@@ -66,19 +53,6 @@
       "fundamentalScore": 85
     },
     {
-      "id": "90d2dbec",
-      "ticker": "UNVR",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-08-04",
-      "entry": 1820,
-      "sl": 1784,
-      "tp1": 1847,
-      "tp2": 1875,
-      "technicalScore": 100,
-      "fundamentalScore": 55
-    },
-    {
       "id": "ba9a313a",
       "ticker": "UNVR",
       "strategy": "Swing",
@@ -90,32 +64,6 @@
       "tp2": 2050,
       "technicalScore": 89,
       "fundamentalScore": 55
-    },
-    {
-      "id": "71c438ac",
-      "ticker": "MDKA",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-08-04",
-      "entry": 2910,
-      "sl": 2852,
-      "tp1": 2954,
-      "tp2": 2997,
-      "technicalScore": 100,
-      "fundamentalScore": 20
-    },
-    {
-      "id": "55788007",
-      "ticker": "INCO",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-08-04",
-      "entry": 5500,
-      "sl": 5390,
-      "tp1": 5582,
-      "tp2": 5665,
-      "technicalScore": 90,
-      "fundamentalScore": 25
     },
     {
       "id": "ad5b2341",
@@ -454,20 +402,96 @@
       "hold_days": 1,
       "return_pct": 0.0,
       "outcome": "loss"
+    },
+    {
+      "id": "c2ba403f",
+      "ticker": "BBNI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-04",
+      "entry": 3660,
+      "sl": 3587,
+      "tp1": 3715,
+      "tp2": 3770,
+      "technicalScore": 90,
+      "fundamentalScore": 85,
+      "date_out": "2026-08-05",
+      "exit": 3660,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 0.0,
+      "outcome": "loss"
+    },
+    {
+      "id": "90d2dbec",
+      "ticker": "UNVR",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-04",
+      "entry": 1820,
+      "sl": 1784,
+      "tp1": 1847,
+      "tp2": 1875,
+      "technicalScore": 100,
+      "fundamentalScore": 55,
+      "date_out": "2026-08-05",
+      "exit": 1820,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 0.0,
+      "outcome": "loss"
+    },
+    {
+      "id": "71c438ac",
+      "ticker": "MDKA",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-04",
+      "entry": 2910,
+      "sl": 2852,
+      "tp1": 2954,
+      "tp2": 2997,
+      "technicalScore": 100,
+      "fundamentalScore": 20,
+      "date_out": "2026-08-05",
+      "exit": 2910,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 0.0,
+      "outcome": "loss"
+    },
+    {
+      "id": "55788007",
+      "ticker": "INCO",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-04",
+      "entry": 5500,
+      "sl": 5390,
+      "tp1": 5582,
+      "tp2": 5665,
+      "technicalScore": 90,
+      "fundamentalScore": 25,
+      "date_out": "2026-08-05",
+      "exit": 5550,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 0.909,
+      "outcome": "win"
     }
   ],
   "stats": {
     "total": {
-      "trades": 17,
-      "win_rate_pct": 17.6,
-      "avg_return_pct": -0.306,
-      "profit_factor": 0.55
+      "trades": 21,
+      "win_rate_pct": 19.0,
+      "avg_return_pct": -0.204,
+      "profit_factor": 0.63
     },
     "BSJP": {
-      "trades": 12,
+      "trades": 16,
       "win_rate_pct": 25.0,
-      "avg_return_pct": 0.334,
-      "profit_factor": 2.73
+      "avg_return_pct": 0.308,
+      "profit_factor": 3.12
     },
     "Swing": {
       "trades": 5,
@@ -476,5 +500,5 @@
       "profit_factor": 0.0
     }
   },
-  "updatedAt": "2026-08-04T11:04:19.614727+00:00"
+  "updatedAt": "2026-08-05T05:33:46.429196+00:00"
 }
