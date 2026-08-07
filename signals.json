@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-07T04:44:11.460267+00:00",
-  "session": "pagi",
+  "generatedAt": "2026-08-07T06:18:52.971235+00:00",
+  "session": "siang",
   "signals": [
     {
       "ticker": "ICBP",
@@ -35,22 +35,6 @@
       "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 8.0x. ROE 18.1%."
     },
     {
-      "ticker": "BBRI",
-      "name": "PT Bank Rakyat Indonesia (Persero) Tbk",
-      "sector": "Financial Services",
-      "price": 3100,
-      "entry": 3100,
-      "sl": 3050,
-      "tp1": 3162,
-      "tp2": 3208,
-      "technicalScore": 55,
-      "fundamentalScore": 100,
-      "strategy": "BPJS",
-      "setup": "Breakout High Kemarin",
-      "status": "pantau",
-      "notes": "Breakout High Kemarin — PANTAU SAJA: strategi ini gagal backtest (PF 0.59; versi ORB pun tidak melampaui fee). Untuk observasi."
-    },
-    {
       "ticker": "INDF",
       "name": "PT Indofood Sukses Makmur Tbk",
       "sector": "Consumer Defensive",
@@ -83,38 +67,6 @@
       "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 9.9x. ROE 14.8%."
     },
     {
-      "ticker": "INDF",
-      "name": "PT Indofood Sukses Makmur Tbk",
-      "sector": "Consumer Defensive",
-      "price": 7425,
-      "entry": 7425,
-      "sl": 7300,
-      "tp1": 7574,
-      "tp2": 7685,
-      "technicalScore": 55,
-      "fundamentalScore": 85,
-      "strategy": "BPJS",
-      "setup": "Breakout High Kemarin",
-      "status": "pantau",
-      "notes": "Breakout High Kemarin — PANTAU SAJA: strategi ini gagal backtest (PF 0.59; versi ORB pun tidak melampaui fee). Untuk observasi."
-    },
-    {
-      "ticker": "BBNI",
-      "name": "PT Bank Negara Indonesia (Persero) Tbk",
-      "sector": "Financial Services",
-      "price": 3630,
-      "entry": 3630,
-      "sl": 3576,
-      "tp1": 3703,
-      "tp2": 3757,
-      "technicalScore": 45,
-      "fundamentalScore": 85,
-      "strategy": "BPJS",
-      "setup": "Gap Up Lanjutan",
-      "status": "pantau",
-      "notes": "Gap Up Lanjutan — PANTAU SAJA: strategi ini gagal backtest (PF 0.59; versi ORB pun tidak melampaui fee). Untuk observasi."
-    },
-    {
       "ticker": "ANTM",
       "name": "PT Antam (Persero) Tbk",
       "sector": "Basic Materials",
@@ -129,22 +81,6 @@
       "setup": "BOS Konfirmasi",
       "status": "pantau",
       "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 8.9x. ROE 24.7%."
-    },
-    {
-      "ticker": "ICBP",
-      "name": "PT Indofood CBP Sukses Makmur Tbk",
-      "sector": "Consumer Defensive",
-      "price": 7675,
-      "entry": 7675,
-      "sl": 7475,
-      "tp1": 7828,
-      "tp2": 7944,
-      "technicalScore": 65,
-      "fundamentalScore": 65,
-      "strategy": "BPJS",
-      "setup": "Breakout High Kemarin",
-      "status": "pantau",
-      "notes": "Breakout High Kemarin — PANTAU SAJA: strategi ini gagal backtest (PF 0.59; versi ORB pun tidak melampaui fee). Untuk observasi."
     },
     {
       "ticker": "BMRI",
@@ -307,22 +243,6 @@
       "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 47.7x. ROE 0.4%."
     },
     {
-      "ticker": "SMGR",
-      "name": "PT Semen Indonesia (Persero) Tbk",
-      "sector": "Basic Materials",
-      "price": 1620,
-      "entry": 1620,
-      "sl": 1596,
-      "tp1": 1652,
-      "tp2": 1677,
-      "technicalScore": 60,
-      "fundamentalScore": 45,
-      "strategy": "BPJS",
-      "setup": "Gap Up Lanjutan",
-      "status": "pantau",
-      "notes": "Gap Up Lanjutan — PANTAU SAJA: strategi ini gagal backtest (PF 0.59; versi ORB pun tidak melampaui fee). Untuk observasi."
-    },
-    {
       "ticker": "ADRO",
       "name": "PT Alamtri Resources Indonesia Tbk",
       "sector": "Energy",
@@ -369,22 +289,6 @@
       "setup": "Konsolidasi",
       "status": "pantau",
       "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 8.1x. ROE 14.4%."
-    },
-    {
-      "ticker": "MDKA",
-      "name": "PT Merdeka Copper Gold Tbk",
-      "sector": "Basic Materials",
-      "price": 2910,
-      "entry": 2910,
-      "sl": 2860,
-      "tp1": 2968,
-      "tp2": 3012,
-      "technicalScore": 45,
-      "fundamentalScore": 20,
-      "strategy": "BPJS",
-      "setup": "Gap Up Lanjutan",
-      "status": "pantau",
-      "notes": "Gap Up Lanjutan — PANTAU SAJA: strategi ini gagal backtest (PF 0.59; versi ORB pun tidak melampaui fee). Untuk observasi."
     },
     {
       "ticker": "EXCL",
