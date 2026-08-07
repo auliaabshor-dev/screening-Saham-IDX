@@ -103,6 +103,45 @@
       "tp2": 1920,
       "technicalScore": 84,
       "fundamentalScore": 45
+    },
+    {
+      "id": "aafa9aca",
+      "ticker": "BBRI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-07",
+      "entry": 3130,
+      "sl": 3067,
+      "tp1": 3177,
+      "tp2": 3224,
+      "technicalScore": 100,
+      "fundamentalScore": 100
+    },
+    {
+      "id": "06ea614f",
+      "ticker": "BBRI",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-08-07",
+      "entry": 3130,
+      "sl": 3034,
+      "tp1": 3322,
+      "tp2": 3419,
+      "technicalScore": 85,
+      "fundamentalScore": 100
+    },
+    {
+      "id": "4d284f0c",
+      "ticker": "ICBP",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-07",
+      "entry": 7750,
+      "sl": 7595,
+      "tp1": 7866,
+      "tp2": 7982,
+      "technicalScore": 100,
+      "fundamentalScore": 65
     }
   ],
   "closed": [
@@ -678,5 +717,5 @@
       "profit_factor": 0.0
     }
   },
-  "updatedAt": "2026-08-07T06:18:54.330612+00:00"
+  "updatedAt": "2026-08-07T09:32:28.177790+00:00"
 }
