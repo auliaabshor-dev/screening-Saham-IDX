@@ -116,6 +116,32 @@
       "tp2": 3419,
       "technicalScore": 85,
       "fundamentalScore": 100
+    },
+    {
+      "id": "d08cb316",
+      "ticker": "MDKA",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-10",
+      "entry": 3040,
+      "sl": 2979,
+      "tp1": 3086,
+      "tp2": 3131,
+      "technicalScore": 100,
+      "fundamentalScore": 20
+    },
+    {
+      "id": "4f09c163",
+      "ticker": "MDKA",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-08-10",
+      "entry": 3040,
+      "sl": 2886,
+      "tp1": 3348,
+      "tp2": 3502,
+      "technicalScore": 98,
+      "fundamentalScore": 20
     }
   ],
   "closed": [
@@ -729,5 +755,5 @@
       "profit_factor": 0.0
     }
   },
-  "updatedAt": "2026-08-10T06:41:26.900217+00:00"
+  "updatedAt": "2026-08-10T09:58:05.659207+00:00"
 }
