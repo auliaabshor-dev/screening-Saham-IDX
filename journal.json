@@ -40,32 +40,6 @@
       "fundamentalScore": 60
     },
     {
-      "id": "ba9a313a",
-      "ticker": "UNVR",
-      "strategy": "Swing",
-      "setup": "Breakout",
-      "date_in": "2026-08-04",
-      "entry": 1820,
-      "sl": 1743,
-      "tp1": 1973,
-      "tp2": 2050,
-      "technicalScore": 89,
-      "fundamentalScore": 55
-    },
-    {
-      "id": "ad5b2341",
-      "ticker": "INCO",
-      "strategy": "Swing",
-      "setup": "Breakout",
-      "date_in": "2026-08-04",
-      "entry": 5500,
-      "sl": 5196,
-      "tp1": 6108,
-      "tp2": 6412,
-      "technicalScore": 76,
-      "fundamentalScore": 25
-    },
-    {
       "id": "bffd9d7a",
       "ticker": "KLBF",
       "strategy": "Swing",
@@ -745,14 +719,52 @@
       "hold_days": 1,
       "return_pct": 0.658,
       "outcome": "win"
+    },
+    {
+      "id": "ba9a313a",
+      "ticker": "UNVR",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-08-04",
+      "entry": 1820,
+      "sl": 1743,
+      "tp1": 1973,
+      "tp2": 2050,
+      "technicalScore": 89,
+      "fundamentalScore": 55,
+      "date_out": "2026-08-11",
+      "exit": 1743,
+      "exit_via": "sl",
+      "hold_days": 5,
+      "return_pct": -4.231,
+      "outcome": "loss"
+    },
+    {
+      "id": "ad5b2341",
+      "ticker": "INCO",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-08-04",
+      "entry": 5500,
+      "sl": 5196,
+      "tp1": 6108,
+      "tp2": 6412,
+      "technicalScore": 76,
+      "fundamentalScore": 25,
+      "date_out": "2026-08-11",
+      "exit": 5196,
+      "exit_via": "sl",
+      "hold_days": 5,
+      "return_pct": -5.527,
+      "outcome": "loss"
     }
   ],
   "stats": {
     "total": {
-      "trades": 33,
-      "win_rate_pct": 33.3,
-      "avg_return_pct": 0.014,
-      "profit_factor": 1.03
+      "trades": 35,
+      "win_rate_pct": 31.4,
+      "avg_return_pct": -0.265,
+      "profit_factor": 0.62
     },
     "BSJP": {
       "trades": 26,
@@ -761,11 +773,11 @@
       "profit_factor": 6.58
     },
     "Swing": {
-      "trades": 7,
+      "trades": 9,
       "win_rate_pct": 0.0,
-      "avg_return_pct": -1.78,
+      "avg_return_pct": -2.468,
       "profit_factor": 0.0
     }
   },
-  "updatedAt": "2026-08-11T06:03:38.300515+00:00"
+  "updatedAt": "2026-08-11T09:31:50.370906+00:00"
 }
