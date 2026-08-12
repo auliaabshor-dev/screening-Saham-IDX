@@ -79,17 +79,17 @@
       "fundamentalScore": 100
     },
     {
-      "id": "4f09c163",
-      "ticker": "MDKA",
-      "strategy": "Swing",
-      "setup": "Breakout",
-      "date_in": "2026-08-10",
-      "entry": 3040,
-      "sl": 2886,
-      "tp1": 3348,
-      "tp2": 3502,
-      "technicalScore": 98,
-      "fundamentalScore": 20
+      "id": "94081e1d",
+      "ticker": "EXCL",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-12",
+      "entry": 2560,
+      "sl": 2509,
+      "tp1": 2598,
+      "tp2": 2637,
+      "technicalScore": 100,
+      "fundamentalScore": 35
     }
   ],
   "closed": [
@@ -757,14 +757,33 @@
       "hold_days": 5,
       "return_pct": -5.527,
       "outcome": "loss"
+    },
+    {
+      "id": "4f09c163",
+      "ticker": "MDKA",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-08-10",
+      "entry": 3040,
+      "sl": 2886,
+      "tp1": 3348,
+      "tp2": 3502,
+      "technicalScore": 98,
+      "fundamentalScore": 20,
+      "date_out": "2026-08-12",
+      "exit": 2886,
+      "exit_via": "sl",
+      "hold_days": 2,
+      "return_pct": -5.066,
+      "outcome": "loss"
     }
   ],
   "stats": {
     "total": {
-      "trades": 35,
-      "win_rate_pct": 31.4,
-      "avg_return_pct": -0.265,
-      "profit_factor": 0.62
+      "trades": 36,
+      "win_rate_pct": 30.6,
+      "avg_return_pct": -0.399,
+      "profit_factor": 0.52
     },
     "BSJP": {
       "trades": 26,
@@ -773,11 +792,11 @@
       "profit_factor": 6.58
     },
     "Swing": {
-      "trades": 9,
+      "trades": 10,
       "win_rate_pct": 0.0,
-      "avg_return_pct": -2.468,
+      "avg_return_pct": -2.728,
       "profit_factor": 0.0
     }
   },
-  "updatedAt": "2026-08-12T06:41:58.283447+00:00"
+  "updatedAt": "2026-08-12T09:42:10.815534+00:00"
 }
