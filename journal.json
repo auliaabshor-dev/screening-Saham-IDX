@@ -64,6 +64,58 @@
       "tp2": 3419,
       "technicalScore": 85,
       "fundamentalScore": 100
+    },
+    {
+      "id": "cc750e14",
+      "ticker": "SMGR",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-14",
+      "entry": 1580,
+      "sl": 1548,
+      "tp1": 1604,
+      "tp2": 1627,
+      "technicalScore": 90,
+      "fundamentalScore": 45
+    },
+    {
+      "id": "aece5055",
+      "ticker": "EXCL",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-08-14",
+      "entry": 2800,
+      "sl": 2620,
+      "tp1": 3160,
+      "tp2": 3340,
+      "technicalScore": 100,
+      "fundamentalScore": 35
+    },
+    {
+      "id": "ce1137d8",
+      "ticker": "EXCL",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-14",
+      "entry": 2800,
+      "sl": 2744,
+      "tp1": 2842,
+      "tp2": 2884,
+      "technicalScore": 100,
+      "fundamentalScore": 35
+    },
+    {
+      "id": "29b619a6",
+      "ticker": "MDKA",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-14",
+      "entry": 2900,
+      "sl": 2842,
+      "tp1": 2943,
+      "tp2": 2987,
+      "technicalScore": 90,
+      "fundamentalScore": 20
     }
   ],
   "closed": [
@@ -810,5 +862,5 @@
       "profit_factor": 0.0
     }
   },
-  "updatedAt": "2026-08-14T06:42:00.144639+00:00"
+  "updatedAt": "2026-08-14T09:36:26.856118+00:00"
 }
