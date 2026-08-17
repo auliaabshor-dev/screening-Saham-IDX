@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-17T03:34:08.694166+00:00",
-  "session": "pagi",
+  "generatedAt": "2026-08-17T05:50:13.969268+00:00",
+  "session": "siang",
   "signals": [
     {
       "ticker": "EXCL",
@@ -51,22 +51,6 @@
       "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.79; versi dengan konfirmasi pun PF 0.54). Untuk observasi. PER 6.2x. ROE 22.4%."
     },
     {
-      "ticker": "BBNI",
-      "name": "PT Bank Negara Indonesia (Persero) Tbk",
-      "sector": "Financial Services",
-      "price": 3630,
-      "entry": 3630,
-      "sl": 3576,
-      "tp1": 3703,
-      "tp2": 3757,
-      "technicalScore": 55,
-      "fundamentalScore": 85,
-      "strategy": "BPJS",
-      "setup": "Breakout High Kemarin",
-      "status": "pantau",
-      "notes": "Breakout High Kemarin — PANTAU SAJA: strategi ini gagal backtest (PF 0.59; versi ORB pun tidak melampaui fee). Untuk observasi."
-    },
-    {
       "ticker": "ICBP",
       "name": "PT Indofood CBP Sukses Makmur Tbk",
       "sector": "Consumer Defensive",
@@ -83,38 +67,6 @@
       "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 12.0x. ROE 12.6%."
     },
     {
-      "ticker": "CPIN",
-      "name": "PT Charoen Pokphand Indonesia Tbk",
-      "sector": "Consumer Defensive",
-      "price": 3070,
-      "entry": 3070,
-      "sl": 3024,
-      "tp1": 3131,
-      "tp2": 3177,
-      "technicalScore": 35,
-      "fundamentalScore": 100,
-      "strategy": "BPJS",
-      "setup": "Gap Up Lanjutan",
-      "status": "pantau",
-      "notes": "Gap Up Lanjutan — PANTAU SAJA: strategi ini gagal backtest (PF 0.59; versi ORB pun tidak melampaui fee). Untuk observasi."
-    },
-    {
-      "ticker": "BMRI",
-      "name": "PT Bank Mandiri (Persero) Tbk",
-      "sector": "Financial Services",
-      "price": 4170,
-      "entry": 4170,
-      "sl": 4107,
-      "tp1": 4253,
-      "tp2": 4316,
-      "technicalScore": 30,
-      "fundamentalScore": 100,
-      "strategy": "BPJS",
-      "setup": "Breakout High Kemarin",
-      "status": "pantau",
-      "notes": "Breakout High Kemarin — PANTAU SAJA: strategi ini gagal backtest (PF 0.59; versi ORB pun tidak melampaui fee). Untuk observasi."
-    },
-    {
       "ticker": "ANTM",
       "name": "PT Antam (Persero) Tbk",
       "sector": "Basic Materials",
@@ -129,22 +81,6 @@
       "setup": "BOS Konfirmasi",
       "status": "pantau",
       "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 8.7x. ROE 24.7%."
-    },
-    {
-      "ticker": "KLBF",
-      "name": "PT Kalbe Farma Tbk.",
-      "sector": "Healthcare",
-      "price": 800,
-      "entry": 800,
-      "sl": 788,
-      "tp1": 816,
-      "tp2": 828,
-      "technicalScore": 55,
-      "fundamentalScore": 75,
-      "strategy": "BPJS",
-      "setup": "Gap Up Lanjutan",
-      "status": "pantau",
-      "notes": "Gap Up Lanjutan — PANTAU SAJA: strategi ini gagal backtest (PF 0.59; versi ORB pun tidak melampaui fee). Untuk observasi."
     },
     {
       "ticker": "BBNI",
@@ -179,22 +115,6 @@
       "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 6.8x. ROE 12.1%."
     },
     {
-      "ticker": "INDF",
-      "name": "PT Indofood Sukses Makmur Tbk",
-      "sector": "Consumer Defensive",
-      "price": 7425,
-      "entry": 7425,
-      "sl": 7314,
-      "tp1": 7574,
-      "tp2": 7685,
-      "technicalScore": 40,
-      "fundamentalScore": 85,
-      "strategy": "BPJS",
-      "setup": "Breakout High Kemarin",
-      "status": "pantau",
-      "notes": "Breakout High Kemarin — PANTAU SAJA: strategi ini gagal backtest (PF 0.59; versi ORB pun tidak melampaui fee). Untuk observasi."
-    },
-    {
       "ticker": "KLBF",
       "name": "PT Kalbe Farma Tbk.",
       "sector": "Healthcare",
@@ -211,54 +131,6 @@
       "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 10.1x. ROE 14.8%."
     },
     {
-      "ticker": "AMRT",
-      "name": "PT Sumber Alfaria Trijaya Tbk",
-      "sector": "Consumer Defensive",
-      "price": 1370,
-      "entry": 1370,
-      "sl": 1349,
-      "tp1": 1397,
-      "tp2": 1418,
-      "technicalScore": 45,
-      "fundamentalScore": 70,
-      "strategy": "BPJS",
-      "setup": "Gap Up Lanjutan",
-      "status": "pantau",
-      "notes": "Gap Up Lanjutan — PANTAU SAJA: strategi ini gagal backtest (PF 0.59; versi ORB pun tidak melampaui fee). Untuk observasi."
-    },
-    {
-      "ticker": "TLKM",
-      "name": "Perusahaan Perseroan (Persero) PT Telekomunikasi Indonesia Tbk",
-      "sector": "Communication Services",
-      "price": 2620,
-      "entry": 2620,
-      "sl": 2581,
-      "tp1": 2672,
-      "tp2": 2712,
-      "technicalScore": 30,
-      "fundamentalScore": 80,
-      "strategy": "BPJS",
-      "setup": "Breakout High Kemarin",
-      "status": "pantau",
-      "notes": "Breakout High Kemarin — PANTAU SAJA: strategi ini gagal backtest (PF 0.59; versi ORB pun tidak melampaui fee). Untuk observasi."
-    },
-    {
-      "ticker": "ICBP",
-      "name": "PT Indofood CBP Sukses Makmur Tbk",
-      "sector": "Consumer Defensive",
-      "price": 7600,
-      "entry": 7600,
-      "sl": 7486,
-      "tp1": 7752,
-      "tp2": 7866,
-      "technicalScore": 45,
-      "fundamentalScore": 65,
-      "strategy": "BPJS",
-      "setup": "Gap Up Lanjutan",
-      "status": "pantau",
-      "notes": "Gap Up Lanjutan — PANTAU SAJA: strategi ini gagal backtest (PF 0.59; versi ORB pun tidak melampaui fee). Untuk observasi."
-    },
-    {
       "ticker": "PGAS",
       "name": "PT Perusahaan Gas Negara (Persero) Tbk",
       "sector": "Utilities",
@@ -273,22 +145,6 @@
       "setup": "Demand Zone Bounce",
       "status": "pantau",
       "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.79; versi dengan konfirmasi pun PF 0.54). Untuk observasi. PER 8.4x. ROE 10.1%."
-    },
-    {
-      "ticker": "SMGR",
-      "name": "PT Semen Indonesia (Persero) Tbk",
-      "sector": "Basic Materials",
-      "price": 1580,
-      "entry": 1580,
-      "sl": 1515,
-      "tp1": 1612,
-      "tp2": 1635,
-      "technicalScore": 65,
-      "fundamentalScore": 45,
-      "strategy": "BPJS",
-      "setup": "Breakout High Kemarin",
-      "status": "pantau",
-      "notes": "Breakout High Kemarin — PANTAU SAJA: strategi ini gagal backtest (PF 0.59; versi ORB pun tidak melampaui fee). Untuk observasi."
     },
     {
       "ticker": "PTBA",
@@ -433,38 +289,6 @@
       "setup": "BOS Konfirmasi",
       "status": "pantau",
       "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 18.1x. ROE 133.4%."
-    },
-    {
-      "ticker": "UNVR",
-      "name": "PT Unilever Indonesia Tbk",
-      "sector": "Consumer Defensive",
-      "price": 1775,
-      "entry": 1775,
-      "sl": 1730,
-      "tp1": 1810,
-      "tp2": 1837,
-      "technicalScore": 40,
-      "fundamentalScore": 55,
-      "strategy": "BPJS",
-      "setup": "Breakout High Kemarin",
-      "status": "pantau",
-      "notes": "Breakout High Kemarin — PANTAU SAJA: strategi ini gagal backtest (PF 0.59; versi ORB pun tidak melampaui fee). Untuk observasi."
-    },
-    {
-      "ticker": "EXCL",
-      "name": "PT XLSMART Telecom Sejahtera Tbk",
-      "sector": "Communication Services",
-      "price": 2800,
-      "entry": 2800,
-      "sl": 2620,
-      "tp1": 2856,
-      "tp2": 2898,
-      "technicalScore": 50,
-      "fundamentalScore": 35,
-      "strategy": "BPJS",
-      "setup": "Breakout High Kemarin",
-      "status": "pantau",
-      "notes": "Breakout High Kemarin — PANTAU SAJA: strategi ini gagal backtest (PF 0.59; versi ORB pun tidak melampaui fee). Untuk observasi."
     },
     {
       "ticker": "MDKA",
