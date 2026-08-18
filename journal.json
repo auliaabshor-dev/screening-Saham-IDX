@@ -77,6 +77,19 @@
       "tp2": 3340,
       "technicalScore": 100,
       "fundamentalScore": 35
+    },
+    {
+      "id": "987bec14",
+      "ticker": "ADRO",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-18",
+      "entry": 2560,
+      "sl": 2509,
+      "tp1": 2598,
+      "tp2": 2637,
+      "technicalScore": 90,
+      "fundamentalScore": 60
     }
   ],
   "closed": [
@@ -880,5 +893,5 @@
       "profit_factor": 0.0
     }
   },
-  "updatedAt": "2026-08-18T05:44:37.273866+00:00"
+  "updatedAt": "2026-08-18T09:03:29.170707+00:00"
 }
