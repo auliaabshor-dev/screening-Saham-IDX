@@ -1,45 +1,6 @@
 {
   "open": [
     {
-      "id": "4360aa59",
-      "ticker": "ICBP",
-      "strategy": "Swing",
-      "setup": "Breakout",
-      "date_in": "2026-07-23",
-      "entry": 7125,
-      "sl": 6747,
-      "tp1": 7880,
-      "tp2": 8258,
-      "technicalScore": 92,
-      "fundamentalScore": 75
-    },
-    {
-      "id": "749c1f34",
-      "ticker": "INDF",
-      "strategy": "Swing",
-      "setup": "Breakout",
-      "date_in": "2026-07-23",
-      "entry": 6925,
-      "sl": 6747,
-      "tp1": 7280,
-      "tp2": 7458,
-      "technicalScore": 78,
-      "fundamentalScore": 85
-    },
-    {
-      "id": "f1bc964a",
-      "ticker": "ADRO",
-      "strategy": "Swing",
-      "setup": "Breakout",
-      "date_in": "2026-07-23",
-      "entry": 2540,
-      "sl": 2295,
-      "tp1": 3030,
-      "tp2": 3275,
-      "technicalScore": 94,
-      "fundamentalScore": 60
-    },
-    {
       "id": "bffd9d7a",
       "ticker": "KLBF",
       "strategy": "Swing",
@@ -77,45 +38,6 @@
       "tp2": 3340,
       "technicalScore": 100,
       "fundamentalScore": 35
-    },
-    {
-      "id": "0dc84381",
-      "ticker": "CPIN",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-08-20",
-      "entry": 2990,
-      "sl": 2930,
-      "tp1": 3035,
-      "tp2": 3080,
-      "technicalScore": 85,
-      "fundamentalScore": 100
-    },
-    {
-      "id": "3b7f89d9",
-      "ticker": "KLBF",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-08-20",
-      "entry": 830,
-      "sl": 813,
-      "tp1": 842,
-      "tp2": 855,
-      "technicalScore": 90,
-      "fundamentalScore": 65
-    },
-    {
-      "id": "eccb501a",
-      "ticker": "UNVR",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-08-20",
-      "entry": 1840,
-      "sl": 1803,
-      "tp1": 1868,
-      "tp2": 1895,
-      "technicalScore": 90,
-      "fundamentalScore": 55
     }
   ],
   "closed": [
@@ -916,27 +838,141 @@
       "hold_days": 1,
       "return_pct": 0.391,
       "outcome": "win"
+    },
+    {
+      "id": "4360aa59",
+      "ticker": "ICBP",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-07-23",
+      "entry": 7125,
+      "sl": 6747,
+      "tp1": 7880,
+      "tp2": 8258,
+      "technicalScore": 92,
+      "fundamentalScore": 75,
+      "date_out": "2026-08-21",
+      "exit": 7625,
+      "exit_via": "timeout",
+      "hold_days": 20,
+      "return_pct": 7.018,
+      "outcome": "win"
+    },
+    {
+      "id": "749c1f34",
+      "ticker": "INDF",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-07-23",
+      "entry": 6925,
+      "sl": 6747,
+      "tp1": 7280,
+      "tp2": 7458,
+      "technicalScore": 78,
+      "fundamentalScore": 85,
+      "date_out": "2026-08-21",
+      "exit": 7375,
+      "exit_via": "timeout",
+      "hold_days": 20,
+      "return_pct": 6.498,
+      "outcome": "win"
+    },
+    {
+      "id": "f1bc964a",
+      "ticker": "ADRO",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-07-23",
+      "entry": 2540,
+      "sl": 2295,
+      "tp1": 3030,
+      "tp2": 3275,
+      "technicalScore": 94,
+      "fundamentalScore": 60,
+      "date_out": "2026-08-21",
+      "exit": 2580,
+      "exit_via": "timeout",
+      "hold_days": 20,
+      "return_pct": 1.575,
+      "outcome": "win"
+    },
+    {
+      "id": "0dc84381",
+      "ticker": "CPIN",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-20",
+      "entry": 2990,
+      "sl": 2930,
+      "tp1": 3035,
+      "tp2": 3080,
+      "technicalScore": 85,
+      "fundamentalScore": 100,
+      "date_out": "2026-08-21",
+      "exit": 3020,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 1.003,
+      "outcome": "win"
+    },
+    {
+      "id": "3b7f89d9",
+      "ticker": "KLBF",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-20",
+      "entry": 830,
+      "sl": 813,
+      "tp1": 842,
+      "tp2": 855,
+      "technicalScore": 90,
+      "fundamentalScore": 65,
+      "date_out": "2026-08-21",
+      "exit": 825,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": -0.602,
+      "outcome": "loss"
+    },
+    {
+      "id": "eccb501a",
+      "ticker": "UNVR",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-20",
+      "entry": 1840,
+      "sl": 1803,
+      "tp1": 1868,
+      "tp2": 1895,
+      "technicalScore": 90,
+      "fundamentalScore": 55,
+      "date_out": "2026-08-21",
+      "exit": 1830,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": -0.543,
+      "outcome": "loss"
     }
   ],
   "stats": {
     "total": {
-      "trades": 42,
-      "win_rate_pct": 35.7,
-      "avg_return_pct": -0.385,
-      "profit_factor": 0.57
+      "trades": 48,
+      "win_rate_pct": 39.6,
+      "avg_return_pct": -0.025,
+      "profit_factor": 0.97
     },
     "BSJP": {
-      "trades": 31,
-      "win_rate_pct": 48.4,
-      "avg_return_pct": 0.607,
-      "profit_factor": 9.12
+      "trades": 34,
+      "win_rate_pct": 47.1,
+      "avg_return_pct": 0.549,
+      "profit_factor": 6.4
     },
     "Swing": {
-      "trades": 11,
-      "win_rate_pct": 0.0,
-      "avg_return_pct": -3.179,
-      "profit_factor": 0.0
+      "trades": 14,
+      "win_rate_pct": 21.4,
+      "avg_return_pct": -1.42,
+      "profit_factor": 0.43
     }
   },
-  "updatedAt": "2026-08-20T09:06:33.514817+00:00"
+  "updatedAt": "2026-08-21T03:37:04.040357+00:00"
 }
