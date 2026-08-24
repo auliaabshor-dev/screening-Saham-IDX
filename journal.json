@@ -51,6 +51,71 @@
       "tp2": 4136,
       "technicalScore": 100,
       "fundamentalScore": 85
+    },
+    {
+      "id": "57c8064e",
+      "ticker": "PTBA",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-24",
+      "entry": 2480,
+      "sl": 2430,
+      "tp1": 2517,
+      "tp2": 2554,
+      "technicalScore": 100,
+      "fundamentalScore": 85
+    },
+    {
+      "id": "8ccfcf09",
+      "ticker": "PTBA",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-08-24",
+      "entry": 2480,
+      "sl": 2364,
+      "tp1": 2712,
+      "tp2": 2828,
+      "technicalScore": 90,
+      "fundamentalScore": 85
+    },
+    {
+      "id": "280dc6c2",
+      "ticker": "ADRO",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-24",
+      "entry": 2630,
+      "sl": 2577,
+      "tp1": 2669,
+      "tp2": 2709,
+      "technicalScore": 100,
+      "fundamentalScore": 60
+    },
+    {
+      "id": "8f56f5d6",
+      "ticker": "ADRO",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-08-24",
+      "entry": 2630,
+      "sl": 2522,
+      "tp1": 2847,
+      "tp2": 2955,
+      "technicalScore": 99,
+      "fundamentalScore": 60
+    },
+    {
+      "id": "5e3fe94c",
+      "ticker": "PGAS",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-24",
+      "entry": 1540,
+      "sl": 1509,
+      "tp1": 1563,
+      "tp2": 1586,
+      "technicalScore": 90,
+      "fundamentalScore": 60
     }
   ],
   "closed": [
@@ -1025,5 +1090,5 @@
       "profit_factor": 0.43
     }
   },
-  "updatedAt": "2026-08-24T05:52:50.640975+00:00"
+  "updatedAt": "2026-08-24T09:23:51.886376+00:00"
 }
