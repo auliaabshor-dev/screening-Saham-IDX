@@ -1,7 +1,23 @@
 {
-  "generatedAt": "2026-08-25T05:47:05.631914+00:00",
-  "session": "siang",
+  "generatedAt": "2026-08-25T09:08:54.331267+00:00",
+  "session": "sore",
   "signals": [
+    {
+      "ticker": "PTBA",
+      "name": "PT Bukit Asam (Persero) Tbk",
+      "sector": "Energy",
+      "price": 2480,
+      "entry": 2480,
+      "sl": 2430,
+      "tp1": 2517,
+      "tp2": 2554,
+      "technicalScore": 100,
+      "fundamentalScore": 85,
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "status": "aktif",
+      "notes": "Strong Close + Volume — tutup di area atas rentang harian (posisi close 77%) dengan volume. Target jual di pembukaan besok pagi. Backtest: PF 3.09, +0.37%/trade (sebelum fee)."
+    },
     {
       "ticker": "PTBA",
       "name": "PT Bukit Asam (Persero) Tbk",
@@ -24,6 +40,22 @@
       "sector": "Energy",
       "price": 2630,
       "entry": 2630,
+      "sl": 2577,
+      "tp1": 2669,
+      "tp2": 2709,
+      "technicalScore": 100,
+      "fundamentalScore": 60,
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "status": "aktif",
+      "notes": "Strong Close + Volume — tutup di area atas rentang harian (posisi close 100%) dengan volume. Target jual di pembukaan besok pagi. Backtest: PF 3.09, +0.37%/trade (sebelum fee)."
+    },
+    {
+      "ticker": "ADRO",
+      "name": "PT Alamtri Resources Indonesia Tbk",
+      "sector": "Energy",
+      "price": 2630,
+      "entry": 2630,
       "sl": 2522,
       "tp1": 2847,
       "tp2": 2955,
@@ -33,6 +65,22 @@
       "setup": "Breakout",
       "status": "aktif",
       "notes": "Breakout swing high dengan volume. Backtest: PF 1.69, +1.73%/trade — TARGET UTAMA TP2 (3R), bukan TP1. PER 8.6x. ROE 10.3%."
+    },
+    {
+      "ticker": "PGAS",
+      "name": "PT Perusahaan Gas Negara (Persero) Tbk",
+      "sector": "Utilities",
+      "price": 1540,
+      "entry": 1540,
+      "sl": 1509,
+      "tp1": 1563,
+      "tp2": 1586,
+      "technicalScore": 90,
+      "fundamentalScore": 60,
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "status": "aktif",
+      "notes": "Strong Close + Volume — tutup di area atas rentang harian (posisi close 60%) dengan volume. Target jual di pembukaan besok pagi. Backtest: PF 3.09, +0.37%/trade (sebelum fee)."
     },
     {
       "ticker": "EXCL",
@@ -81,6 +129,22 @@
       "setup": "Demand Zone Bounce",
       "status": "pantau",
       "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.79; versi dengan konfirmasi pun PF 0.54). Untuk observasi. PER 6.3x. ROE 22.4%."
+    },
+    {
+      "ticker": "ICBP",
+      "name": "PT Indofood CBP Sukses Makmur Tbk",
+      "sector": "Consumer Defensive",
+      "price": 7750,
+      "entry": 7750,
+      "sl": 7595,
+      "tp1": 7866,
+      "tp2": 7982,
+      "technicalScore": 75,
+      "fundamentalScore": 65,
+      "strategy": "BSJP",
+      "setup": "Strong Close",
+      "status": "pantau",
+      "notes": "Strong Close — strong close TANPA volume di atas rata-rata. Statistik lebih lemah, pantau saja."
     },
     {
       "ticker": "ANTM",
@@ -225,6 +289,22 @@
       "setup": "BOS Konfirmasi",
       "status": "pantau",
       "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 12.2x. ROE 12.6%."
+    },
+    {
+      "ticker": "INCO",
+      "name": "PT Vale Indonesia Tbk",
+      "sector": "Basic Materials",
+      "price": 5275,
+      "entry": 5275,
+      "sl": 5170,
+      "tp1": 5354,
+      "tp2": 5433,
+      "technicalScore": 75,
+      "fundamentalScore": 25,
+      "strategy": "BSJP",
+      "setup": "Strong Close",
+      "status": "pantau",
+      "notes": "Strong Close — strong close TANPA volume di atas rata-rata. Statistik lebih lemah, pantau saja."
     },
     {
       "ticker": "AMRT",
