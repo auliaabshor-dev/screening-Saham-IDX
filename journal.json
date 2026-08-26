@@ -40,32 +40,6 @@
       "fundamentalScore": 35
     },
     {
-      "id": "ae89e1c3",
-      "ticker": "BBNI",
-      "strategy": "Swing",
-      "setup": "Breakout",
-      "date_in": "2026-08-21",
-      "entry": 3760,
-      "sl": 3635,
-      "tp1": 4011,
-      "tp2": 4136,
-      "technicalScore": 100,
-      "fundamentalScore": 85
-    },
-    {
-      "id": "57c8064e",
-      "ticker": "PTBA",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-08-24",
-      "entry": 2480,
-      "sl": 2430,
-      "tp1": 2517,
-      "tp2": 2554,
-      "technicalScore": 100,
-      "fundamentalScore": 85
-    },
-    {
       "id": "8ccfcf09",
       "ticker": "PTBA",
       "strategy": "Swing",
@@ -79,19 +53,6 @@
       "fundamentalScore": 85
     },
     {
-      "id": "280dc6c2",
-      "ticker": "ADRO",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-08-24",
-      "entry": 2630,
-      "sl": 2577,
-      "tp1": 2669,
-      "tp2": 2709,
-      "technicalScore": 100,
-      "fundamentalScore": 60
-    },
-    {
       "id": "8f56f5d6",
       "ticker": "ADRO",
       "strategy": "Swing",
@@ -102,19 +63,6 @@
       "tp1": 2847,
       "tp2": 2955,
       "technicalScore": 99,
-      "fundamentalScore": 60
-    },
-    {
-      "id": "5e3fe94c",
-      "ticker": "PGAS",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-08-24",
-      "entry": 1540,
-      "sl": 1509,
-      "tp1": 1563,
-      "tp2": 1586,
-      "technicalScore": 90,
       "fundamentalScore": 60
     }
   ],
@@ -1068,27 +1016,103 @@
       "hold_days": 1,
       "return_pct": -0.798,
       "outcome": "loss"
+    },
+    {
+      "id": "ae89e1c3",
+      "ticker": "BBNI",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-08-21",
+      "entry": 3760,
+      "sl": 3635,
+      "tp1": 4011,
+      "tp2": 4136,
+      "technicalScore": 100,
+      "fundamentalScore": 85,
+      "date_out": "2026-08-26",
+      "exit": 3635,
+      "exit_via": "sl",
+      "hold_days": 2,
+      "return_pct": -3.324,
+      "outcome": "loss"
+    },
+    {
+      "id": "57c8064e",
+      "ticker": "PTBA",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-24",
+      "entry": 2480,
+      "sl": 2430,
+      "tp1": 2517,
+      "tp2": 2554,
+      "technicalScore": 100,
+      "fundamentalScore": 85,
+      "date_out": "2026-08-26",
+      "exit": 2460,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": -0.806,
+      "outcome": "loss"
+    },
+    {
+      "id": "280dc6c2",
+      "ticker": "ADRO",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-24",
+      "entry": 2630,
+      "sl": 2577,
+      "tp1": 2669,
+      "tp2": 2709,
+      "technicalScore": 100,
+      "fundamentalScore": 60,
+      "date_out": "2026-08-26",
+      "exit": 2630,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 0.0,
+      "outcome": "loss"
+    },
+    {
+      "id": "5e3fe94c",
+      "ticker": "PGAS",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-24",
+      "entry": 1540,
+      "sl": 1509,
+      "tp1": 1563,
+      "tp2": 1586,
+      "technicalScore": 90,
+      "fundamentalScore": 60,
+      "date_out": "2026-08-26",
+      "exit": 1545,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 0.325,
+      "outcome": "win"
     }
   ],
   "stats": {
     "total": {
-      "trades": 50,
-      "win_rate_pct": 40.0,
-      "avg_return_pct": -0.034,
-      "profit_factor": 0.96
+      "trades": 54,
+      "win_rate_pct": 38.9,
+      "avg_return_pct": -0.102,
+      "profit_factor": 0.87
     },
     "BSJP": {
-      "trades": 36,
-      "win_rate_pct": 47.2,
-      "avg_return_pct": 0.505,
-      "profit_factor": 5.27
+      "trades": 39,
+      "win_rate_pct": 46.2,
+      "avg_return_pct": 0.454,
+      "profit_factor": 4.5
     },
     "Swing": {
-      "trades": 14,
-      "win_rate_pct": 21.4,
-      "avg_return_pct": -1.42,
-      "profit_factor": 0.43
+      "trades": 15,
+      "win_rate_pct": 20.0,
+      "avg_return_pct": -1.547,
+      "profit_factor": 0.39
     }
   },
-  "updatedAt": "2026-08-25T09:08:55.547886+00:00"
+  "updatedAt": "2026-08-26T03:40:21.804107+00:00"
 }
