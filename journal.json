@@ -79,17 +79,95 @@
       "fundamentalScore": 65
     },
     {
-      "id": "5992c15a",
-      "ticker": "ICBP",
+      "id": "28f0ead3",
+      "ticker": "PTBA",
       "strategy": "BSJP",
       "setup": "Strong Close + Volume",
-      "date_in": "2026-08-26",
-      "entry": 7850,
-      "sl": 7693,
-      "tp1": 7968,
-      "tp2": 8086,
+      "date_in": "2026-08-27",
+      "entry": 2500,
+      "sl": 2450,
+      "tp1": 2537,
+      "tp2": 2575,
       "technicalScore": 100,
-      "fundamentalScore": 65
+      "fundamentalScore": 85
+    },
+    {
+      "id": "73f91caa",
+      "ticker": "CPIN",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-27",
+      "entry": 3020,
+      "sl": 2960,
+      "tp1": 3065,
+      "tp2": 3111,
+      "technicalScore": 85,
+      "fundamentalScore": 100
+    },
+    {
+      "id": "46a69c6f",
+      "ticker": "BBNI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-27",
+      "entry": 3710,
+      "sl": 3636,
+      "tp1": 3766,
+      "tp2": 3821,
+      "technicalScore": 90,
+      "fundamentalScore": 85
+    },
+    {
+      "id": "16b82fe2",
+      "ticker": "BBNI",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-08-27",
+      "entry": 3710,
+      "sl": 3635,
+      "tp1": 3861,
+      "tp2": 3936,
+      "technicalScore": 78,
+      "fundamentalScore": 85
+    },
+    {
+      "id": "51357597",
+      "ticker": "ADRO",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-27",
+      "entry": 2700,
+      "sl": 2646,
+      "tp1": 2740,
+      "tp2": 2781,
+      "technicalScore": 100,
+      "fundamentalScore": 60
+    },
+    {
+      "id": "9b2f55ec",
+      "ticker": "TLKM",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-27",
+      "entry": 2610,
+      "sl": 2558,
+      "tp1": 2649,
+      "tp2": 2688,
+      "technicalScore": 75,
+      "fundamentalScore": 80
+    },
+    {
+      "id": "b78ce502",
+      "ticker": "SMGR",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-27",
+      "entry": 1505,
+      "sl": 1475,
+      "tp1": 1528,
+      "tp2": 1550,
+      "technicalScore": 75,
+      "fundamentalScore": 45
     }
   ],
   "closed": [
@@ -1118,20 +1196,39 @@
       "hold_days": 1,
       "return_pct": 0.325,
       "outcome": "win"
+    },
+    {
+      "id": "5992c15a",
+      "ticker": "ICBP",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-26",
+      "entry": 7850,
+      "sl": 7693,
+      "tp1": 7968,
+      "tp2": 8086,
+      "technicalScore": 100,
+      "fundamentalScore": 65,
+      "date_out": "2026-08-27",
+      "exit": 7825,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": -0.318,
+      "outcome": "loss"
     }
   ],
   "stats": {
     "total": {
-      "trades": 54,
-      "win_rate_pct": 38.9,
-      "avg_return_pct": -0.102,
+      "trades": 55,
+      "win_rate_pct": 38.2,
+      "avg_return_pct": -0.106,
       "profit_factor": 0.87
     },
     "BSJP": {
-      "trades": 39,
-      "win_rate_pct": 46.2,
-      "avg_return_pct": 0.454,
-      "profit_factor": 4.5
+      "trades": 40,
+      "win_rate_pct": 45.0,
+      "avg_return_pct": 0.435,
+      "profit_factor": 4.23
     },
     "Swing": {
       "trades": 15,
@@ -1140,5 +1237,5 @@
       "profit_factor": 0.39
     }
   },
-  "updatedAt": "2026-08-26T09:12:22.665692+00:00"
+  "updatedAt": "2026-08-27T13:06:47.618318+00:00"
 }
