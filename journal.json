@@ -103,6 +103,97 @@
       "tp2": 2894,
       "technicalScore": 100,
       "fundamentalScore": 60
+    },
+    {
+      "id": "ea3c830e",
+      "ticker": "BBRI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-31",
+      "entry": 3250,
+      "sl": 3185,
+      "tp1": 3299,
+      "tp2": 3348,
+      "technicalScore": 100,
+      "fundamentalScore": 100
+    },
+    {
+      "id": "2aba0a09",
+      "ticker": "INDF",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-08-31",
+      "entry": 7500,
+      "sl": 7314,
+      "tp1": 7873,
+      "tp2": 8059,
+      "technicalScore": 100,
+      "fundamentalScore": 85
+    },
+    {
+      "id": "59f49ca1",
+      "ticker": "INDF",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-31",
+      "entry": 7500,
+      "sl": 7350,
+      "tp1": 7612,
+      "tp2": 7725,
+      "technicalScore": 100,
+      "fundamentalScore": 85
+    },
+    {
+      "id": "c058c3a5",
+      "ticker": "BBCA",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-08-31",
+      "entry": 6475,
+      "sl": 6378,
+      "tp1": 6669,
+      "tp2": 6767,
+      "technicalScore": 100,
+      "fundamentalScore": 80
+    },
+    {
+      "id": "06fda214",
+      "ticker": "BBCA",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-31",
+      "entry": 6475,
+      "sl": 6346,
+      "tp1": 6572,
+      "tp2": 6669,
+      "technicalScore": 100,
+      "fundamentalScore": 80
+    },
+    {
+      "id": "ea6b056b",
+      "ticker": "TLKM",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-31",
+      "entry": 2600,
+      "sl": 2548,
+      "tp1": 2639,
+      "tp2": 2678,
+      "technicalScore": 85,
+      "fundamentalScore": 80
+    },
+    {
+      "id": "efbbbcc8",
+      "ticker": "PGAS",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-08-31",
+      "entry": 1530,
+      "sl": 1499,
+      "tp1": 1553,
+      "tp2": 1576,
+      "technicalScore": 90,
+      "fundamentalScore": 60
     }
   ],
   "closed": [
@@ -1343,5 +1434,5 @@
       "profit_factor": 0.37
     }
   },
-  "updatedAt": "2026-08-31T08:55:07.522051+00:00"
+  "updatedAt": "2026-08-31T11:35:44.977791+00:00"
 }
