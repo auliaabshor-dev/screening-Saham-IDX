@@ -90,6 +90,123 @@
       "tp2": 6767,
       "technicalScore": 100,
       "fundamentalScore": 80
+    },
+    {
+      "id": "dfc91e2a",
+      "ticker": "BMRI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-01",
+      "entry": 4320,
+      "sl": 4234,
+      "tp1": 4385,
+      "tp2": 4450,
+      "technicalScore": 100,
+      "fundamentalScore": 100
+    },
+    {
+      "id": "498af142",
+      "ticker": "BBRI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-01",
+      "entry": 3380,
+      "sl": 3312,
+      "tp1": 3431,
+      "tp2": 3481,
+      "technicalScore": 100,
+      "fundamentalScore": 90
+    },
+    {
+      "id": "95ba93b9",
+      "ticker": "BMRI",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-09-01",
+      "entry": 4320,
+      "sl": 4216,
+      "tp1": 4528,
+      "tp2": 4633,
+      "technicalScore": 87,
+      "fundamentalScore": 100
+    },
+    {
+      "id": "d71ad528",
+      "ticker": "CPIN",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-01",
+      "entry": 3060,
+      "sl": 2999,
+      "tp1": 3106,
+      "tp2": 3152,
+      "technicalScore": 85,
+      "fundamentalScore": 100
+    },
+    {
+      "id": "fd4f432e",
+      "ticker": "ASII",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-01",
+      "entry": 4920,
+      "sl": 4822,
+      "tp1": 4994,
+      "tp2": 5068,
+      "technicalScore": 90,
+      "fundamentalScore": 85
+    },
+    {
+      "id": "9bbd7a80",
+      "ticker": "PGAS",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-01",
+      "entry": 1555,
+      "sl": 1524,
+      "tp1": 1578,
+      "tp2": 1602,
+      "technicalScore": 100,
+      "fundamentalScore": 60
+    },
+    {
+      "id": "72dc14f5",
+      "ticker": "PGAS",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-09-01",
+      "entry": 1555,
+      "sl": 1527,
+      "tp1": 1612,
+      "tp2": 1640,
+      "technicalScore": 90,
+      "fundamentalScore": 60
+    },
+    {
+      "id": "c9b16eb4",
+      "ticker": "SMGR",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-09-01",
+      "entry": 1730,
+      "sl": 1615,
+      "tp1": 1959,
+      "tp2": 2074,
+      "technicalScore": 100,
+      "fundamentalScore": 45
+    },
+    {
+      "id": "b7dd2f99",
+      "ticker": "SMGR",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-01",
+      "entry": 1730,
+      "sl": 1695,
+      "tp1": 1756,
+      "tp2": 1782,
+      "technicalScore": 100,
+      "fundamentalScore": 45
     }
   ],
   "closed": [
@@ -1482,5 +1599,5 @@
       "profit_factor": 0.35
     }
   },
-  "updatedAt": "2026-09-01T07:59:21.619833+00:00"
+  "updatedAt": "2026-09-01T10:05:27.883490+00:00"
 }
