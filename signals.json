@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T10:05:26.409325+00:00",
+  "generatedAt": "2026-09-01T13:37:40.858755+00:00",
   "session": "sore",
   "signals": [
     {
@@ -32,7 +32,7 @@
       "strategy": "Swing",
       "setup": "Breakout",
       "status": "aktif",
-      "notes": "Breakout swing high dengan volume. Backtest: PF 1.69, +1.73%/trade — TARGET UTAMA TP2 (3R), bukan TP1. PER 8.7x. ROE 19.0%."
+      "notes": "Breakout swing high dengan volume. Backtest: PF 1.69, +1.73%/trade — TARGET UTAMA TP2 (3R), bukan TP1. PER 8.7x. ROE 18.1%."
     },
     {
       "ticker": "BBRI",
@@ -115,22 +115,6 @@
       "notes": "Strong Close + Volume — tutup di area atas rentang harian (posisi close 93%) dengan volume. Target jual di pembukaan besok pagi. Backtest: PF 3.09, +0.37%/trade (sebelum fee)."
     },
     {
-      "ticker": "PGAS",
-      "name": "PT Perusahaan Gas Negara (Persero) Tbk",
-      "sector": "Utilities",
-      "price": 1555,
-      "entry": 1555,
-      "sl": 1524,
-      "tp1": 1578,
-      "tp2": 1602,
-      "technicalScore": 100,
-      "fundamentalScore": 60,
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "status": "aktif",
-      "notes": "Strong Close + Volume — tutup di area atas rentang harian (posisi close 71%) dengan volume. Target jual di pembukaan besok pagi. Backtest: PF 3.09, +0.37%/trade (sebelum fee)."
-    },
-    {
       "ticker": "ADRO",
       "name": "PT Alamtri Resources Indonesia Tbk",
       "sector": "Energy",
@@ -144,23 +128,7 @@
       "strategy": "Swing",
       "setup": "Breakout",
       "status": "aktif",
-      "notes": "Breakout swing high dengan volume. Backtest: PF 1.69, +1.73%/trade — TARGET UTAMA TP2 (3R), bukan TP1. PER 7.8x. ROE 12.3%."
-    },
-    {
-      "ticker": "PGAS",
-      "name": "PT Perusahaan Gas Negara (Persero) Tbk",
-      "sector": "Utilities",
-      "price": 1555,
-      "entry": 1555,
-      "sl": 1527,
-      "tp1": 1612,
-      "tp2": 1640,
-      "technicalScore": 90,
-      "fundamentalScore": 60,
-      "strategy": "Swing",
-      "setup": "Breakout",
-      "status": "aktif",
-      "notes": "Breakout swing high dengan volume. Backtest: PF 1.69, +1.73%/trade — TARGET UTAMA TP2 (3R), bukan TP1. PER 8.8x. ROE 10.1%."
+      "notes": "Breakout swing high dengan volume. Backtest: PF 1.69, +1.73%/trade — TARGET UTAMA TP2 (3R), bukan TP1. PER 7.8x. ROE 10.3%."
     },
     {
       "ticker": "SMGR",
@@ -336,7 +304,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 8.3x. ROE 26.8%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 8.3x. ROE 24.7%."
     },
     {
       "ticker": "ICBP",
@@ -400,7 +368,7 @@
       "strategy": "Swing",
       "setup": "Demand Zone Bounce",
       "status": "pantau",
-      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.79; versi dengan konfirmasi pun PF 0.54). Untuk observasi. PER 19.3x. ROE 5.6%."
+      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.79; versi dengan konfirmasi pun PF 0.54). Untuk observasi. PER 19.4x. ROE 5.6%."
     },
     {
       "ticker": "EXCL",
