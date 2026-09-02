@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T09:36:51.095316+00:00",
+  "generatedAt": "2026-09-02T12:54:11.050060+00:00",
   "session": "sore",
   "signals": [
     {
@@ -12,11 +12,11 @@
       "tp1": 3432,
       "tp2": 3788,
       "technicalScore": 100,
-      "fundamentalScore": 85,
+      "fundamentalScore": 100,
       "strategy": "Swing",
       "setup": "Breakout",
       "status": "aktif",
-      "notes": "Breakout swing high dengan volume. Backtest: PF 1.69, +1.73%/trade — TARGET UTAMA TP2 (3R), bukan TP1. PER 6.6x. ROE 14.4%."
+      "notes": "Breakout swing high dengan volume. Backtest: PF 1.69, +1.73%/trade — TARGET UTAMA TP2 (3R), bukan TP1. PER 6.6x. ROE 21.1%."
     },
     {
       "ticker": "ADRO",
