@@ -90,6 +90,19 @@
       "tp2": 2074,
       "technicalScore": 100,
       "fundamentalScore": 45
+    },
+    {
+      "id": "fe96a2af",
+      "ticker": "PTBA",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-09-02",
+      "entry": 2720,
+      "sl": 2364,
+      "tp1": 3432,
+      "tp2": 3788,
+      "technicalScore": 100,
+      "fundamentalScore": 85
     }
   ],
   "closed": [
@@ -1653,5 +1666,5 @@
       "profit_factor": 0.74
     }
   },
-  "updatedAt": "2026-09-02T07:20:04.248199+00:00"
+  "updatedAt": "2026-09-02T09:36:52.502912+00:00"
 }
