@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T09:38:18.103476+00:00",
+  "generatedAt": "2026-09-04T12:51:51.232241+00:00",
   "session": "sore",
   "signals": [
     {
@@ -67,6 +67,38 @@
       "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 7.1x. ROE 12.4%."
     },
     {
+      "ticker": "TLKM",
+      "name": "Perusahaan Perseroan (Persero) PT Telekomunikasi Indonesia Tbk",
+      "sector": "Communication Services",
+      "price": 2610,
+      "entry": 2610,
+      "sl": 2499,
+      "tp1": 2832,
+      "tp2": 2943,
+      "technicalScore": 65,
+      "fundamentalScore": 80,
+      "strategy": "Swing",
+      "setup": "Demand Zone Bounce",
+      "status": "pantau",
+      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.79; versi dengan konfirmasi pun PF 0.54). Untuk observasi. PER 14.6x. ROE 17.7%."
+    },
+    {
+      "ticker": "BBCA",
+      "name": "PT Bank Central Asia Tbk",
+      "sector": "Financial Services",
+      "price": 6700,
+      "entry": 6700,
+      "sl": 6114,
+      "tp1": 7871,
+      "tp2": 8457,
+      "technicalScore": 70,
+      "fundamentalScore": 70,
+      "strategy": "Swing",
+      "setup": "BOS Konfirmasi",
+      "status": "pantau",
+      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 14.2x. ROE 21.8%."
+    },
+    {
       "ticker": "KLBF",
       "name": "PT Kalbe Farma Tbk.",
       "sector": "Healthcare",
@@ -99,36 +131,36 @@
       "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 8.4x. ROE 26.8%."
     },
     {
-      "ticker": "TLKM",
-      "name": "Perusahaan Perseroan (Persero) PT Telekomunikasi Indonesia Tbk",
-      "sector": "Communication Services",
-      "price": 2610,
-      "entry": 2610,
-      "sl": 2499,
-      "tp1": 2832,
-      "tp2": 2943,
-      "technicalScore": 65,
-      "fundamentalScore": 60,
-      "strategy": "Swing",
-      "setup": "Demand Zone Bounce",
-      "status": "pantau",
-      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.79; versi dengan konfirmasi pun PF 0.54). Untuk observasi. PER 14.6x. ROE 17.7%."
-    },
-    {
-      "ticker": "BBCA",
-      "name": "PT Bank Central Asia Tbk",
-      "sector": "Financial Services",
-      "price": 6700,
-      "entry": 6700,
-      "sl": 6114,
-      "tp1": 7871,
-      "tp2": 8457,
+      "ticker": "ADRO",
+      "name": "PT Alamtri Resources Indonesia Tbk",
+      "sector": "Energy",
+      "price": 2720,
+      "entry": 2720,
+      "sl": 2435,
+      "tp1": 3289,
+      "tp2": 3574,
       "technicalScore": 70,
-      "fundamentalScore": 50,
+      "fundamentalScore": 60,
       "strategy": "Swing",
       "setup": "BOS Konfirmasi",
       "status": "pantau",
-      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 14.0x. ROE 21.8%."
+      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 7.6x. ROE 12.3%."
+    },
+    {
+      "ticker": "CPIN",
+      "name": "PT Charoen Pokphand Indonesia Tbk",
+      "sector": "Consumer Defensive",
+      "price": 3210,
+      "entry": 3210,
+      "sl": 3050,
+      "tp1": 3531,
+      "tp2": 3692,
+      "technicalScore": 30,
+      "fundamentalScore": 90,
+      "strategy": "Swing",
+      "setup": "Konsolidasi",
+      "status": "pantau",
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 7.1x. ROE 22.8%."
     },
     {
       "ticker": "ASII",
@@ -163,20 +195,20 @@
       "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 32.0x. ROE 0.4%."
     },
     {
-      "ticker": "ADRO",
-      "name": "PT Alamtri Resources Indonesia Tbk",
-      "sector": "Energy",
-      "price": 2720,
-      "entry": 2720,
-      "sl": 2435,
-      "tp1": 3289,
-      "tp2": 3574,
-      "technicalScore": 70,
-      "fundamentalScore": 40,
+      "ticker": "INDF",
+      "name": "PT Indofood Sukses Makmur Tbk",
+      "sector": "Consumer Defensive",
+      "price": 7225,
+      "entry": 7225,
+      "sl": 6864,
+      "tp1": 7948,
+      "tp2": 8309,
+      "technicalScore": 25,
+      "fundamentalScore": 85,
       "strategy": "Swing",
-      "setup": "BOS Konfirmasi",
+      "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 7.6x. ROE 12.3%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.6x. ROE 12.1%."
     },
     {
       "ticker": "PGAS",
@@ -193,22 +225,6 @@
       "setup": "BOS Konfirmasi",
       "status": "pantau",
       "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 8.5x. ROE 10.1%."
-    },
-    {
-      "ticker": "CPIN",
-      "name": "PT Charoen Pokphand Indonesia Tbk",
-      "sector": "Consumer Defensive",
-      "price": 3210,
-      "entry": 3210,
-      "sl": 3050,
-      "tp1": 3531,
-      "tp2": 3692,
-      "technicalScore": 30,
-      "fundamentalScore": 70,
-      "strategy": "Swing",
-      "setup": "Konsolidasi",
-      "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 7.1x. ROE 22.8%."
     },
     {
       "ticker": "EXCL",
@@ -259,22 +275,6 @@
       "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 11.5x. ROE 12.6%."
     },
     {
-      "ticker": "INDF",
-      "name": "PT Indofood Sukses Makmur Tbk",
-      "sector": "Consumer Defensive",
-      "price": 7225,
-      "entry": 7225,
-      "sl": 6864,
-      "tp1": 7948,
-      "tp2": 8309,
-      "technicalScore": 25,
-      "fundamentalScore": 65,
-      "strategy": "Swing",
-      "setup": "Konsolidasi",
-      "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.6x. ROE 12.1%."
-    },
-    {
       "ticker": "UNVR",
       "name": "PT Unilever Indonesia Tbk",
       "sector": "Consumer Defensive",
@@ -288,7 +288,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 17.1x. ROE 133.4%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 17.2x. ROE 133.4%."
     },
     {
       "ticker": "INCO",
@@ -316,7 +316,7 @@
       "tp1": 3190,
       "tp2": 3335,
       "technicalScore": 25,
-      "fundamentalScore": 0,
+      "fundamentalScore": 20,
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
