@@ -77,6 +77,32 @@
       "tp2": 4302,
       "technicalScore": 76,
       "fundamentalScore": 90
+    },
+    {
+      "id": "8873dafe",
+      "ticker": "PTBA",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-07",
+      "entry": 3010,
+      "sl": 2950,
+      "tp1": 3055,
+      "tp2": 3100,
+      "technicalScore": 100,
+      "fundamentalScore": 100
+    },
+    {
+      "id": "26d4e1f7",
+      "ticker": "INDF",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-07",
+      "entry": 7350,
+      "sl": 7203,
+      "tp1": 7460,
+      "tp2": 7570,
+      "technicalScore": 100,
+      "fundamentalScore": 85
     }
   ],
   "closed": [
@@ -1849,5 +1875,5 @@
       "profit_factor": 0.99
     }
   },
-  "updatedAt": "2026-09-07T07:33:26.601747+00:00"
+  "updatedAt": "2026-09-07T10:16:37.631694+00:00"
 }
