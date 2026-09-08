@@ -77,32 +77,6 @@
       "tp2": 4302,
       "technicalScore": 76,
       "fundamentalScore": 90
-    },
-    {
-      "id": "8873dafe",
-      "ticker": "PTBA",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-09-07",
-      "entry": 3010,
-      "sl": 2950,
-      "tp1": 3055,
-      "tp2": 3100,
-      "technicalScore": 100,
-      "fundamentalScore": 100
-    },
-    {
-      "id": "26d4e1f7",
-      "ticker": "INDF",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-09-07",
-      "entry": 7350,
-      "sl": 7203,
-      "tp1": 7460,
-      "tp2": 7570,
-      "technicalScore": 100,
-      "fundamentalScore": 85
     }
   ],
   "closed": [
@@ -1853,19 +1827,57 @@
       "hold_days": 1,
       "return_pct": 1.12,
       "outcome": "win"
+    },
+    {
+      "id": "8873dafe",
+      "ticker": "PTBA",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-07",
+      "entry": 3010,
+      "sl": 2950,
+      "tp1": 3055,
+      "tp2": 3100,
+      "technicalScore": 100,
+      "fundamentalScore": 100,
+      "date_out": "2026-09-08",
+      "exit": 3010,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 0.0,
+      "outcome": "loss"
+    },
+    {
+      "id": "26d4e1f7",
+      "ticker": "INDF",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-07",
+      "entry": 7350,
+      "sl": 7203,
+      "tp1": 7460,
+      "tp2": 7570,
+      "technicalScore": 100,
+      "fundamentalScore": 85,
+      "date_out": "2026-09-08",
+      "exit": 7350,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 0.0,
+      "outcome": "loss"
     }
   ],
   "stats": {
     "total": {
-      "trades": 92,
-      "win_rate_pct": 43.5,
-      "avg_return_pct": 0.278,
+      "trades": 94,
+      "win_rate_pct": 42.6,
+      "avg_return_pct": 0.272,
       "profit_factor": 1.46
     },
     "BSJP": {
-      "trades": 69,
-      "win_rate_pct": 47.8,
-      "avg_return_pct": 0.376,
+      "trades": 71,
+      "win_rate_pct": 46.5,
+      "avg_return_pct": 0.365,
       "profit_factor": 4.87
     },
     "Swing": {
@@ -1875,5 +1887,5 @@
       "profit_factor": 0.99
     }
   },
-  "updatedAt": "2026-09-07T14:22:53.709042+00:00"
+  "updatedAt": "2026-09-08T07:26:57.528851+00:00"
 }
