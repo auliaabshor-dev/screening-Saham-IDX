@@ -77,6 +77,84 @@
       "tp2": 4302,
       "technicalScore": 76,
       "fundamentalScore": 90
+    },
+    {
+      "id": "014eea28",
+      "ticker": "TLKM",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-08",
+      "entry": 2650,
+      "sl": 2597,
+      "tp1": 2690,
+      "tp2": 2730,
+      "technicalScore": 100,
+      "fundamentalScore": 80
+    },
+    {
+      "id": "7d6a125a",
+      "ticker": "TLKM",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-09-08",
+      "entry": 2650,
+      "sl": 2600,
+      "tp1": 2749,
+      "tp2": 2799,
+      "technicalScore": 99,
+      "fundamentalScore": 80
+    },
+    {
+      "id": "0dc14c7c",
+      "ticker": "INDF",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-08",
+      "entry": 7500,
+      "sl": 7350,
+      "tp1": 7612,
+      "tp2": 7725,
+      "technicalScore": 90,
+      "fundamentalScore": 85
+    },
+    {
+      "id": "82ab6a5a",
+      "ticker": "INDF",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-09-08",
+      "entry": 7500,
+      "sl": 7388,
+      "tp1": 7725,
+      "tp2": 7838,
+      "technicalScore": 82,
+      "fundamentalScore": 85
+    },
+    {
+      "id": "285653ce",
+      "ticker": "BBNI",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-09-08",
+      "entry": 3870,
+      "sl": 3723,
+      "tp1": 4163,
+      "tp2": 4310,
+      "technicalScore": 76,
+      "fundamentalScore": 85
+    },
+    {
+      "id": "57215682",
+      "ticker": "MDKA",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-08",
+      "entry": 3120,
+      "sl": 3058,
+      "tp1": 3167,
+      "tp2": 3214,
+      "technicalScore": 100,
+      "fundamentalScore": 20
     }
   ],
   "closed": [
@@ -1887,5 +1965,5 @@
       "profit_factor": 0.99
     }
   },
-  "updatedAt": "2026-09-08T07:26:57.528851+00:00"
+  "updatedAt": "2026-09-08T09:40:24.671540+00:00"
 }
