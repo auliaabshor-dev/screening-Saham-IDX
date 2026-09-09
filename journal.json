@@ -116,6 +116,58 @@
       "tp2": 4310,
       "technicalScore": 76,
       "fundamentalScore": 85
+    },
+    {
+      "id": "31cac71b",
+      "ticker": "ANTM",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-09",
+      "entry": 3200,
+      "sl": 3136,
+      "tp1": 3248,
+      "tp2": 3296,
+      "technicalScore": 100,
+      "fundamentalScore": 90
+    },
+    {
+      "id": "a22b38fd",
+      "ticker": "PTBA",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-09",
+      "entry": 3100,
+      "sl": 3038,
+      "tp1": 3146,
+      "tp2": 3193,
+      "technicalScore": 100,
+      "fundamentalScore": 90
+    },
+    {
+      "id": "99570611",
+      "ticker": "BBCA",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-09-09",
+      "entry": 6525,
+      "sl": 6378,
+      "tp1": 6819,
+      "tp2": 6967,
+      "technicalScore": 95,
+      "fundamentalScore": 80
+    },
+    {
+      "id": "1b7ab275",
+      "ticker": "TLKM",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-09",
+      "entry": 2660,
+      "sl": 2607,
+      "tp1": 2700,
+      "tp2": 2740,
+      "technicalScore": 90,
+      "fundamentalScore": 80
     }
   ],
   "closed": [
@@ -1983,5 +2035,5 @@
       "profit_factor": 0.99
     }
   },
-  "updatedAt": "2026-09-09T07:34:41.764284+00:00"
+  "updatedAt": "2026-09-09T09:44:52.741470+00:00"
 }
