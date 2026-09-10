@@ -92,19 +92,6 @@
       "fundamentalScore": 80
     },
     {
-      "id": "82ab6a5a",
-      "ticker": "INDF",
-      "strategy": "Swing",
-      "setup": "Breakout",
-      "date_in": "2026-09-08",
-      "entry": 7500,
-      "sl": 7388,
-      "tp1": 7725,
-      "tp2": 7838,
-      "technicalScore": 82,
-      "fundamentalScore": 85
-    },
-    {
       "id": "285653ce",
       "ticker": "BBNI",
       "strategy": "Swing",
@@ -118,32 +105,6 @@
       "fundamentalScore": 85
     },
     {
-      "id": "31cac71b",
-      "ticker": "ANTM",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-09-09",
-      "entry": 3200,
-      "sl": 3136,
-      "tp1": 3248,
-      "tp2": 3296,
-      "technicalScore": 100,
-      "fundamentalScore": 90
-    },
-    {
-      "id": "a22b38fd",
-      "ticker": "PTBA",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-09-09",
-      "entry": 3100,
-      "sl": 3038,
-      "tp1": 3146,
-      "tp2": 3193,
-      "technicalScore": 100,
-      "fundamentalScore": 90
-    },
-    {
       "id": "99570611",
       "ticker": "BBCA",
       "strategy": "Swing",
@@ -154,19 +115,6 @@
       "tp1": 6819,
       "tp2": 6967,
       "technicalScore": 95,
-      "fundamentalScore": 80
-    },
-    {
-      "id": "1b7ab275",
-      "ticker": "TLKM",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-09-09",
-      "entry": 2660,
-      "sl": 2607,
-      "tp1": 2700,
-      "tp2": 2740,
-      "technicalScore": 90,
       "fundamentalScore": 80
     }
   ],
@@ -2013,27 +1961,103 @@
       "hold_days": 1,
       "return_pct": 0.0,
       "outcome": "loss"
+    },
+    {
+      "id": "82ab6a5a",
+      "ticker": "INDF",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-09-08",
+      "entry": 7500,
+      "sl": 7388,
+      "tp1": 7725,
+      "tp2": 7838,
+      "technicalScore": 82,
+      "fundamentalScore": 85,
+      "date_out": "2026-09-10",
+      "exit": 7388,
+      "exit_via": "sl",
+      "hold_days": 2,
+      "return_pct": -1.493,
+      "outcome": "loss"
+    },
+    {
+      "id": "31cac71b",
+      "ticker": "ANTM",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-09",
+      "entry": 3200,
+      "sl": 3136,
+      "tp1": 3248,
+      "tp2": 3296,
+      "technicalScore": 100,
+      "fundamentalScore": 90,
+      "date_out": "2026-09-10",
+      "exit": 3230,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 0.938,
+      "outcome": "win"
+    },
+    {
+      "id": "a22b38fd",
+      "ticker": "PTBA",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-09",
+      "entry": 3100,
+      "sl": 3038,
+      "tp1": 3146,
+      "tp2": 3193,
+      "technicalScore": 100,
+      "fundamentalScore": 90,
+      "date_out": "2026-09-10",
+      "exit": 3080,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": -0.645,
+      "outcome": "loss"
+    },
+    {
+      "id": "1b7ab275",
+      "ticker": "TLKM",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-09",
+      "entry": 2660,
+      "sl": 2607,
+      "tp1": 2700,
+      "tp2": 2740,
+      "technicalScore": 90,
+      "fundamentalScore": 80,
+      "date_out": "2026-09-10",
+      "exit": 2680,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 0.752,
+      "outcome": "win"
     }
   ],
   "stats": {
     "total": {
-      "trades": 97,
-      "win_rate_pct": 41.2,
-      "avg_return_pct": 0.264,
-      "profit_factor": 1.46
+      "trades": 101,
+      "win_rate_pct": 41.6,
+      "avg_return_pct": 0.249,
+      "profit_factor": 1.43
     },
     "BSJP": {
-      "trades": 74,
-      "win_rate_pct": 44.6,
+      "trades": 77,
+      "win_rate_pct": 45.5,
       "avg_return_pct": 0.351,
-      "profit_factor": 4.87
+      "profit_factor": 4.67
     },
     "Swing": {
-      "trades": 23,
-      "win_rate_pct": 30.4,
-      "avg_return_pct": -0.016,
-      "profit_factor": 0.99
+      "trades": 24,
+      "win_rate_pct": 29.2,
+      "avg_return_pct": -0.078,
+      "profit_factor": 0.96
     }
   },
-  "updatedAt": "2026-09-09T13:05:31.303112+00:00"
+  "updatedAt": "2026-09-10T07:31:29.170367+00:00"
 }
