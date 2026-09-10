@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T09:43:14.778772+00:00",
+  "generatedAt": "2026-09-10T13:02:44.216351+00:00",
   "session": "sore",
   "signals": [
     {
@@ -12,7 +12,7 @@
       "tp1": 4572,
       "tp2": 5308,
       "technicalScore": 94,
-      "fundamentalScore": 100,
+      "fundamentalScore": 90,
       "strategy": "Swing",
       "setup": "Breakout",
       "status": "aktif",
