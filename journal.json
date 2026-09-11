@@ -64,6 +64,32 @@
       "tp2": 4302,
       "technicalScore": 76,
       "fundamentalScore": 90
+    },
+    {
+      "id": "6ce111f3",
+      "ticker": "ANTM",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-11",
+      "entry": 3270,
+      "sl": 3205,
+      "tp1": 3319,
+      "tp2": 3368,
+      "technicalScore": 80,
+      "fundamentalScore": 90
+    },
+    {
+      "id": "5af0466c",
+      "ticker": "INCO",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-11",
+      "entry": 4830,
+      "sl": 4733,
+      "tp1": 4902,
+      "tp2": 4975,
+      "technicalScore": 85,
+      "fundamentalScore": 25
     }
   ],
   "closed": [
@@ -2083,5 +2109,5 @@
       "profit_factor": 0.75
     }
   },
-  "updatedAt": "2026-09-11T07:29:19.302324+00:00"
+  "updatedAt": "2026-09-11T09:41:10.178945+00:00"
 }
