@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T10:37:50.854387+00:00",
+  "generatedAt": "2026-09-14T15:11:08.098580+00:00",
   "session": "sore",
   "signals": [
     {
@@ -115,22 +115,6 @@
       "notes": "Strong Close + Volume — tutup di area atas rentang harian (posisi close 89%) dengan volume. Target jual di pembukaan besok pagi. Backtest: PF 3.09, +0.37%/trade (sebelum fee)."
     },
     {
-      "ticker": "PTBA",
-      "name": "PT Bukit Asam (Persero) Tbk",
-      "sector": "Energy",
-      "price": 3080,
-      "entry": 3080,
-      "sl": 2297,
-      "tp1": 4646,
-      "tp2": 5430,
-      "technicalScore": 70,
-      "fundamentalScore": 100,
-      "strategy": "Swing",
-      "setup": "BOS Konfirmasi",
-      "status": "pantau",
-      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 7.5x. ROE 21.1%."
-    },
-    {
       "ticker": "BMRI",
       "name": "PT Bank Mandiri (Persero) Tbk",
       "sector": "Financial Services",
@@ -161,6 +145,22 @@
       "setup": "Strong Close",
       "status": "pantau",
       "notes": "Strong Close — strong close TANPA volume di atas rata-rata. Statistik lebih lemah, pantau saja."
+    },
+    {
+      "ticker": "PTBA",
+      "name": "PT Bukit Asam (Persero) Tbk",
+      "sector": "Energy",
+      "price": 3080,
+      "entry": 3080,
+      "sl": 2297,
+      "tp1": 4646,
+      "tp2": 5430,
+      "technicalScore": 70,
+      "fundamentalScore": 90,
+      "strategy": "Swing",
+      "setup": "BOS Konfirmasi",
+      "status": "pantau",
+      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 7.5x. ROE 21.1%."
     },
     {
       "ticker": "BBNI",
