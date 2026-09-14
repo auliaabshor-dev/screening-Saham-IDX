@@ -64,6 +64,97 @@
       "tp2": 4302,
       "technicalScore": 76,
       "fundamentalScore": 90
+    },
+    {
+      "id": "109b0717",
+      "ticker": "BMRI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-14",
+      "entry": 4440,
+      "sl": 4351,
+      "tp1": 4507,
+      "tp2": 4573,
+      "technicalScore": 100,
+      "fundamentalScore": 100
+    },
+    {
+      "id": "95015e8a",
+      "ticker": "BBNI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-14",
+      "entry": 3870,
+      "sl": 3793,
+      "tp1": 3928,
+      "tp2": 3986,
+      "technicalScore": 100,
+      "fundamentalScore": 85
+    },
+    {
+      "id": "cdf16d6d",
+      "ticker": "BBCA",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-14",
+      "entry": 6500,
+      "sl": 6370,
+      "tp1": 6597,
+      "tp2": 6695,
+      "technicalScore": 100,
+      "fundamentalScore": 80
+    },
+    {
+      "id": "8d95f980",
+      "ticker": "BBRI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-14",
+      "entry": 3400,
+      "sl": 3332,
+      "tp1": 3451,
+      "tp2": 3502,
+      "technicalScore": 90,
+      "fundamentalScore": 90
+    },
+    {
+      "id": "60bfe473",
+      "ticker": "TLKM",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-14",
+      "entry": 2690,
+      "sl": 2636,
+      "tp1": 2730,
+      "tp2": 2771,
+      "technicalScore": 100,
+      "fundamentalScore": 80
+    },
+    {
+      "id": "3c3ee714",
+      "ticker": "TLKM",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-09-14",
+      "entry": 2690,
+      "sl": 2600,
+      "tp1": 2869,
+      "tp2": 2959,
+      "technicalScore": 86,
+      "fundamentalScore": 80
+    },
+    {
+      "id": "fd9dfd24",
+      "ticker": "PGAS",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-14",
+      "entry": 1550,
+      "sl": 1519,
+      "tp1": 1573,
+      "tp2": 1596,
+      "technicalScore": 90,
+      "fundamentalScore": 60
     }
   ],
   "closed": [
@@ -2121,5 +2212,5 @@
       "profit_factor": 0.75
     }
   },
-  "updatedAt": "2026-09-14T08:07:36.074459+00:00"
+  "updatedAt": "2026-09-14T10:37:52.224296+00:00"
 }
