@@ -64,32 +64,6 @@
       "tp2": 4302,
       "technicalScore": 76,
       "fundamentalScore": 90
-    },
-    {
-      "id": "6ce111f3",
-      "ticker": "ANTM",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-09-11",
-      "entry": 3270,
-      "sl": 3205,
-      "tp1": 3319,
-      "tp2": 3368,
-      "technicalScore": 80,
-      "fundamentalScore": 90
-    },
-    {
-      "id": "5af0466c",
-      "ticker": "INCO",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-09-11",
-      "entry": 4830,
-      "sl": 4733,
-      "tp1": 4902,
-      "tp2": 4975,
-      "technicalScore": 85,
-      "fundamentalScore": 25
     }
   ],
   "closed": [
@@ -2087,20 +2061,58 @@
       "hold_days": 2,
       "return_pct": -2.253,
       "outcome": "loss"
+    },
+    {
+      "id": "6ce111f3",
+      "ticker": "ANTM",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-11",
+      "entry": 3270,
+      "sl": 3205,
+      "tp1": 3319,
+      "tp2": 3368,
+      "technicalScore": 80,
+      "fundamentalScore": 90,
+      "date_out": "2026-09-14",
+      "exit": 3240,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": -0.917,
+      "outcome": "loss"
+    },
+    {
+      "id": "5af0466c",
+      "ticker": "INCO",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-11",
+      "entry": 4830,
+      "sl": 4733,
+      "tp1": 4902,
+      "tp2": 4975,
+      "technicalScore": 85,
+      "fundamentalScore": 25,
+      "date_out": "2026-09-14",
+      "exit": 4830,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 0.0,
+      "outcome": "loss"
     }
   ],
   "stats": {
     "total": {
-      "trades": 105,
-      "win_rate_pct": 40.0,
-      "avg_return_pct": 0.102,
-      "profit_factor": 1.15
+      "trades": 107,
+      "win_rate_pct": 39.3,
+      "avg_return_pct": 0.092,
+      "profit_factor": 1.13
     },
     "BSJP": {
-      "trades": 77,
-      "win_rate_pct": 45.5,
-      "avg_return_pct": 0.351,
-      "profit_factor": 4.67
+      "trades": 79,
+      "win_rate_pct": 44.3,
+      "avg_return_pct": 0.33,
+      "profit_factor": 4.15
     },
     "Swing": {
       "trades": 28,
@@ -2109,5 +2121,5 @@
       "profit_factor": 0.75
     }
   },
-  "updatedAt": "2026-09-11T12:57:27.301216+00:00"
+  "updatedAt": "2026-09-14T08:07:36.074459+00:00"
 }
