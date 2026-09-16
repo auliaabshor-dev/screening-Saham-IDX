@@ -51,6 +51,19 @@
       "tp2": 2959,
       "technicalScore": 86,
       "fundamentalScore": 80
+    },
+    {
+      "id": "39e41be2",
+      "ticker": "INCO",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-16",
+      "entry": 4830,
+      "sl": 4733,
+      "tp1": 4902,
+      "tp2": 4975,
+      "technicalScore": 85,
+      "fundamentalScore": 25
     }
   ],
   "closed": [
@@ -2279,5 +2292,5 @@
       "profit_factor": 0.66
     }
   },
-  "updatedAt": "2026-09-16T07:55:41.062190+00:00"
+  "updatedAt": "2026-09-16T09:56:37.459277+00:00"
 }
