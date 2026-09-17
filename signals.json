@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T09:59:10.474224+00:00",
+  "generatedAt": "2026-09-17T13:42:30.506667+00:00",
   "session": "sore",
   "signals": [
     {
@@ -19,22 +19,6 @@
       "notes": "Strong Close — strong close TANPA volume di atas rata-rata. Statistik lebih lemah, pantau saja."
     },
     {
-      "ticker": "ANTM",
-      "name": "PT Antam (Persero) Tbk",
-      "sector": "Basic Materials",
-      "price": 3280,
-      "entry": 3280,
-      "sl": 3214,
-      "tp1": 3329,
-      "tp2": 3378,
-      "technicalScore": 75,
-      "fundamentalScore": 90,
-      "strategy": "BSJP",
-      "setup": "Strong Close",
-      "status": "pantau",
-      "notes": "Strong Close — strong close TANPA volume di atas rata-rata. Statistik lebih lemah, pantau saja."
-    },
-    {
       "ticker": "PTBA",
       "name": "PT Bukit Asam (Persero) Tbk",
       "sector": "Energy",
@@ -43,6 +27,22 @@
       "sl": 3077,
       "tp1": 3187,
       "tp2": 3234,
+      "technicalScore": 75,
+      "fundamentalScore": 100,
+      "strategy": "BSJP",
+      "setup": "Strong Close",
+      "status": "pantau",
+      "notes": "Strong Close — strong close TANPA volume di atas rata-rata. Statistik lebih lemah, pantau saja."
+    },
+    {
+      "ticker": "ANTM",
+      "name": "PT Antam (Persero) Tbk",
+      "sector": "Basic Materials",
+      "price": 3280,
+      "entry": 3280,
+      "sl": 3214,
+      "tp1": 3329,
+      "tp2": 3378,
       "technicalScore": 75,
       "fundamentalScore": 90,
       "strategy": "BSJP",
@@ -97,6 +97,22 @@
       "setup": "BOS Konfirmasi",
       "status": "pantau",
       "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 6.5x. ROE 22.4%."
+    },
+    {
+      "ticker": "PTBA",
+      "name": "PT Bukit Asam (Persero) Tbk",
+      "sector": "Energy",
+      "price": 3140,
+      "entry": 3140,
+      "sl": 2297,
+      "tp1": 4826,
+      "tp2": 5670,
+      "technicalScore": 40,
+      "fundamentalScore": 100,
+      "strategy": "Swing",
+      "setup": "BOS Konfirmasi",
+      "status": "pantau",
+      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 7.6x. ROE 21.1%."
     },
     {
       "ticker": "INDF",
@@ -161,22 +177,6 @@
       "setup": "BOS Konfirmasi",
       "status": "pantau",
       "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 8.9x. ROE 26.8%."
-    },
-    {
-      "ticker": "PTBA",
-      "name": "PT Bukit Asam (Persero) Tbk",
-      "sector": "Energy",
-      "price": 3140,
-      "entry": 3140,
-      "sl": 2297,
-      "tp1": 4826,
-      "tp2": 5670,
-      "technicalScore": 40,
-      "fundamentalScore": 90,
-      "strategy": "Swing",
-      "setup": "BOS Konfirmasi",
-      "status": "pantau",
-      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.74-0.77, rata-rata hold 16 hari untuk hasil negatif). PER 7.6x. ROE 21.1%."
     },
     {
       "ticker": "AMRT",
