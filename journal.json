@@ -38,19 +38,6 @@
       "tp2": 4302,
       "technicalScore": 76,
       "fundamentalScore": 90
-    },
-    {
-      "id": "db512936",
-      "ticker": "INCO",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-09-18",
-      "entry": 4860,
-      "sl": 4763,
-      "tp1": 4933,
-      "tp2": 5006,
-      "technicalScore": 75,
-      "fundamentalScore": 25
     }
   ],
   "closed": [
@@ -2295,19 +2282,38 @@
       "hold_days": 1,
       "return_pct": 0.414,
       "outcome": "win"
+    },
+    {
+      "id": "db512936",
+      "ticker": "INCO",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-18",
+      "entry": 4860,
+      "sl": 4763,
+      "tp1": 4933,
+      "tp2": 5006,
+      "technicalScore": 75,
+      "fundamentalScore": 25,
+      "date_out": "2026-09-21",
+      "exit": 4860,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 0.0,
+      "outcome": "loss"
     }
   ],
   "stats": {
     "total": {
-      "trades": 118,
-      "win_rate_pct": 37.3,
+      "trades": 119,
+      "win_rate_pct": 37.0,
       "avg_return_pct": -0.014,
       "profit_factor": 0.98
     },
     "BSJP": {
-      "trades": 87,
-      "win_rate_pct": 42.5,
-      "avg_return_pct": 0.31,
+      "trades": 88,
+      "win_rate_pct": 42.0,
+      "avg_return_pct": 0.306,
       "profit_factor": 4.02
     },
     "Swing": {
@@ -2317,5 +2323,5 @@
       "profit_factor": 0.63
     }
   },
-  "updatedAt": "2026-09-18T13:05:22.814570+00:00"
+  "updatedAt": "2026-09-21T08:13:02.361621+00:00"
 }
