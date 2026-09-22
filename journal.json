@@ -1,19 +1,6 @@
 {
   "open": [
     {
-      "id": "8f56f5d6",
-      "ticker": "ADRO",
-      "strategy": "Swing",
-      "setup": "Breakout",
-      "date_in": "2026-08-24",
-      "entry": 2630,
-      "sl": 2522,
-      "tp1": 2847,
-      "tp2": 2955,
-      "technicalScore": 99,
-      "fundamentalScore": 60
-    },
-    {
       "id": "fe96a2af",
       "ticker": "PTBA",
       "strategy": "Swing",
@@ -2301,14 +2288,33 @@
       "hold_days": 1,
       "return_pct": 0.0,
       "outcome": "loss"
+    },
+    {
+      "id": "8f56f5d6",
+      "ticker": "ADRO",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-08-24",
+      "entry": 2630,
+      "sl": 2522,
+      "tp1": 2847,
+      "tp2": 2955,
+      "technicalScore": 99,
+      "fundamentalScore": 60,
+      "date_out": "2026-09-22",
+      "exit": 2590,
+      "exit_via": "timeout",
+      "hold_days": 20,
+      "return_pct": -1.521,
+      "outcome": "loss"
     }
   ],
   "stats": {
     "total": {
-      "trades": 119,
-      "win_rate_pct": 37.0,
-      "avg_return_pct": -0.014,
-      "profit_factor": 0.98
+      "trades": 120,
+      "win_rate_pct": 36.7,
+      "avg_return_pct": -0.027,
+      "profit_factor": 0.96
     },
     "BSJP": {
       "trades": 88,
@@ -2317,11 +2323,11 @@
       "profit_factor": 4.02
     },
     "Swing": {
-      "trades": 31,
-      "win_rate_pct": 22.6,
-      "avg_return_pct": -0.924,
-      "profit_factor": 0.63
+      "trades": 32,
+      "win_rate_pct": 21.9,
+      "avg_return_pct": -0.942,
+      "profit_factor": 0.62
     }
   },
-  "updatedAt": "2026-09-21T15:16:25.478727+00:00"
+  "updatedAt": "2026-09-22T07:57:34.793877+00:00"
 }
