@@ -25,6 +25,19 @@
       "tp2": 4302,
       "technicalScore": 76,
       "fundamentalScore": 90
+    },
+    {
+      "id": "c2938670",
+      "ticker": "MDKA",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-23",
+      "entry": 3080,
+      "sl": 3018,
+      "tp1": 3126,
+      "tp2": 3172,
+      "technicalScore": 100,
+      "fundamentalScore": 20
     }
   ],
   "closed": [
@@ -2329,5 +2342,5 @@
       "profit_factor": 0.62
     }
   },
-  "updatedAt": "2026-09-23T07:58:52.200267+00:00"
+  "updatedAt": "2026-09-23T09:58:37.246994+00:00"
 }
