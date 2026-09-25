@@ -12,6 +12,19 @@
       "tp2": 3788,
       "technicalScore": 100,
       "fundamentalScore": 85
+    },
+    {
+      "id": "e4bb369f",
+      "ticker": "TLKM",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-25",
+      "entry": 2410,
+      "sl": 2362,
+      "tp1": 2446,
+      "tp2": 2482,
+      "technicalScore": 65,
+      "fundamentalScore": 80
     }
   ],
   "closed": [
@@ -2354,5 +2367,5 @@
       "profit_factor": 0.56
     }
   },
-  "updatedAt": "2026-09-25T08:12:00.252259+00:00"
+  "updatedAt": "2026-09-25T10:11:35.119871+00:00"
 }
