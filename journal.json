@@ -12,19 +12,6 @@
       "tp2": 3788,
       "technicalScore": 100,
       "fundamentalScore": 85
-    },
-    {
-      "id": "93dd0cfd",
-      "ticker": "BBRI",
-      "strategy": "Swing",
-      "setup": "Breakout",
-      "date_in": "2026-09-03",
-      "entry": 3410,
-      "sl": 3113,
-      "tp1": 4005,
-      "tp2": 4302,
-      "technicalScore": 76,
-      "fundamentalScore": 90
     }
   ],
   "closed": [
@@ -2326,14 +2313,33 @@
       "hold_days": 1,
       "return_pct": 0.0,
       "outcome": "loss"
+    },
+    {
+      "id": "93dd0cfd",
+      "ticker": "BBRI",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-09-03",
+      "entry": 3410,
+      "sl": 3113,
+      "tp1": 4005,
+      "tp2": 4302,
+      "technicalScore": 76,
+      "fundamentalScore": 90,
+      "date_out": "2026-09-25",
+      "exit": 3113,
+      "exit_via": "sl",
+      "hold_days": 16,
+      "return_pct": -8.71,
+      "outcome": "loss"
     }
   ],
   "stats": {
     "total": {
-      "trades": 121,
-      "win_rate_pct": 36.4,
-      "avg_return_pct": -0.026,
-      "profit_factor": 0.96
+      "trades": 122,
+      "win_rate_pct": 36.1,
+      "avg_return_pct": -0.098,
+      "profit_factor": 0.88
     },
     "BSJP": {
       "trades": 89,
@@ -2342,11 +2348,11 @@
       "profit_factor": 4.02
     },
     "Swing": {
-      "trades": 32,
-      "win_rate_pct": 21.9,
-      "avg_return_pct": -0.942,
-      "profit_factor": 0.62
+      "trades": 33,
+      "win_rate_pct": 21.2,
+      "avg_return_pct": -1.178,
+      "profit_factor": 0.56
     }
   },
-  "updatedAt": "2026-09-24T13:42:46.160151+00:00"
+  "updatedAt": "2026-09-25T08:12:00.252259+00:00"
 }
