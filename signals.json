@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T11:21:43.222949+00:00",
+  "generatedAt": "2026-09-29T14:58:37.625831+00:00",
   "session": "sore",
   "signals": [
     {
@@ -160,7 +160,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.6x. ROE 22.8%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.7x. ROE 22.8%."
     },
     {
       "ticker": "TLKM",
@@ -240,7 +240,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.8x. ROE 12.3%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 7.0x. ROE 12.3%."
     },
     {
       "ticker": "UNVR",
