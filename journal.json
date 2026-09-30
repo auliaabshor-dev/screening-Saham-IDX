@@ -1,30 +1,30 @@
 {
   "open": [
     {
-      "id": "fe96a2af",
-      "ticker": "PTBA",
-      "strategy": "Swing",
-      "setup": "Breakout",
-      "date_in": "2026-09-02",
-      "entry": 2720,
-      "sl": 2364,
-      "tp1": 3432,
-      "tp2": 3788,
-      "technicalScore": 100,
-      "fundamentalScore": 85
-    },
-    {
-      "id": "f0bd5822",
-      "ticker": "TLKM",
+      "id": "bbdd040c",
+      "ticker": "BBCA",
       "strategy": "BSJP",
       "setup": "Strong Close + Volume",
-      "date_in": "2026-09-29",
-      "entry": 2360,
-      "sl": 2313,
-      "tp1": 2395,
-      "tp2": 2431,
-      "technicalScore": 75,
+      "date_in": "2026-09-30",
+      "entry": 6125,
+      "sl": 6002,
+      "tp1": 6217,
+      "tp2": 6309,
+      "technicalScore": 65,
       "fundamentalScore": 80
+    },
+    {
+      "id": "5d17482f",
+      "ticker": "EXCL",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-30",
+      "entry": 2420,
+      "sl": 2372,
+      "tp1": 2456,
+      "tp2": 2493,
+      "technicalScore": 75,
+      "fundamentalScore": 35
     }
   ],
   "closed": [
@@ -2364,27 +2364,65 @@
       "hold_days": 1,
       "return_pct": -0.415,
       "outcome": "loss"
+    },
+    {
+      "id": "fe96a2af",
+      "ticker": "PTBA",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-09-02",
+      "entry": 2720,
+      "sl": 2364,
+      "tp1": 3432,
+      "tp2": 3788,
+      "technicalScore": 100,
+      "fundamentalScore": 85,
+      "date_out": "2026-09-30",
+      "exit": 3120,
+      "exit_via": "timeout",
+      "hold_days": 20,
+      "return_pct": 14.706,
+      "outcome": "win"
+    },
+    {
+      "id": "f0bd5822",
+      "ticker": "TLKM",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-09-29",
+      "entry": 2360,
+      "sl": 2313,
+      "tp1": 2395,
+      "tp2": 2431,
+      "technicalScore": 75,
+      "fundamentalScore": 80,
+      "date_out": "2026-09-30",
+      "exit": 2350,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": -0.424,
+      "outcome": "loss"
     }
   ],
   "stats": {
     "total": {
-      "trades": 123,
-      "win_rate_pct": 35.8,
-      "avg_return_pct": -0.1,
-      "profit_factor": 0.87
+      "trades": 125,
+      "win_rate_pct": 36.0,
+      "avg_return_pct": 0.016,
+      "profit_factor": 1.02
     },
     "BSJP": {
-      "trades": 90,
-      "win_rate_pct": 41.1,
-      "avg_return_pct": 0.295,
-      "profit_factor": 3.84
+      "trades": 91,
+      "win_rate_pct": 40.7,
+      "avg_return_pct": 0.287,
+      "profit_factor": 3.68
     },
     "Swing": {
-      "trades": 33,
-      "win_rate_pct": 21.2,
-      "avg_return_pct": -1.178,
-      "profit_factor": 0.56
+      "trades": 34,
+      "win_rate_pct": 23.5,
+      "avg_return_pct": -0.711,
+      "profit_factor": 0.72
     }
   },
-  "updatedAt": "2026-09-29T14:58:38.493445+00:00"
+  "updatedAt": "2026-09-30T09:01:31.385096+00:00"
 }
