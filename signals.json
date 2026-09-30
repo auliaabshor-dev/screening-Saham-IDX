@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T11:09:53.541486+00:00",
+  "generatedAt": "2026-09-30T15:08:01.131790+00:00",
   "session": "sore",
   "signals": [
     {
@@ -240,7 +240,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.1x. ROE 12.1%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.2x. ROE 12.1%."
     },
     {
       "ticker": "ADRO",
@@ -256,7 +256,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.9x. ROE 12.3%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.7x. ROE 12.3%."
     },
     {
       "ticker": "PGAS",
@@ -272,7 +272,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 7.7x. ROE 10.1%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 7.8x. ROE 10.1%."
     },
     {
       "ticker": "SMGR",
@@ -336,7 +336,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 1565.2x. ROE 7.5%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 1645.7x. ROE 7.5%."
     }
   ]
 }
