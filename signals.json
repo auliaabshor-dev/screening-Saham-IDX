@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T09:26:38.700568+00:00",
+  "generatedAt": "2026-10-01T11:36:58.686618+00:00",
   "session": "sore",
   "signals": [
     {
@@ -192,7 +192,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.5x. ROE 22.8%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.4x. ROE 22.8%."
     },
     {
       "ticker": "TLKM",
@@ -336,7 +336,7 @@
       "strategy": "Swing",
       "setup": "Demand Zone Bounce",
       "status": "pantau",
-      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.79; versi dengan konfirmasi pun PF 0.54). Untuk observasi. PER 1532.6x. ROE 7.5%."
+      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.79; versi dengan konfirmasi pun PF 0.54). Untuk observasi. PER 68.0x. ROE 7.5%."
     },
     {
       "ticker": "EXCL",
