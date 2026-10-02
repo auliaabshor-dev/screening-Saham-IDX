@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T11:06:12.578521+00:00",
+  "generatedAt": "2026-10-02T14:54:16.457770+00:00",
   "session": "sore",
   "signals": [
     {
@@ -256,7 +256,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.4x. ROE 22.8%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.6x. ROE 22.8%."
     },
     {
       "ticker": "BBNI",
@@ -432,7 +432,7 @@
       "strategy": "Swing",
       "setup": "Demand Zone Bounce",
       "status": "pantau",
-      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.79; versi dengan konfirmasi pun PF 0.54). Untuk observasi. PER 1548.9x. ROE 7.5%."
+      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.79; versi dengan konfirmasi pun PF 0.54). Untuk observasi. PER 68.8x. ROE 7.5%."
     },
     {
       "ticker": "INCO",
