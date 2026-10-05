@@ -1,5 +1,45 @@
 {
-  "open": [],
+  "open": [
+    {
+      "id": "90584b0e",
+      "ticker": "PTBA",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-05",
+      "entry": 3270,
+      "sl": 3205,
+      "tp1": 3319,
+      "tp2": 3368,
+      "technicalScore": 90,
+      "fundamentalScore": 100
+    },
+    {
+      "id": "ac035e41",
+      "ticker": "PTBA",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-10-05",
+      "entry": 3270,
+      "sl": 3152,
+      "tp1": 3506,
+      "tp2": 3624,
+      "technicalScore": 78,
+      "fundamentalScore": 100
+    },
+    {
+      "id": "486a891f",
+      "ticker": "ASII",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-05",
+      "entry": 4750,
+      "sl": 4655,
+      "tp1": 4821,
+      "tp2": 4892,
+      "technicalScore": 75,
+      "fundamentalScore": 85
+    }
+  ],
   "closed": [
     {
       "id": "c5206a16",
@@ -2454,5 +2494,5 @@
       "profit_factor": 0.72
     }
   },
-  "updatedAt": "2026-10-02T14:54:17.072623+00:00"
+  "updatedAt": "2026-10-05T09:37:30.718125+00:00"
 }
