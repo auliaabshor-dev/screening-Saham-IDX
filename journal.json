@@ -12,6 +12,19 @@
       "tp2": 3624,
       "technicalScore": 78,
       "fundamentalScore": 100
+    },
+    {
+      "id": "c1674bd1",
+      "ticker": "PTBA",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-06",
+      "entry": 3400,
+      "sl": 3332,
+      "tp1": 3451,
+      "tp2": 3502,
+      "technicalScore": 100,
+      "fundamentalScore": 90
     }
   ],
   "closed": [
@@ -2506,5 +2519,5 @@
       "profit_factor": 0.72
     }
   },
-  "updatedAt": "2026-10-06T09:26:45.233816+00:00"
+  "updatedAt": "2026-10-06T12:01:33.129160+00:00"
 }
