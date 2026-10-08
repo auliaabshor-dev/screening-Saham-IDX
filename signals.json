@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T09:30:22.279738+00:00",
+  "generatedAt": "2026-10-08T12:01:31.842577+00:00",
   "session": "sore",
   "signals": [
     {
@@ -208,7 +208,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.2x. ROE 12.1%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.3x. ROE 12.1%."
     },
     {
       "ticker": "AMRT",
@@ -224,7 +224,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 14.9x. ROE 20.0%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 14.5x. ROE 20.0%."
     },
     {
       "ticker": "BBCA",
@@ -240,7 +240,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 12.8x. ROE 21.8%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 12.7x. ROE 21.8%."
     },
     {
       "ticker": "ICBP",
@@ -320,7 +320,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 27.9x. ROE 0.7%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 28.0x. ROE 0.7%."
     },
     {
       "ticker": "ADRO",
@@ -368,7 +368,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 77.1x. ROE 7.5%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 75.8x. ROE 7.5%."
     }
   ]
 }
