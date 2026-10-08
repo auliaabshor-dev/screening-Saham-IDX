@@ -12,6 +12,19 @@
       "tp2": 3624,
       "technicalScore": 78,
       "fundamentalScore": 100
+    },
+    {
+      "id": "ea04dcc7",
+      "ticker": "KLBF",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-08",
+      "entry": 775,
+      "sl": 760,
+      "tp1": 787,
+      "tp2": 798,
+      "technicalScore": 90,
+      "fundamentalScore": 85
     }
   ],
   "closed": [
@@ -2525,5 +2538,5 @@
       "profit_factor": 0.72
     }
   },
-  "updatedAt": "2026-10-07T15:42:06.256782+00:00"
+  "updatedAt": "2026-10-08T09:30:23.194010+00:00"
 }
