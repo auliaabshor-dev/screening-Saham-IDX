@@ -12,19 +12,6 @@
       "tp2": 3624,
       "technicalScore": 78,
       "fundamentalScore": 100
-    },
-    {
-      "id": "ea04dcc7",
-      "ticker": "KLBF",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-10-08",
-      "entry": 775,
-      "sl": 760,
-      "tp1": 787,
-      "tp2": 798,
-      "technicalScore": 90,
-      "fundamentalScore": 85
     }
   ],
   "closed": [
@@ -2516,20 +2503,39 @@
       "hold_days": 1,
       "return_pct": 0.588,
       "outcome": "win"
+    },
+    {
+      "id": "ea04dcc7",
+      "ticker": "KLBF",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-08",
+      "entry": 775,
+      "sl": 760,
+      "tp1": 787,
+      "tp2": 798,
+      "technicalScore": 90,
+      "fundamentalScore": 85,
+      "date_out": "2026-10-09",
+      "exit": 780,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 0.645,
+      "outcome": "win"
     }
   ],
   "stats": {
     "total": {
-      "trades": 131,
-      "win_rate_pct": 36.6,
-      "avg_return_pct": 0.016,
-      "profit_factor": 1.02
+      "trades": 132,
+      "win_rate_pct": 37.1,
+      "avg_return_pct": 0.02,
+      "profit_factor": 1.03
     },
     "BSJP": {
-      "trades": 97,
-      "win_rate_pct": 41.2,
-      "avg_return_pct": 0.27,
-      "profit_factor": 3.39
+      "trades": 98,
+      "win_rate_pct": 41.8,
+      "avg_return_pct": 0.274,
+      "profit_factor": 3.45
     },
     "Swing": {
       "trades": 34,
@@ -2538,5 +2544,5 @@
       "profit_factor": 0.72
     }
   },
-  "updatedAt": "2026-10-08T15:47:42.182803+00:00"
+  "updatedAt": "2026-10-09T09:39:42.179355+00:00"
 }
