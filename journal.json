@@ -12,6 +12,19 @@
       "tp2": 3624,
       "technicalScore": 78,
       "fundamentalScore": 100
+    },
+    {
+      "id": "fc65dd1d",
+      "ticker": "SMGR",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-12",
+      "entry": 1640,
+      "sl": 1607,
+      "tp1": 1665,
+      "tp2": 1689,
+      "technicalScore": 100,
+      "fundamentalScore": 45
     }
   ],
   "closed": [
@@ -2544,5 +2557,5 @@
       "profit_factor": 0.72
     }
   },
-  "updatedAt": "2026-10-09T15:29:42.115745+00:00"
+  "updatedAt": "2026-10-12T09:47:31.396901+00:00"
 }
