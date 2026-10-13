@@ -12,19 +12,6 @@
       "tp2": 3624,
       "technicalScore": 78,
       "fundamentalScore": 100
-    },
-    {
-      "id": "fc65dd1d",
-      "ticker": "SMGR",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-10-12",
-      "entry": 1640,
-      "sl": 1607,
-      "tp1": 1665,
-      "tp2": 1689,
-      "technicalScore": 100,
-      "fundamentalScore": 45
     }
   ],
   "closed": [
@@ -2535,20 +2522,39 @@
       "hold_days": 1,
       "return_pct": 0.645,
       "outcome": "win"
+    },
+    {
+      "id": "fc65dd1d",
+      "ticker": "SMGR",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-12",
+      "entry": 1640,
+      "sl": 1607,
+      "tp1": 1665,
+      "tp2": 1689,
+      "technicalScore": 100,
+      "fundamentalScore": 45,
+      "date_out": "2026-10-13",
+      "exit": 1650,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 0.61,
+      "outcome": "win"
     }
   ],
   "stats": {
     "total": {
-      "trades": 132,
-      "win_rate_pct": 37.1,
-      "avg_return_pct": 0.02,
+      "trades": 133,
+      "win_rate_pct": 37.6,
+      "avg_return_pct": 0.025,
       "profit_factor": 1.03
     },
     "BSJP": {
-      "trades": 98,
-      "win_rate_pct": 41.8,
-      "avg_return_pct": 0.274,
-      "profit_factor": 3.45
+      "trades": 99,
+      "win_rate_pct": 42.4,
+      "avg_return_pct": 0.277,
+      "profit_factor": 3.5
     },
     "Swing": {
       "trades": 34,
@@ -2557,5 +2563,5 @@
       "profit_factor": 0.72
     }
   },
-  "updatedAt": "2026-10-12T18:07:41.562772+00:00"
+  "updatedAt": "2026-10-13T09:45:39.714429+00:00"
 }
