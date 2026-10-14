@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T10:11:27.186594+00:00",
+  "generatedAt": "2026-10-14T13:56:55.636953+00:00",
   "session": "sore",
   "signals": [
     {
@@ -224,7 +224,7 @@
       "strategy": "Swing",
       "setup": "Demand Zone Bounce",
       "status": "pantau",
-      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.79; versi dengan konfirmasi pun PF 0.54). Untuk observasi. PER 12.8x. ROE 21.8%."
+      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.79; versi dengan konfirmasi pun PF 0.54). Untuk observasi. PER 13.0x. ROE 21.8%."
     },
     {
       "ticker": "UNVR",
