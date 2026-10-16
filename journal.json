@@ -1,5 +1,19 @@
 {
-  "open": [],
+  "open": [
+    {
+      "id": "9eca8439",
+      "ticker": "CPIN",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-16",
+      "entry": 2560,
+      "sl": 2509,
+      "tp1": 2598,
+      "tp2": 2637,
+      "technicalScore": 75,
+      "fundamentalScore": 100
+    }
+  ],
   "closed": [
     {
       "id": "c5206a16",
@@ -2568,5 +2582,5 @@
       "profit_factor": 0.7
     }
   },
-  "updatedAt": "2026-10-16T07:32:22.632434+00:00"
+  "updatedAt": "2026-10-16T09:47:53.999121+00:00"
 }
