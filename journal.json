@@ -1,17 +1,121 @@
 {
   "open": [
     {
-      "id": "9eca8439",
-      "ticker": "CPIN",
+      "id": "8335b9d4",
+      "ticker": "BMRI",
       "strategy": "BSJP",
       "setup": "Strong Close + Volume",
-      "date_in": "2026-10-16",
+      "date_in": "2026-10-19",
+      "entry": 3410,
+      "sl": 3342,
+      "tp1": 3461,
+      "tp2": 3512,
+      "technicalScore": 85,
+      "fundamentalScore": 100
+    },
+    {
+      "id": "2f498b9c",
+      "ticker": "PTBA",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-19",
+      "entry": 2900,
+      "sl": 2842,
+      "tp1": 2943,
+      "tp2": 2987,
+      "technicalScore": 85,
+      "fundamentalScore": 100
+    },
+    {
+      "id": "1d41b450",
+      "ticker": "BBRI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-19",
       "entry": 2560,
       "sl": 2509,
       "tp1": 2598,
       "tp2": 2637,
       "technicalScore": 75,
       "fundamentalScore": 100
+    },
+    {
+      "id": "2339fe6d",
+      "ticker": "BBNI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-19",
+      "entry": 2990,
+      "sl": 2930,
+      "tp1": 3035,
+      "tp2": 3080,
+      "technicalScore": 85,
+      "fundamentalScore": 85
+    },
+    {
+      "id": "60230965",
+      "ticker": "ANTM",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-19",
+      "entry": 2460,
+      "sl": 2411,
+      "tp1": 2497,
+      "tp2": 2534,
+      "technicalScore": 75,
+      "fundamentalScore": 90
+    },
+    {
+      "id": "73ab8187",
+      "ticker": "ASII",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-19",
+      "entry": 4180,
+      "sl": 4096,
+      "tp1": 4243,
+      "tp2": 4305,
+      "technicalScore": 75,
+      "fundamentalScore": 85
+    },
+    {
+      "id": "bcc7e633",
+      "ticker": "PGAS",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-19",
+      "entry": 1210,
+      "sl": 1186,
+      "tp1": 1228,
+      "tp2": 1246,
+      "technicalScore": 85,
+      "fundamentalScore": 60
+    },
+    {
+      "id": "acf4430b",
+      "ticker": "ADRO",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-19",
+      "entry": 2230,
+      "sl": 2185,
+      "tp1": 2263,
+      "tp2": 2297,
+      "technicalScore": 85,
+      "fundamentalScore": 60
+    },
+    {
+      "id": "7dae615a",
+      "ticker": "INCO",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-19",
+      "entry": 3570,
+      "sl": 3499,
+      "tp1": 3624,
+      "tp2": 3677,
+      "technicalScore": 85,
+      "fundamentalScore": 35
     }
   ],
   "closed": [
@@ -2560,20 +2664,39 @@
       "hold_days": 8,
       "return_pct": -3.609,
       "outcome": "loss"
+    },
+    {
+      "id": "9eca8439",
+      "ticker": "CPIN",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-16",
+      "entry": 2560,
+      "sl": 2509,
+      "tp1": 2598,
+      "tp2": 2637,
+      "technicalScore": 75,
+      "fundamentalScore": 100,
+      "date_out": "2026-10-19",
+      "exit": 2520,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": -1.562,
+      "outcome": "loss"
     }
   ],
   "stats": {
     "total": {
-      "trades": 134,
-      "win_rate_pct": 37.3,
-      "avg_return_pct": -0.002,
-      "profit_factor": 1.0
+      "trades": 135,
+      "win_rate_pct": 37.0,
+      "avg_return_pct": -0.014,
+      "profit_factor": 0.98
     },
     "BSJP": {
-      "trades": 99,
-      "win_rate_pct": 42.4,
-      "avg_return_pct": 0.277,
-      "profit_factor": 3.5
+      "trades": 100,
+      "win_rate_pct": 42.0,
+      "avg_return_pct": 0.259,
+      "profit_factor": 3.07
     },
     "Swing": {
       "trades": 35,
@@ -2582,5 +2705,5 @@
       "profit_factor": 0.7
     }
   },
-  "updatedAt": "2026-10-16T13:26:57.687707+00:00"
+  "updatedAt": "2026-10-19T08:06:04.078970+00:00"
 }
