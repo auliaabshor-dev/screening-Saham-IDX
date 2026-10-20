@@ -1,5 +1,214 @@
 {
-  "open": [],
+  "open": [
+    {
+      "id": "57c3ea1a",
+      "ticker": "BBRI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-20",
+      "entry": 2790,
+      "sl": 2734,
+      "tp1": 2832,
+      "tp2": 2874,
+      "technicalScore": 85,
+      "fundamentalScore": 100
+    },
+    {
+      "id": "b76f1260",
+      "ticker": "BMRI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-20",
+      "entry": 3690,
+      "sl": 3616,
+      "tp1": 3745,
+      "tp2": 3801,
+      "technicalScore": 85,
+      "fundamentalScore": 100
+    },
+    {
+      "id": "bbf2650d",
+      "ticker": "ANTM",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-20",
+      "entry": 2740,
+      "sl": 2685,
+      "tp1": 2781,
+      "tp2": 2822,
+      "technicalScore": 85,
+      "fundamentalScore": 90
+    },
+    {
+      "id": "0c879b19",
+      "ticker": "PTBA",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-20",
+      "entry": 3050,
+      "sl": 2989,
+      "tp1": 3096,
+      "tp2": 3142,
+      "technicalScore": 75,
+      "fundamentalScore": 100
+    },
+    {
+      "id": "b07ffc0b",
+      "ticker": "CPIN",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-20",
+      "entry": 2640,
+      "sl": 2587,
+      "tp1": 2680,
+      "tp2": 2719,
+      "technicalScore": 75,
+      "fundamentalScore": 100
+    },
+    {
+      "id": "741587c8",
+      "ticker": "BBNI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-20",
+      "entry": 3220,
+      "sl": 3156,
+      "tp1": 3268,
+      "tp2": 3317,
+      "technicalScore": 85,
+      "fundamentalScore": 85
+    },
+    {
+      "id": "c017769e",
+      "ticker": "ASII",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-20",
+      "entry": 4500,
+      "sl": 4410,
+      "tp1": 4568,
+      "tp2": 4635,
+      "technicalScore": 85,
+      "fundamentalScore": 85
+    },
+    {
+      "id": "92d6cc86",
+      "ticker": "BBCA",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-20",
+      "entry": 5200,
+      "sl": 5096,
+      "tp1": 5278,
+      "tp2": 5356,
+      "technicalScore": 85,
+      "fundamentalScore": 80
+    },
+    {
+      "id": "24c4a2bb",
+      "ticker": "TLKM",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-20",
+      "entry": 2060,
+      "sl": 2019,
+      "tp1": 2091,
+      "tp2": 2122,
+      "technicalScore": 85,
+      "fundamentalScore": 80
+    },
+    {
+      "id": "383954fd",
+      "ticker": "AMRT",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-20",
+      "entry": 1045,
+      "sl": 1024,
+      "tp1": 1061,
+      "tp2": 1076,
+      "technicalScore": 85,
+      "fundamentalScore": 80
+    },
+    {
+      "id": "cffde208",
+      "ticker": "UNVR",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-20",
+      "entry": 1375,
+      "sl": 1348,
+      "tp1": 1396,
+      "tp2": 1416,
+      "technicalScore": 85,
+      "fundamentalScore": 65
+    },
+    {
+      "id": "6b3002c6",
+      "ticker": "PGAS",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-20",
+      "entry": 1305,
+      "sl": 1279,
+      "tp1": 1325,
+      "tp2": 1344,
+      "technicalScore": 85,
+      "fundamentalScore": 60
+    },
+    {
+      "id": "0eda680c",
+      "ticker": "ADRO",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-20",
+      "entry": 2400,
+      "sl": 2352,
+      "tp1": 2436,
+      "tp2": 2472,
+      "technicalScore": 85,
+      "fundamentalScore": 60
+    },
+    {
+      "id": "a6a8b10e",
+      "ticker": "EXCL",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-20",
+      "entry": 1790,
+      "sl": 1754,
+      "tp1": 1817,
+      "tp2": 1844,
+      "technicalScore": 85,
+      "fundamentalScore": 45
+    },
+    {
+      "id": "eeb8b0a8",
+      "ticker": "SMGR",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-20",
+      "entry": 1385,
+      "sl": 1357,
+      "tp1": 1406,
+      "tp2": 1427,
+      "technicalScore": 75,
+      "fundamentalScore": 50
+    },
+    {
+      "id": "e3709dfc",
+      "ticker": "MDKA",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-20",
+      "entry": 2200,
+      "sl": 2156,
+      "tp1": 2233,
+      "tp2": 2266,
+      "technicalScore": 75,
+      "fundamentalScore": 20
+    }
+  ],
   "closed": [
     {
       "id": "c5206a16",
@@ -2777,5 +2986,5 @@
       "profit_factor": 0.7
     }
   },
-  "updatedAt": "2026-10-20T07:56:19.080493+00:00"
+  "updatedAt": "2026-10-20T10:03:16.782587+00:00"
 }
