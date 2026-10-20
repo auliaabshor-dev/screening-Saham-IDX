@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T10:03:14.727053+00:00",
+  "generatedAt": "2026-10-20T13:46:18.254920+00:00",
   "session": "sore",
   "signals": [
     {
@@ -304,7 +304,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 7.2x. ROE 21.1%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 7.4x. ROE 21.1%."
     },
     {
       "ticker": "BBRI",
@@ -464,7 +464,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 5.9x. ROE 22.8%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 5.8x. ROE 22.8%."
     },
     {
       "ticker": "ADRO",
