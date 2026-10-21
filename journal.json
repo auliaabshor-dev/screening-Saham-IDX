@@ -12,6 +12,58 @@
       "tp2": 6232,
       "technicalScore": 75,
       "fundamentalScore": 85
+    },
+    {
+      "id": "b9d9b1b1",
+      "ticker": "BBRI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-21",
+      "entry": 2810,
+      "sl": 2754,
+      "tp1": 2852,
+      "tp2": 2894,
+      "technicalScore": 85,
+      "fundamentalScore": 100
+    },
+    {
+      "id": "bfd2757a",
+      "ticker": "BBNI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-21",
+      "entry": 3250,
+      "sl": 3185,
+      "tp1": 3299,
+      "tp2": 3348,
+      "technicalScore": 85,
+      "fundamentalScore": 85
+    },
+    {
+      "id": "66183c50",
+      "ticker": "ASII",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-21",
+      "entry": 4560,
+      "sl": 4469,
+      "tp1": 4628,
+      "tp2": 4697,
+      "technicalScore": 85,
+      "fundamentalScore": 85
+    },
+    {
+      "id": "11b1d848",
+      "ticker": "PGAS",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-21",
+      "entry": 1335,
+      "sl": 1308,
+      "tp1": 1355,
+      "tp2": 1375,
+      "technicalScore": 85,
+      "fundamentalScore": 60
     }
   ],
   "closed": [
@@ -3095,5 +3147,5 @@
       "profit_factor": 0.7
     }
   },
-  "updatedAt": "2026-10-21T08:00:48.197204+00:00"
+  "updatedAt": "2026-10-21T10:07:24.879087+00:00"
 }
