@@ -1,71 +1,5 @@
 {
-  "open": [
-    {
-      "id": "35be140f",
-      "ticker": "ICBP",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-10-21",
-      "entry": 6050,
-      "sl": 5929,
-      "tp1": 6141,
-      "tp2": 6232,
-      "technicalScore": 75,
-      "fundamentalScore": 85
-    },
-    {
-      "id": "b9d9b1b1",
-      "ticker": "BBRI",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-10-21",
-      "entry": 2810,
-      "sl": 2754,
-      "tp1": 2852,
-      "tp2": 2894,
-      "technicalScore": 85,
-      "fundamentalScore": 100
-    },
-    {
-      "id": "bfd2757a",
-      "ticker": "BBNI",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-10-21",
-      "entry": 3250,
-      "sl": 3185,
-      "tp1": 3299,
-      "tp2": 3348,
-      "technicalScore": 85,
-      "fundamentalScore": 85
-    },
-    {
-      "id": "66183c50",
-      "ticker": "ASII",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-10-21",
-      "entry": 4560,
-      "sl": 4469,
-      "tp1": 4628,
-      "tp2": 4697,
-      "technicalScore": 85,
-      "fundamentalScore": 85
-    },
-    {
-      "id": "11b1d848",
-      "ticker": "PGAS",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-10-21",
-      "entry": 1335,
-      "sl": 1308,
-      "tp1": 1355,
-      "tp2": 1375,
-      "technicalScore": 85,
-      "fundamentalScore": 60
-    }
-  ],
+  "open": [],
   "closed": [
     {
       "id": "c5206a16",
@@ -3125,20 +3059,115 @@
       "hold_days": 1,
       "return_pct": 1.364,
       "outcome": "win"
+    },
+    {
+      "id": "35be140f",
+      "ticker": "ICBP",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-21",
+      "entry": 6050,
+      "sl": 5929,
+      "tp1": 6141,
+      "tp2": 6232,
+      "technicalScore": 75,
+      "fundamentalScore": 85,
+      "date_out": "2026-10-22",
+      "exit": 6025,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": -0.413,
+      "outcome": "loss"
+    },
+    {
+      "id": "b9d9b1b1",
+      "ticker": "BBRI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-21",
+      "entry": 2810,
+      "sl": 2754,
+      "tp1": 2852,
+      "tp2": 2894,
+      "technicalScore": 85,
+      "fundamentalScore": 100,
+      "date_out": "2026-10-22",
+      "exit": 2760,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": -1.779,
+      "outcome": "loss"
+    },
+    {
+      "id": "bfd2757a",
+      "ticker": "BBNI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-21",
+      "entry": 3250,
+      "sl": 3185,
+      "tp1": 3299,
+      "tp2": 3348,
+      "technicalScore": 85,
+      "fundamentalScore": 85,
+      "date_out": "2026-10-22",
+      "exit": 3180,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": -2.154,
+      "outcome": "loss"
+    },
+    {
+      "id": "66183c50",
+      "ticker": "ASII",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-21",
+      "entry": 4560,
+      "sl": 4469,
+      "tp1": 4628,
+      "tp2": 4697,
+      "technicalScore": 85,
+      "fundamentalScore": 85,
+      "date_out": "2026-10-22",
+      "exit": 4490,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": -1.535,
+      "outcome": "loss"
+    },
+    {
+      "id": "11b1d848",
+      "ticker": "PGAS",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-21",
+      "entry": 1335,
+      "sl": 1308,
+      "tp1": 1355,
+      "tp2": 1375,
+      "technicalScore": 85,
+      "fundamentalScore": 60,
+      "date_out": "2026-10-22",
+      "exit": 1285,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": -3.745,
+      "outcome": "loss"
     }
   ],
   "stats": {
     "total": {
-      "trades": 161,
-      "win_rate_pct": 42.9,
-      "avg_return_pct": 0.193,
-      "profit_factor": 1.29
+      "trades": 166,
+      "win_rate_pct": 41.6,
+      "avg_return_pct": 0.13,
+      "profit_factor": 1.19
     },
     "BSJP": {
-      "trades": 126,
-      "win_rate_pct": 48.4,
-      "avg_return_pct": 0.467,
-      "profit_factor": 4.94
+      "trades": 131,
+      "win_rate_pct": 46.6,
+      "avg_return_pct": 0.376,
+      "profit_factor": 3.01
     },
     "Swing": {
       "trades": 35,
@@ -3147,5 +3176,5 @@
       "profit_factor": 0.7
     }
   },
-  "updatedAt": "2026-10-21T14:02:00.640067+00:00"
+  "updatedAt": "2026-10-22T07:58:43.530166+00:00"
 }
