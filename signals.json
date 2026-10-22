@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T10:09:55.113049+00:00",
+  "generatedAt": "2026-10-22T14:00:24.000925+00:00",
   "session": "sore",
   "signals": [
     {
@@ -65,22 +65,6 @@
       "setup": "Strong Close + Volume",
       "status": "aktif",
       "notes": "Strong Close + Volume — tutup di area atas rentang harian (posisi close 90%) dengan volume. Target jual di pembukaan besok pagi. Backtest: PF 3.09, +0.37%/trade (sebelum fee)."
-    },
-    {
-      "ticker": "AMRT",
-      "name": "PT Sumber Alfaria Trijaya Tbk",
-      "sector": "Consumer Defensive",
-      "price": 1080,
-      "entry": 1080,
-      "sl": 1058,
-      "tp1": 1096,
-      "tp2": 1112,
-      "technicalScore": 85,
-      "fundamentalScore": 80,
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "status": "aktif",
-      "notes": "Strong Close + Volume — tutup di area atas rentang harian (posisi close 61%) dengan volume. Target jual di pembukaan besok pagi. Backtest: PF 3.09, +0.37%/trade (sebelum fee)."
     },
     {
       "ticker": "UNVR",
