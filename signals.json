@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T10:02:43.635212+00:00",
+  "generatedAt": "2026-10-23T13:42:54.610954+00:00",
   "session": "sore",
   "signals": [
     {
@@ -128,7 +128,7 @@
       "strategy": "Swing",
       "setup": "Demand Zone Bounce",
       "status": "pantau",
-      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.79; versi dengan konfirmasi pun PF 0.54). Untuk observasi. PER 12.5x. ROE 17.7%."
+      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.79; versi dengan konfirmasi pun PF 0.54). Untuk observasi. PER 12.9x. ROE 17.7%."
     },
     {
       "ticker": "ASII",
