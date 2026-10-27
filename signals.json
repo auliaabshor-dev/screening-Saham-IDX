@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T10:32:23.359465+00:00",
+  "generatedAt": "2026-10-27T14:49:27.256413+00:00",
   "session": "sore",
   "signals": [
     {
@@ -80,7 +80,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.1x. ROE 22.8%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.2x. ROE 22.8%."
     },
     {
       "ticker": "INDF",
@@ -96,7 +96,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.1x. ROE 12.1%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.2x. ROE 12.1%."
     },
     {
       "ticker": "BMRI",
@@ -240,7 +240,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 10.6x. ROE 21.8%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 10.4x. ROE 21.8%."
     },
     {
       "ticker": "KLBF",
@@ -272,7 +272,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 12.4x. ROE 17.7%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 12.3x. ROE 17.7%."
     },
     {
       "ticker": "AMRT",
@@ -304,7 +304,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 7.1x. ROE 12.3%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 7.3x. ROE 12.3%."
     },
     {
       "ticker": "SMGR",
@@ -336,7 +336,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 52.5x. ROE 7.5%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 55.8x. ROE 7.5%."
     },
     {
       "ticker": "EXCL",
