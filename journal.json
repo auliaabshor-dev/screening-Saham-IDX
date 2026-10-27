@@ -1,5 +1,45 @@
 {
-  "open": [],
+  "open": [
+    {
+      "id": "768d7831",
+      "ticker": "CPIN",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-27",
+      "entry": 2780,
+      "sl": 2724,
+      "tp1": 2822,
+      "tp2": 2863,
+      "technicalScore": 85,
+      "fundamentalScore": 100
+    },
+    {
+      "id": "5fc5bacc",
+      "ticker": "BBRI",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-27",
+      "entry": 2900,
+      "sl": 2842,
+      "tp1": 2943,
+      "tp2": 2987,
+      "technicalScore": 65,
+      "fundamentalScore": 100
+    },
+    {
+      "id": "e00a8513",
+      "ticker": "ANTM",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-27",
+      "entry": 2770,
+      "sl": 2715,
+      "tp1": 2812,
+      "tp2": 2853,
+      "technicalScore": 75,
+      "fundamentalScore": 90
+    }
+  ],
   "closed": [
     {
       "id": "c5206a16",
@@ -3385,5 +3425,5 @@
       "profit_factor": 0.7
     }
   },
-  "updatedAt": "2026-10-27T08:24:02.063665+00:00"
+  "updatedAt": "2026-10-27T10:32:24.300701+00:00"
 }
