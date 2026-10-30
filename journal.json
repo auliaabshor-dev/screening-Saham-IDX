@@ -1,5 +1,32 @@
 {
-  "open": [],
+  "open": [
+    {
+      "id": "1f914a6e",
+      "ticker": "PGAS",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-30",
+      "entry": 1335,
+      "sl": 1308,
+      "tp1": 1355,
+      "tp2": 1375,
+      "technicalScore": 85,
+      "fundamentalScore": 60
+    },
+    {
+      "id": "3bde4db3",
+      "ticker": "UNVR",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-10-30",
+      "entry": 1395,
+      "sl": 1367,
+      "tp1": 1416,
+      "tp2": 1437,
+      "technicalScore": 65,
+      "fundamentalScore": 65
+    }
+  ],
   "closed": [
     {
       "id": "c5206a16",
@@ -3537,5 +3564,5 @@
       "profit_factor": 0.66
     }
   },
-  "updatedAt": "2026-10-29T15:26:27.243417+00:00"
+  "updatedAt": "2026-10-30T09:01:48.489381+00:00"
 }
