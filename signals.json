@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T10:00:05.653300+00:00",
+  "generatedAt": "2026-11-02T13:29:23.355722+00:00",
   "session": "sore",
   "signals": [
     {
@@ -128,7 +128,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 5.5x. ROE 21.8%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 5.6x. ROE 21.8%."
     },
     {
       "ticker": "SMGR",
@@ -288,7 +288,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 12.0x. ROE 16.1%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 11.3x. ROE 16.3%."
     },
     {
       "ticker": "MDKA",
