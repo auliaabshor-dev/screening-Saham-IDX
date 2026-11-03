@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T10:06:26.296651+00:00",
+  "generatedAt": "2026-11-03T12:46:39.120636+00:00",
   "session": "sore",
   "signals": [
     {
@@ -67,6 +67,22 @@
       "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.4x. ROE 11.6%."
     },
     {
+      "ticker": "PTBA",
+      "name": "PT Bukit Asam (Persero) Tbk",
+      "sector": "Energy",
+      "price": 3000,
+      "entry": 3000,
+      "sl": 2850,
+      "tp1": 3300,
+      "tp2": 3450,
+      "technicalScore": 10,
+      "fundamentalScore": 100,
+      "strategy": "Swing",
+      "setup": "Konsolidasi",
+      "status": "pantau",
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 5.8x. ROE 24.9%."
+    },
+    {
       "ticker": "BBCA",
       "name": "PT Bank Central Asia Tbk",
       "sector": "Financial Services",
@@ -131,22 +147,6 @@
       "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 8.6x. ROE 15.1%."
     },
     {
-      "ticker": "PTBA",
-      "name": "PT Bukit Asam (Persero) Tbk",
-      "sector": "Energy",
-      "price": 3000,
-      "entry": 3000,
-      "sl": 2850,
-      "tp1": 3300,
-      "tp2": 3450,
-      "technicalScore": 10,
-      "fundamentalScore": 90,
-      "strategy": "Swing",
-      "setup": "Konsolidasi",
-      "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 5.8x. ROE 24.9%."
-    },
-    {
       "ticker": "BBNI",
       "name": "PT Bank Negara Indonesia (Persero) Tbk",
       "sector": "Financial Services",
@@ -176,7 +176,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 5.8x. ROE 13.1%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.0x. ROE 13.1%."
     },
     {
       "ticker": "TLKM",
@@ -192,7 +192,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 11.6x. ROE 16.3%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 10.9x. ROE 16.3%."
     },
     {
       "ticker": "AMRT",
@@ -256,7 +256,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.7x. ROE 14.2%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 6.8x. ROE 14.2%."
     },
     {
       "ticker": "PGAS",
@@ -320,7 +320,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 45.6x. ROE 7.5%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 48.4x. ROE 7.5%."
     }
   ]
 }
