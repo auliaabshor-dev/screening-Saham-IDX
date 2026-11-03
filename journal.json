@@ -1,19 +1,5 @@
 {
-  "open": [
-    {
-      "id": "efc69837",
-      "ticker": "ICBP",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-11-02",
-      "entry": 5725,
-      "sl": 5610,
-      "tp1": 5811,
-      "tp2": 5897,
-      "technicalScore": 75,
-      "fundamentalScore": 85
-    }
-  ],
+  "open": [],
   "closed": [
     {
       "id": "c5206a16",
@@ -3567,19 +3553,38 @@
       "hold_days": 1,
       "return_pct": 0.358,
       "outcome": "win"
+    },
+    {
+      "id": "efc69837",
+      "ticker": "ICBP",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-11-02",
+      "entry": 5725,
+      "sl": 5610,
+      "tp1": 5811,
+      "tp2": 5897,
+      "technicalScore": 75,
+      "fundamentalScore": 85,
+      "date_out": "2026-11-03",
+      "exit": 5725,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 0.0,
+      "outcome": "loss"
     }
   ],
   "stats": {
     "total": {
-      "trades": 187,
-      "win_rate_pct": 43.9,
+      "trades": 188,
+      "win_rate_pct": 43.6,
       "avg_return_pct": 0.106,
       "profit_factor": 1.16
     },
     "BSJP": {
-      "trades": 151,
-      "win_rate_pct": 49.0,
-      "avg_return_pct": 0.347,
+      "trades": 152,
+      "win_rate_pct": 48.7,
+      "avg_return_pct": 0.344,
       "profit_factor": 2.69
     },
     "Swing": {
@@ -3589,5 +3594,5 @@
       "profit_factor": 0.66
     }
   },
-  "updatedAt": "2026-11-02T18:42:23.415157+00:00"
+  "updatedAt": "2026-11-03T10:06:27.229469+00:00"
 }
