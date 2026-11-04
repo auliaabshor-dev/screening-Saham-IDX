@@ -1,5 +1,45 @@
 {
-  "open": [],
+  "open": [
+    {
+      "id": "000a060f",
+      "ticker": "ICBP",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-11-04",
+      "entry": 5925,
+      "sl": 5806,
+      "tp1": 6014,
+      "tp2": 6103,
+      "technicalScore": 85,
+      "fundamentalScore": 85
+    },
+    {
+      "id": "75c1b992",
+      "ticker": "ANTM",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-11-04",
+      "entry": 2600,
+      "sl": 2548,
+      "tp1": 2639,
+      "tp2": 2678,
+      "technicalScore": 75,
+      "fundamentalScore": 90
+    },
+    {
+      "id": "e7c1f4ba",
+      "ticker": "MDKA",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-11-04",
+      "entry": 1840,
+      "sl": 1803,
+      "tp1": 1868,
+      "tp2": 1895,
+      "technicalScore": 65,
+      "fundamentalScore": 20
+    }
+  ],
   "closed": [
     {
       "id": "c5206a16",
@@ -3594,5 +3634,5 @@
       "profit_factor": 0.66
     }
   },
-  "updatedAt": "2026-11-03T16:26:28.336670+00:00"
+  "updatedAt": "2026-11-04T09:53:43.075629+00:00"
 }
