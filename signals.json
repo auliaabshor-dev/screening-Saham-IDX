@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T12:59:13.848308+00:00",
+  "generatedAt": "2026-11-04T16:29:09.372364+00:00",
   "session": "sore",
   "signals": [
     {
@@ -160,7 +160,7 @@
       "strategy": "Swing",
       "setup": "Demand Zone Bounce",
       "status": "pantau",
-      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.79; versi dengan konfirmasi pun PF 0.54). Untuk observasi. PER 5.4x. ROE 21.8%."
+      "notes": "PANTAU SAJA: setup ini gagal backtest (PF 0.79; versi dengan konfirmasi pun PF 0.54). Untuk observasi. PER 5.2x. ROE 21.8%."
     },
     {
       "ticker": "ADRO",
@@ -336,7 +336,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 5.5x. ROE 13.1%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 5.4x. ROE 13.1%."
     },
     {
       "ticker": "BBCA",
@@ -352,7 +352,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 10.5x. ROE 21.2%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 10.2x. ROE 21.2%."
     },
     {
       "ticker": "TLKM",
@@ -368,7 +368,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 12.0x. ROE 16.3%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 11.6x. ROE 16.3%."
     },
     {
       "ticker": "PGAS",
@@ -480,7 +480,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 51.6x. ROE 7.5%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 48.3x. ROE 7.5%."
     }
   ]
 }
