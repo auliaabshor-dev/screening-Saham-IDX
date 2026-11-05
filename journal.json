@@ -1,43 +1,30 @@
 {
   "open": [
     {
-      "id": "000a060f",
-      "ticker": "ICBP",
+      "id": "84b4bdf6",
+      "ticker": "UNVR",
       "strategy": "BSJP",
       "setup": "Strong Close + Volume",
-      "date_in": "2026-11-04",
-      "entry": 5925,
-      "sl": 5806,
-      "tp1": 6014,
-      "tp2": 6103,
-      "technicalScore": 85,
-      "fundamentalScore": 85
+      "date_in": "2026-11-05",
+      "entry": 1455,
+      "sl": 1426,
+      "tp1": 1477,
+      "tp2": 1499,
+      "technicalScore": 100,
+      "fundamentalScore": 65
     },
     {
-      "id": "75c1b992",
-      "ticker": "ANTM",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-11-04",
-      "entry": 2600,
-      "sl": 2548,
-      "tp1": 2639,
-      "tp2": 2678,
-      "technicalScore": 75,
-      "fundamentalScore": 90
-    },
-    {
-      "id": "e7c1f4ba",
-      "ticker": "MDKA",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-11-04",
-      "entry": 1840,
-      "sl": 1803,
-      "tp1": 1868,
-      "tp2": 1895,
-      "technicalScore": 65,
-      "fundamentalScore": 20
+      "id": "26994c75",
+      "ticker": "UNVR",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-11-05",
+      "entry": 1455,
+      "sl": 1433,
+      "tp1": 1499,
+      "tp2": 1520,
+      "technicalScore": 66,
+      "fundamentalScore": 65
     }
   ],
   "closed": [
@@ -3612,20 +3599,77 @@
       "hold_days": 1,
       "return_pct": 0.0,
       "outcome": "loss"
+    },
+    {
+      "id": "000a060f",
+      "ticker": "ICBP",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-11-04",
+      "entry": 5925,
+      "sl": 5806,
+      "tp1": 6014,
+      "tp2": 6103,
+      "technicalScore": 85,
+      "fundamentalScore": 85,
+      "date_out": "2026-11-05",
+      "exit": 5975,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 0.844,
+      "outcome": "win"
+    },
+    {
+      "id": "75c1b992",
+      "ticker": "ANTM",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-11-04",
+      "entry": 2600,
+      "sl": 2548,
+      "tp1": 2639,
+      "tp2": 2678,
+      "technicalScore": 75,
+      "fundamentalScore": 90,
+      "date_out": "2026-11-05",
+      "exit": 2700,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 3.846,
+      "outcome": "win"
+    },
+    {
+      "id": "e7c1f4ba",
+      "ticker": "MDKA",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-11-04",
+      "entry": 1840,
+      "sl": 1803,
+      "tp1": 1868,
+      "tp2": 1895,
+      "technicalScore": 65,
+      "fundamentalScore": 20,
+      "date_out": "2026-11-05",
+      "exit": 1900,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 3.261,
+      "outcome": "win"
     }
   ],
   "stats": {
     "total": {
-      "trades": 188,
-      "win_rate_pct": 43.6,
-      "avg_return_pct": 0.106,
-      "profit_factor": 1.16
+      "trades": 191,
+      "win_rate_pct": 44.5,
+      "avg_return_pct": 0.146,
+      "profit_factor": 1.22
     },
     "BSJP": {
-      "trades": 152,
-      "win_rate_pct": 48.7,
-      "avg_return_pct": 0.344,
-      "profit_factor": 2.69
+      "trades": 155,
+      "win_rate_pct": 49.7,
+      "avg_return_pct": 0.389,
+      "profit_factor": 2.94
     },
     "Swing": {
       "trades": 36,
@@ -3634,5 +3678,5 @@
       "profit_factor": 0.66
     }
   },
-  "updatedAt": "2026-11-04T16:29:10.489419+00:00"
+  "updatedAt": "2026-11-05T09:51:37.381867+00:00"
 }
