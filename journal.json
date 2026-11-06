@@ -12,6 +12,19 @@
       "tp2": 1540,
       "technicalScore": 75,
       "fundamentalScore": 45
+    },
+    {
+      "id": "b379afea",
+      "ticker": "ICBP",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-11-06",
+      "entry": 6325,
+      "sl": 6198,
+      "tp1": 6420,
+      "tp2": 6515,
+      "technicalScore": 90,
+      "fundamentalScore": 85
     }
   ],
   "closed": [
@@ -3741,5 +3754,5 @@
       "profit_factor": 0.65
     }
   },
-  "updatedAt": "2026-11-06T09:55:10.314781+00:00"
+  "updatedAt": "2026-11-06T12:56:13.667180+00:00"
 }
