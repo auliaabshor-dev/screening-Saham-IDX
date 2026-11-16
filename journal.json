@@ -12,6 +12,19 @@
       "tp2": 3807,
       "technicalScore": 67,
       "fundamentalScore": 85
+    },
+    {
+      "id": "d4fee8a9",
+      "ticker": "EXCL",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-11-16",
+      "entry": 1525,
+      "sl": 1494,
+      "tp1": 1548,
+      "tp2": 1571,
+      "technicalScore": 85,
+      "fundamentalScore": 45
     }
   ],
   "closed": [
@@ -3817,5 +3830,5 @@
       "profit_factor": 0.65
     }
   },
-  "updatedAt": "2026-11-16T10:11:28.156191+00:00"
+  "updatedAt": "2026-11-16T13:37:52.508074+00:00"
 }
