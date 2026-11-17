@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T11:13:09.131655+00:00",
+  "generatedAt": "2026-11-17T14:22:31.705942+00:00",
   "session": "sore",
   "signals": [
     {
@@ -256,7 +256,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 13.4x. ROE 16.3%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 13.2x. ROE 16.3%."
     },
     {
       "ticker": "UNVR",
@@ -352,7 +352,7 @@
       "strategy": "Swing",
       "setup": "Konsolidasi",
       "status": "pantau",
-      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 50.9x. ROE 7.5%."
+      "notes": "Belum ada konfirmasi arah — pemantauan kondisi. PER 54.2x. ROE 7.5%."
     }
   ]
 }
