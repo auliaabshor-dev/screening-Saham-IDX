@@ -12,6 +12,32 @@
       "tp2": 3807,
       "technicalScore": 67,
       "fundamentalScore": 85
+    },
+    {
+      "id": "a1d5368a",
+      "ticker": "BBCA",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-11-18",
+      "entry": 5750,
+      "sl": 5245,
+      "tp1": 6760,
+      "tp2": 7265,
+      "technicalScore": 71,
+      "fundamentalScore": 80
+    },
+    {
+      "id": "a1de9f3f",
+      "ticker": "EXCL",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-11-18",
+      "entry": 1715,
+      "sl": 1681,
+      "tp1": 1741,
+      "tp2": 1766,
+      "technicalScore": 100,
+      "fundamentalScore": 45
     }
   ],
   "closed": [
@@ -3836,5 +3862,5 @@
       "profit_factor": 0.65
     }
   },
-  "updatedAt": "2026-11-17T17:46:37.775887+00:00"
+  "updatedAt": "2026-11-18T10:46:02.249838+00:00"
 }
