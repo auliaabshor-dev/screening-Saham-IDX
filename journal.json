@@ -27,17 +27,17 @@
       "fundamentalScore": 80
     },
     {
-      "id": "a1de9f3f",
-      "ticker": "EXCL",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-11-18",
-      "entry": 1715,
-      "sl": 1681,
-      "tp1": 1741,
-      "tp2": 1766,
-      "technicalScore": 100,
-      "fundamentalScore": 45
+      "id": "a846a592",
+      "ticker": "INDF",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-11-19",
+      "entry": 7175,
+      "sl": 6969,
+      "tp1": 7587,
+      "tp2": 7793,
+      "technicalScore": 72,
+      "fundamentalScore": 85
     }
   ],
   "closed": [
@@ -3840,19 +3840,38 @@
       "hold_days": 1,
       "return_pct": -0.328,
       "outcome": "loss"
+    },
+    {
+      "id": "a1de9f3f",
+      "ticker": "EXCL",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-11-18",
+      "entry": 1715,
+      "sl": 1681,
+      "tp1": 1741,
+      "tp2": 1766,
+      "technicalScore": 100,
+      "fundamentalScore": 45,
+      "date_out": "2026-11-19",
+      "exit": 1715,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 0.0,
+      "outcome": "loss"
     }
   ],
   "stats": {
     "total": {
-      "trades": 200,
-      "win_rate_pct": 43.5,
-      "avg_return_pct": 0.096,
+      "trades": 201,
+      "win_rate_pct": 43.3,
+      "avg_return_pct": 0.095,
       "profit_factor": 1.14
     },
     "BSJP": {
-      "trades": 163,
-      "win_rate_pct": 48.5,
-      "avg_return_pct": 0.326,
+      "trades": 164,
+      "win_rate_pct": 48.2,
+      "avg_return_pct": 0.324,
       "profit_factor": 2.36
     },
     "Swing": {
@@ -3862,5 +3881,5 @@
       "profit_factor": 0.65
     }
   },
-  "updatedAt": "2026-11-18T17:27:34.185368+00:00"
+  "updatedAt": "2026-11-19T10:46:34.957239+00:00"
 }
