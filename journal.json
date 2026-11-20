@@ -38,6 +38,32 @@
       "tp2": 7793,
       "technicalScore": 72,
       "fundamentalScore": 85
+    },
+    {
+      "id": "a09ff709",
+      "ticker": "ASII",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-11-20",
+      "entry": 5300,
+      "sl": 4925,
+      "tp1": 6050,
+      "tp2": 6425,
+      "technicalScore": 76,
+      "fundamentalScore": 85
+    },
+    {
+      "id": "94e283bb",
+      "ticker": "EXCL",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-11-20",
+      "entry": 1725,
+      "sl": 1690,
+      "tp1": 1751,
+      "tp2": 1777,
+      "technicalScore": 100,
+      "fundamentalScore": 45
     }
   ],
   "closed": [
@@ -3881,5 +3907,5 @@
       "profit_factor": 0.65
     }
   },
-  "updatedAt": "2026-11-19T17:33:15.878001+00:00"
+  "updatedAt": "2026-11-20T10:33:38.849221+00:00"
 }
