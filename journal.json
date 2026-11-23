@@ -27,19 +27,6 @@
       "fundamentalScore": 80
     },
     {
-      "id": "a846a592",
-      "ticker": "INDF",
-      "strategy": "Swing",
-      "setup": "Breakout",
-      "date_in": "2026-11-19",
-      "entry": 7175,
-      "sl": 6969,
-      "tp1": 7587,
-      "tp2": 7793,
-      "technicalScore": 72,
-      "fundamentalScore": 85
-    },
-    {
       "id": "a09ff709",
       "ticker": "ASII",
       "strategy": "Swing",
@@ -53,17 +40,30 @@
       "fundamentalScore": 85
     },
     {
-      "id": "94e283bb",
-      "ticker": "EXCL",
+      "id": "705014a1",
+      "ticker": "AMRT",
       "strategy": "BSJP",
       "setup": "Strong Close + Volume",
-      "date_in": "2026-11-20",
-      "entry": 1725,
-      "sl": 1690,
-      "tp1": 1751,
-      "tp2": 1777,
-      "technicalScore": 100,
-      "fundamentalScore": 45
+      "date_in": "2026-11-23",
+      "entry": 1105,
+      "sl": 1083,
+      "tp1": 1122,
+      "tp2": 1138,
+      "technicalScore": 90,
+      "fundamentalScore": 80
+    },
+    {
+      "id": "73f18555",
+      "ticker": "INCO",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-11-23",
+      "entry": 3430,
+      "sl": 3361,
+      "tp1": 3481,
+      "tp2": 3533,
+      "technicalScore": 75,
+      "fundamentalScore": 35
     }
   ],
   "closed": [
@@ -3885,27 +3885,65 @@
       "hold_days": 1,
       "return_pct": 0.0,
       "outcome": "loss"
+    },
+    {
+      "id": "a846a592",
+      "ticker": "INDF",
+      "strategy": "Swing",
+      "setup": "Breakout",
+      "date_in": "2026-11-19",
+      "entry": 7175,
+      "sl": 6969,
+      "tp1": 7587,
+      "tp2": 7793,
+      "technicalScore": 72,
+      "fundamentalScore": 85,
+      "date_out": "2026-11-23",
+      "exit": 6969,
+      "exit_via": "sl",
+      "hold_days": 2,
+      "return_pct": -2.871,
+      "outcome": "loss"
+    },
+    {
+      "id": "94e283bb",
+      "ticker": "EXCL",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-11-20",
+      "entry": 1725,
+      "sl": 1690,
+      "tp1": 1751,
+      "tp2": 1777,
+      "technicalScore": 100,
+      "fundamentalScore": 45,
+      "date_out": "2026-11-23",
+      "exit": 1730,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 0.29,
+      "outcome": "win"
     }
   ],
   "stats": {
     "total": {
-      "trades": 201,
+      "trades": 203,
       "win_rate_pct": 43.3,
-      "avg_return_pct": 0.095,
-      "profit_factor": 1.14
+      "avg_return_pct": 0.082,
+      "profit_factor": 1.12
     },
     "BSJP": {
-      "trades": 164,
-      "win_rate_pct": 48.2,
-      "avg_return_pct": 0.324,
-      "profit_factor": 2.36
+      "trades": 165,
+      "win_rate_pct": 48.5,
+      "avg_return_pct": 0.323,
+      "profit_factor": 2.37
     },
     "Swing": {
-      "trades": 37,
-      "win_rate_pct": 21.6,
-      "avg_return_pct": -0.917,
-      "profit_factor": 0.65
+      "trades": 38,
+      "win_rate_pct": 21.1,
+      "avg_return_pct": -0.969,
+      "profit_factor": 0.63
     }
   },
-  "updatedAt": "2026-11-20T17:07:50.793828+00:00"
+  "updatedAt": "2026-11-23T11:18:22.014515+00:00"
 }
