@@ -77,6 +77,19 @@
       "tp2": 1806,
       "technicalScore": 78,
       "fundamentalScore": 65
+    },
+    {
+      "id": "bd5b638e",
+      "ticker": "UNVR",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-11-26",
+      "entry": 1650,
+      "sl": 1617,
+      "tp1": 1675,
+      "tp2": 1700,
+      "technicalScore": 90,
+      "fundamentalScore": 65
     }
   ],
   "closed": [
@@ -4072,5 +4085,5 @@
       "profit_factor": 0.63
     }
   },
-  "updatedAt": "2026-11-26T11:31:06.728918+00:00"
+  "updatedAt": "2026-11-26T15:13:01.953109+00:00"
 }
