@@ -66,19 +66,6 @@
       "fundamentalScore": 100
     },
     {
-      "id": "d188b774",
-      "ticker": "UNVR",
-      "strategy": "BSJP",
-      "setup": "Strong Close + Volume",
-      "date_in": "2026-11-25",
-      "entry": 1615,
-      "sl": 1583,
-      "tp1": 1639,
-      "tp2": 1663,
-      "technicalScore": 100,
-      "fundamentalScore": 65
-    },
-    {
       "id": "9afc7ed3",
       "ticker": "UNVR",
       "strategy": "Swing",
@@ -4044,20 +4031,39 @@
       "hold_days": 1,
       "return_pct": -0.42,
       "outcome": "loss"
+    },
+    {
+      "id": "d188b774",
+      "ticker": "UNVR",
+      "strategy": "BSJP",
+      "setup": "Strong Close + Volume",
+      "date_in": "2026-11-25",
+      "entry": 1615,
+      "sl": 1583,
+      "tp1": 1639,
+      "tp2": 1663,
+      "technicalScore": 100,
+      "fundamentalScore": 65,
+      "date_out": "2026-11-26",
+      "exit": 1620,
+      "exit_via": "open-besok",
+      "hold_days": 1,
+      "return_pct": 0.31,
+      "outcome": "win"
     }
   ],
   "stats": {
     "total": {
-      "trades": 208,
-      "win_rate_pct": 43.3,
-      "avg_return_pct": 0.096,
-      "profit_factor": 1.14
+      "trades": 209,
+      "win_rate_pct": 43.5,
+      "avg_return_pct": 0.097,
+      "profit_factor": 1.15
     },
     "BSJP": {
-      "trades": 170,
-      "win_rate_pct": 48.2,
+      "trades": 171,
+      "win_rate_pct": 48.5,
       "avg_return_pct": 0.334,
-      "profit_factor": 2.44
+      "profit_factor": 2.45
     },
     "Swing": {
       "trades": 38,
@@ -4066,5 +4072,5 @@
       "profit_factor": 0.63
     }
   },
-  "updatedAt": "2026-11-25T18:46:36.094778+00:00"
+  "updatedAt": "2026-11-26T11:31:06.728918+00:00"
 }
